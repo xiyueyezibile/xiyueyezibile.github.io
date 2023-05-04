@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>汐月也自闭了的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="JS Set使用Set类似与Array数组，但Set里面的元素不能重复 12345const set &#x3D; new Set([10, 10, 12, 14])console.log(set)&#x2F;&#x2F;10 12 14 const array &#x3D; [10, 10, 12, 14]console.log(array)&#x2F;&#x2F;10 10 12 14  除了new时初始化元素，也可以通过add添加元素 1234567">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汐月也自闭了的个人博客">
+<meta property="og:url" content="http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="汐月也自闭了的个人博客">
+<meta property="og:description" content="JS Set使用Set类似与Array数组，但Set里面的元素不能重复 12345const set &#x3D; new Set([10, 10, 12, 14])console.log(set)&#x2F;&#x2F;10 12 14 const array &#x3D; [10, 10, 12, 14]console.log(array)&#x2F;&#x2F;10 10 12 14  除了new时初始化元素，也可以通过add添加元素 1234567">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-04T12:49:24.291Z">
+<meta property="article:modified_time" content="2023-03-27T12:38:27.000Z">
+<meta property="article:author" content="xiyueyezibile">
+<meta property="article:tag" content="xiyueyezibile">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="汐月也自闭了的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汐月也自闭了的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">1</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JS Set使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-05-04T12:49:24.291Z" itemprop="datePublished">2023-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="JS-Set使用"><a href="#JS-Set使用" class="headerlink" title="JS Set使用"></a>JS Set使用</h1><p>Set类似与Array数组，但Set里面的元素不能重复</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>([<span class="number">10</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>])</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(set)<span class="comment">//10 12 14</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> array = [<span class="number">10</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array)<span class="comment">//10 10 12 14</span></span><br></pre></td></tr></table></figure>
+
+<p>除了new时初始化元素，也可以通过add添加元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式一：创建Set对象，使用add方法添加元素</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">name</span>: <span class="string">&quot;aaa&quot;</span>&#125;</span><br><span class="line"><span class="keyword">const</span> set1 = <span class="keyword">new</span> <span class="title class_">Set</span>()</span><br><span class="line">set1.<span class="title function_">add</span>(<span class="number">10</span>)</span><br><span class="line">set1.<span class="title function_">add</span>(<span class="number">10</span>)</span><br><span class="line">set1.<span class="title function_">add</span>(<span class="number">12</span>)</span><br><span class="line">set1.<span class="title function_">add</span>(<span class="number">14</span>)</span><br><span class="line">set1.<span class="title function_">add</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(set1)</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 方式二： 直接添加元素</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> set2 = <span class="keyword">new</span> <span class="title class_">Set</span>([<span class="number">10</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>, &#123;<span class="attr">name</span>: <span class="string">&quot;zzz&quot;</span>&#125;])</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(set2)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set方法数组去重"><a href="#Set方法数组去重" class="headerlink" title="Set方法数组去重"></a>Set方法数组去重</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">10</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, <span class="number">15</span>, <span class="number">17</span>]</span><br><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(array)</span><br><span class="line"><span class="comment">//Array.from把伪数组转换为数组</span></span><br><span class="line"><span class="keyword">const</span> newArray = <span class="title class_">Array</span>.<span class="title function_">from</span>(set)</span><br><span class="line"><span class="keyword">const</span> newArray1 = [...set]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(set)<span class="comment">//Set(4) 10 12 15 17</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray)<span class="comment">//10 12 15 17</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray1)<span class="comment">//10 12 15 17</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Set常见的属性："><a href="#Set常见的属性：" class="headerlink" title="Set常见的属性："></a>Set常见的属性：</h2><p><strong>size：</strong>返回Set中元素的个数；</p>
+<h2 id="Set常用的方法："><a href="#Set常用的方法：" class="headerlink" title="Set常用的方法："></a>Set常用的方法：</h2><p><strong>add(value)：</strong>添加某个元素，返回Set对象本身；</p>
+<p><strong>delete(value)：</strong>从set中删除和这个值相等的元素，返回boolean类型；</p>
+<p><strong>has(value)：</strong>判断set中是否存在某个元素，返回boolean类型；</p>
+<p><strong>clear()：</strong>清空set中所有的元素，没有返回值；</p>
+<p><strong>forEach(callback, [, thisArg])：</strong>通过forEach遍历set；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/" data-id="clh94med600006sgt4obrclla" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/04/call,bind,apply/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">call,bind,apply</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/">函数防抖与函数节流</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/">关于函数闭包的理解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/call,bind,apply/">call,bind,apply</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 xiyueyezibile<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>前后端实现websocket通信 | 汐月也自闭了的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前后端实现websocket通信后端nodeJS(http原生)安装ws1npm i ws  所需知识1234const WebSocket &#x3D; require(&amp;#x27;ws&amp;#x27;);const WebSocketServer &#x3D; WebSocket.Server;&#x2F;&#x2F; 创建 WebSocket 服务器 监听在 8080 端口const wss &#x3D; new WebSocketServer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端实现websocket通信">
+<meta property="og:url" content="http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/index.html">
+<meta property="og:site_name" content="汐月也自闭了的个人博客">
+<meta property="og:description" content="前后端实现websocket通信后端nodeJS(http原生)安装ws1npm i ws  所需知识1234const WebSocket &#x3D; require(&amp;#x27;ws&amp;#x27;);const WebSocketServer &#x3D; WebSocket.Server;&#x2F;&#x2F; 创建 WebSocket 服务器 监听在 8080 端口const wss &#x3D; new WebSocketServer">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-04T12:49:24.260Z">
+<meta property="article:modified_time" content="2023-05-04T12:51:19.107Z">
+<meta property="article:author" content="xiyueyezibile">
+<meta property="article:tag" content="xiyueyezibile">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="汐月也自闭了的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汐月也自闭了的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">1</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-前后端实现websocket通信" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" class="article-date">
+  <time class="dt-published" datetime="2023-05-04T12:49:24.260Z" itemprop="datePublished">2023-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      前后端实现websocket通信
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="前后端实现websocket通信"><a href="#前后端实现websocket通信" class="headerlink" title="前后端实现websocket通信"></a>前后端实现websocket通信</h1><h2 id="后端nodeJS-http原生"><a href="#后端nodeJS-http原生" class="headerlink" title="后端nodeJS(http原生)"></a>后端nodeJS(http原生)</h2><h3 id="安装ws"><a href="#安装ws" class="headerlink" title="安装ws"></a>安装ws</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i ws</span><br></pre></td></tr></table></figure>
+
+<h3 id="所需知识"><a href="#所需知识" class="headerlink" title="所需知识"></a>所需知识</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocketServer</span> = <span class="title class_">WebSocket</span>.<span class="property">Server</span>;</span><br><span class="line"><span class="comment">// 创建 WebSocket 服务器 监听在 8080 端口</span></span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocketServer</span>(&#123; <span class="attr">port</span>: <span class="number">8080</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="wss-clients"><a href="#wss-clients" class="headerlink" title="wss.clients"></a>wss.clients</h3><p>wss.clients方法中存储所有的连入对象,保存为一个数组，通过它可以遍历所有连入的客户端发送消息</p>
+<h3 id="wss-on-‘connection’-callback-ws"><a href="#wss-on-‘connection’-callback-ws" class="headerlink" title="wss.on(‘connection’,callback(ws))"></a>wss.on(‘connection’,callback(ws))</h3><p>有客户端连接时会调用,ws为连接进来的客户端对象</p>
+<h3 id="ws-on-‘message’-callback-message"><a href="#ws-on-‘message’-callback-message" class="headerlink" title="ws.on(‘message’,callback(message))"></a>ws.on(‘message’,callback(message))</h3><p>接受到客户端&#x2F;服务端消息时调用,message为信息</p>
+<h3 id="ws-send-message-callback-err"><a href="#ws-send-message-callback-err" class="headerlink" title="ws.send(message,callback(err))"></a>ws.send(message,callback(err))</h3><p>给客户端或服务器端返回消息</p>
+<h3 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocketServer</span> = <span class="title class_">WebSocket</span>.<span class="property">Server</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 WebSocket 服务器 监听在 8080 端口</span></span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocketServer</span>(&#123; <span class="attr">port</span>: <span class="number">8080</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果有WebSocket请求接入，wss对象可以响应connection事件来处理这个WebSocket：</span></span><br><span class="line">wss.<span class="title function_">on</span>(<span class="string">&#x27;connection&#x27;</span>, <span class="function">(<span class="params">ws,req</span>) =&gt;</span> &#123;</span><br><span class="line"><span class="comment">// 在connection事件中，回调函数会传入一个WebSocket的实例，表示这个WebSocket连接</span></span><br><span class="line">	<span class="keyword">const</span> ip = req.<span class="property">socket</span>.<span class="property">remoteAddress</span>;<span class="comment">//客户端访问ip</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;连接了&#x27;</span>);</span><br><span class="line">  <span class="comment">// 接收客户端信息并把信息返回发送</span></span><br><span class="line">  ws.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="function">(<span class="params">message</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br><span class="line">    <span class="comment">// send 方法的第二个参数是一个错误回调函数</span></span><br><span class="line">    wss.<span class="property">clients</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      item.<span class="title function_">send</span>(message.<span class="title function_">toString</span>(), <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[SERVER] error: <span class="subst">$&#123;err&#125;</span>`</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// ws.send(message.toString(), (err) =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//   if (err) &#123;</span></span><br><span class="line">    <span class="comment">//     console.log(`[SERVER] error: $&#123;err&#125;`);</span></span><br><span class="line">    <span class="comment">//   &#125;</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="前端react"><a href="#前端react" class="headerlink" title="前端react"></a>前端react</h2><p>都用的ws模块，跟后端实现差不多</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect, useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span> () &#123;</span><br><span class="line">  <span class="keyword">const</span> [data, setData] = <span class="title function_">useState</span>([]);</span><br><span class="line">  <span class="keyword">const</span> [anew, setAnew] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> ws = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&#x27;ws://127.0.0.1:8080&#x27;</span>)</span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    ws.<span class="property">onopen</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    ws.<span class="property">onmessage</span> = <span class="function">(<span class="params">mes</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(mes);</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">      <span class="keyword">let</span> newdata = [</span><br><span class="line">        ...data,</span><br><span class="line">        mes.<span class="property">data</span></span><br><span class="line">      ]</span><br><span class="line">      data.<span class="title function_">push</span>(mes.<span class="property">data</span>)</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(newdata);</span><br><span class="line">      <span class="title function_">setData</span>(newdata)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">click</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    ws.<span class="title function_">send</span>(anew)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">change</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> n = e.<span class="property">target</span>.<span class="property">value</span></span><br><span class="line">    <span class="title function_">setAnew</span>(n)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;data.map(it =&gt; <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;it&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span>)&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&#123;anew&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;change&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;click&#125;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" data-id="clh94medl00096sgtgkst1gqx" data-title="前后端实现websocket通信" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          使内容滚动到盒子底部
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/04/test-my-site/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">test_my_site</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/">函数防抖与函数节流</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/">关于函数闭包的理解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/call,bind,apply/">call,bind,apply</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 xiyueyezibile<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

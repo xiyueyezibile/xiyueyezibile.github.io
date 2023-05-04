@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>base64转文件 | 汐月也自闭了的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="base64转文件所需知识match方法match本身是JavaScript语言中字符串对象的一个方法，该方法的签名是  match([string] | [RegExp]) 它的参数既可以是一个字符串，也可以是一个正则表达式。该方法绝大多数都是要使用正则表达式的，所以参数为string的情况不在本文讨论范围之内。其实参数即使是一个简单的string，其返回值也跟使用正则表达式的结果无异，而且使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="base64转文件">
+<meta property="og:url" content="http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:site_name" content="汐月也自闭了的个人博客">
+<meta property="og:description" content="base64转文件所需知识match方法match本身是JavaScript语言中字符串对象的一个方法，该方法的签名是  match([string] | [RegExp]) 它的参数既可以是一个字符串，也可以是一个正则表达式。该方法绝大多数都是要使用正则表达式的，所以参数为string的情况不在本文讨论范围之内。其实参数即使是一个简单的string，其返回值也跟使用正则表达式的结果无异，而且使用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-04T12:49:24.284Z">
+<meta property="article:modified_time" content="2023-05-04T12:50:38.553Z">
+<meta property="article:author" content="xiyueyezibile">
+<meta property="article:tag" content="xiyueyezibile">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="汐月也自闭了的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汐月也自闭了的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">1</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-base64转文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/" class="article-date">
+  <time class="dt-published" datetime="2023-05-04T12:49:24.284Z" itemprop="datePublished">2023-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      base64转文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="base64转文件"><a href="#base64转文件" class="headerlink" title="base64转文件"></a>base64转文件</h1><h2 id="所需知识"><a href="#所需知识" class="headerlink" title="所需知识"></a>所需知识</h2><h3 id="match方法"><a href="#match方法" class="headerlink" title="match方法"></a>match方法</h3><p>match本身是JavaScript语言中字符串对象的一个方法，该方法的签名是  match([string] | [RegExp])</p>
+<p>它的参数既可以是一个字符串，也可以是一个正则表达式。该方法绝大多数都是要使用正则表达式的，所以参数为string的情况不在本文讨论范围之内。其实参数即使是一个简单的string，其返回值也跟使用正则表达式的结果无异，而且使用正则表达式的变化比较多，用法复杂，所以我们只讨论正则的用法。</p>
+<p>JavaScript中的match()方法的返回值是数组或者是null。如果原字符串中匹配到了正则表达式指代的子串，则返回一个数组，否则返回null。</p>
+<h3 id="window-atob-base64"><a href="#window-atob-base64" class="headerlink" title="window.atob(base64)"></a>window.atob(base64)</h3><p>用来解码一个已经被base-64编码过的数据</p>
+<h3 id="charCodeAt-index"><a href="#charCodeAt-index" class="headerlink" title="charCodeAt(index)"></a>charCodeAt(index)</h3><p>在 JavaScript 中，charCodeAt() 是一种字符串方法，用于检索字符串中特定位置的字符的Unicode 值。因为 charCodeAt() 方法是 String 对象的方法，所以必须通过 String 类的特定实例调用它。</p>
+<p>charCodeAt() 方法返回一个 UTF-16 值（一个介于 0 和 65535 之间的 16 位整数），它是字符串中特定位置的字符的Unicode值。</p>
+<p>该位置必须是0之间串。长度-1。如果位置超出范围，则 charCodeAt() 方法将返回一个特殊的非数字值，打印为 NaN。</p>
+<ul>
+<li>如果字符的 Unicode 值无法用单个 UTF-16 代码单元表示，请使用codePointAt() 方法。</li>
+<li>charCodeAt() 方法不会更改原始<em>字符串</em>的值。</li>
+</ul>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p><strong>File 对象继承自 Blob 对象，先看看 Blob 对象。</strong></p>
+<p>Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。</p>
+<p>我们接触的多数关于 File 的操作都是读取，js也为我们提供了手动创建 File 对象的构造函数：File(bits, name[, options])。</p>
+<ul>
+<li><code>bits (required)</code> ArrayBuffer，ArrayBufferView，Blob，或者 Array[string] —<br>或者任何这些对象的组合。这是 UTF-8 编码的文件内容。</li>
+<li><code>name [String] (required)</code> 文件名称，或者文件路径.</li>
+<li><code>options [Object] (optional) </code>选项对象，包含文件的可选属性。可用的选项如下：<br><code>type: string</code>, 表示将要放到文件中的内容的MIME类型。默认值为 ‘’ 。<br><code>lastModified</code>: 数值，表示文件最后修改时间的 Unix 时间戳（毫秒）。默认值为 Date.now()。</li>
+</ul>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// base64图片转file的方法（base64图片, 设置生成file的文件名）</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">base64ToFile</span>(<span class="params">base64: <span class="built_in">any</span>, fileName: <span class="built_in">string</span></span>): <span class="title class_">File</span> &#123;</span><br><span class="line">  <span class="comment">// 将base64按照 , 进行分割 将前缀  与后续内容分隔开</span></span><br><span class="line">  <span class="keyword">let</span> data = base64.<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">  <span class="comment">// 利用正则表达式 从前缀中获取图片的类型信息（image/png、image/jpeg、image/webp等）</span></span><br><span class="line">  <span class="keyword">let</span> <span class="keyword">type</span> = data[<span class="number">0</span>].<span class="title function_">match</span>(<span class="regexp">/:(.*?);/</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="comment">// 从图片的类型信息中 获取具体的文件格式后缀（png、jpeg、webp）</span></span><br><span class="line">  <span class="keyword">let</span> suffix = <span class="keyword">type</span>.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="comment">// 使用atob()对base64数据进行解码  结果是一个文件数据流 以字符串的格式输出</span></span><br><span class="line">  <span class="keyword">const</span> bstr = <span class="variable language_">window</span>.<span class="title function_">atob</span>(data[<span class="number">1</span>]);</span><br><span class="line">  <span class="comment">// 获取解码结果字符串的长度</span></span><br><span class="line">  <span class="keyword">let</span> n = bstr.<span class="property">length</span>;</span><br><span class="line">  <span class="comment">// 根据解码结果字符串的长度创建一个等长的整形数字数组</span></span><br><span class="line">  <span class="comment">// 但在创建时 所有元素初始值都为 0</span></span><br><span class="line">  <span class="keyword">const</span> u8arr = <span class="keyword">new</span> <span class="title class_">Uint8Array</span>(n);</span><br><span class="line">  <span class="comment">// 将整形数组的每个元素填充为解码结果字符串对应位置字符的UTF-16 编码单元</span></span><br><span class="line">  <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">    <span class="comment">// charCodeAt()：获取给定索引处字符对应的 UTF-16 代码单元</span></span><br><span class="line">    u8arr[n] = bstr.<span class="title function_">charCodeAt</span>(n);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 利用构造函数创建File文件对象</span></span><br><span class="line">  <span class="comment">// new File(bits, name, options)</span></span><br><span class="line">  <span class="keyword">const</span> file = <span class="keyword">new</span> <span class="title class_">File</span>([u8arr], <span class="string">`<span class="subst">$&#123;fileName&#125;</span>.<span class="subst">$&#123;suffix&#125;</span>`</span>, &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="keyword">type</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 将File文件对象返回给方法的调用者</span></span><br><span class="line">  <span class="keyword">return</span> file;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/" data-id="clh94medf00036sgt73sf4ny0" data-title="base64转文件" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/04/call,bind,apply/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          call,bind,apply
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/04/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Array includes</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/">函数防抖与函数节流</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/">关于函数闭包的理解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/call,bind,apply/">call,bind,apply</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 xiyueyezibile<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>使内容滚动到盒子底部 | 汐月也自闭了的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="使内容滚动到盒子底部通常用于评论之类的部分，出现新内容后自动滚动到盒子的底部，优化用户体验 React中使用Ref获取元素对象并修改在这里我们会用到scrollIntoView()这个方法 scrollIntoView()语法123element.scrollIntoView(); &#x2F;&#x2F; 等同于 element.scrollIntoView(true)element.scrollIntoView(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使内容滚动到盒子底部">
+<meta property="og:url" content="http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/index.html">
+<meta property="og:site_name" content="汐月也自闭了的个人博客">
+<meta property="og:description" content="使内容滚动到盒子底部通常用于评论之类的部分，出现新内容后自动滚动到盒子的底部，优化用户体验 React中使用Ref获取元素对象并修改在这里我们会用到scrollIntoView()这个方法 scrollIntoView()语法123element.scrollIntoView(); &#x2F;&#x2F; 等同于 element.scrollIntoView(true)element.scrollIntoView(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-04T12:49:24.265Z">
+<meta property="article:modified_time" content="2023-05-04T12:51:12.696Z">
+<meta property="article:author" content="xiyueyezibile">
+<meta property="article:tag" content="xiyueyezibile">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="汐月也自闭了的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汐月也自闭了的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">1</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-使内容滚动到盒子底部" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-05-04T12:49:24.265Z" itemprop="datePublished">2023-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      使内容滚动到盒子底部
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="使内容滚动到盒子底部"><a href="#使内容滚动到盒子底部" class="headerlink" title="使内容滚动到盒子底部"></a>使内容滚动到盒子底部</h1><p>通常用于评论之类的部分，出现新内容后自动滚动到盒子的底部，优化用户体验</p>
+<h2 id="React中使用Ref获取元素对象并修改"><a href="#React中使用Ref获取元素对象并修改" class="headerlink" title="React中使用Ref获取元素对象并修改"></a>React中使用Ref获取元素对象并修改</h2><p>在这里我们会用到scrollIntoView()这个方法</p>
+<h3 id="scrollIntoView"><a href="#scrollIntoView" class="headerlink" title="scrollIntoView()"></a>scrollIntoView()</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.scrollIntoView(); // 等同于 element.scrollIntoView(true)</span><br><span class="line">element.scrollIntoView(alignToTop); // Boolean 型参数</span><br><span class="line">element.scrollIntoView(scrollIntoViewOptions); // Object 型参数 ，有兼容性问题，只有google和火狐完美支持</span><br></pre></td></tr></table></figure>
+
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p><code>alignToTop</code>可选</p>
+<p>一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>值：</p>
+<ul>
+<li>如果为<code>true</code>，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 <code>scrollIntoViewOptions: &#123;block: &quot;start&quot;, inline: &quot;nearest&quot;&#125;</code>。这是这个参数的默认值。</li>
+<li>如果为<code>false</code>，元素的底端将和其所在滚动区的可视区域的底端对齐。相应的<code>scrollIntoViewOptions: &#123;block: &quot;end&quot;, inline: &quot;nearest&quot;&#125;</code>。</li>
+</ul>
+<p><code>scrollIntoViewOptions</code> 可选 实验性</p>
+<p>一个包含下列属性的对象：</p>
+<ul>
+<li><p><code>behavior</code> 可选</p>
+<p>定义动画过渡效果， <code>&quot;auto&quot;</code>或 <code>&quot;smooth&quot;</code> 之一。默认为 <code>&quot;auto&quot;</code>。</p>
+</li>
+<li><p><code>block</code> 可选</p>
+<p>定义垂直方向的对齐， <code>&quot;start&quot;</code>, <code>&quot;center&quot;</code>, <code>&quot;end&quot;</code>, 或 <code>&quot;nearest&quot;</code>之一。默认为 <code>&quot;start&quot;</code>。</p>
+</li>
+<li><p><code>inline</code> 可选</p>
+<p>定义水平方向的对齐， <code>&quot;start&quot;</code>, <code>&quot;center&quot;</code>, <code>&quot;end&quot;</code>, 或 <code>&quot;nearest&quot;</code>之一。默认为 <code>&quot;nearest&quot;</code>。</p>
+</li>
+</ul>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>​	给子元素设置scrollIntoView()，将会滚动它的父元素直到它可视</p>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView">MDN文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6992143761601986574">掘金</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" data-id="clh94medj00076sgtcz5m23vm" data-title="使内容滚动到盒子底部" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/04/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          图片懒加载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">前后端实现websocket通信</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/">函数防抖与函数节流</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/">关于函数闭包的理解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/04/call,bind,apply/">call,bind,apply</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 xiyueyezibile<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
