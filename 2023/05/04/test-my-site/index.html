@@ -1,206 +1,414 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>test_my_site | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://example.com/2023/05/04/test-my-site/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-04T11:02:25.000Z">
-<meta property="article:modified_time" content="2023-05-04T11:02:25.430Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+/*
+  Post-specific style
+*/
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+@mixin btn-sharing-color($light-color, $important: false) {
+  @if $important {
+    color: var(--btn-share-color, $light-color) !important;
+  } @else {
+    color: var(--btn-share-color, $light-color);
+  }
+}
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+@mixin btn-post-nav {
+  width: 50%;
+  position: relative;
+  border-color: var(--btn-border-color);
+}
 
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+@mixin dot($pl: 0.25rem, $pr: 0.25rem) {
+  content: '\2022';
+  padding-left: $pl;
+  padding-right: $pr;
+}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+%text-color {
+  color: var(--text-color);
+}
 
-      <div class="outer">
-        <section id="main"><article id="post-test-my-site" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/04/test-my-site/" class="article-date">
-  <time class="dt-published" datetime="2023-05-04T11:02:25.000Z" itemprop="datePublished">2023-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      test_my_site
-    </h1>
-  
+.preview-img {
+  @extend %rounded;
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/04/test-my-site/" data-id="clh91xljv0001c0gtah8i9ozx" data-title="test_my_site" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2023/05/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+  &:not(.no-bg) {
+    img.lazyloaded {
+      background: var(--img-bg);
+    }
+  }
 
-  
-</article>
+  img {
+    aspect-ratio: 40 / 21;
+    -o-object-fit: cover;
+    object-fit: cover;
 
+    @extend %rounded;
+  }
+}
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+h1 + .post-meta {
+  span + span::before {
+    @include dot;
+  }
 
-  
-    
+  em {
+    @extend %text-color;
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
-    </div>
-  </div>
+    a {
+      @extend %text-color;
+    }
+  }
+}
 
+.post-tail-wrapper {
+  margin-top: 6rem;
+  border-bottom: 1px double var(--main-border-color);
+  font-size: 0.85rem;
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/05/04/test-my-site/">test_my_site</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/04/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  .post-tail-bottom a {
+    color: inherit;
+  }
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+  .license-wrapper {
+    line-height: 1.2rem;
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    > a {
+      color: var(--text-color);
 
+      &:hover {
+        @extend %link-hover;
+      }
+    }
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    span:last-child {
+      font-size: 0.85rem;
+    }
+  } /* .license-wrapper */
 
+  .post-meta a:not(:hover) {
+    @extend %link-underline;
+  }
 
+  .share-wrapper {
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    .share-icons {
+      font-size: 1.2rem;
 
+      > i {
+        position: relative;
+        bottom: 1px;
 
+        @extend %cursor-pointer;
 
+        &:hover {
+          @extend %btn-share-hovor;
+        }
+      }
 
-<script src="/js/script.js"></script>
+      a {
+        &:not(:last-child) {
+          margin-right: 0.25rem;
+        }
 
+        &:hover {
+          text-decoration: none;
 
+          > i {
+            @extend %btn-share-hovor;
+          }
+        }
+      }
 
+      .fab {
+        &.fa-twitter {
+          @include btn-sharing-color(rgba(29, 161, 242, 1));
+        }
 
+        &.fa-facebook-square {
+          @include btn-sharing-color(rgb(66, 95, 156));
+        }
 
-  </div>
-</body>
-</html>
+        &.fa-telegram {
+          @include btn-sharing-color(rgb(39, 159, 217));
+        }
+
+        &.fa-linkedin {
+          @include btn-sharing-color(rgb(0, 119, 181));
+        }
+
+        &.fa-weibo {
+          @include btn-sharing-color(rgb(229, 20, 43));
+        }
+      }
+    } /* .share-icons */
+
+    .fas.fa-link {
+      @include btn-sharing-color(rgb(171, 171, 171));
+    }
+  } /* .share-wrapper */
+}
+
+.post-tags {
+  line-height: 2rem;
+}
+
+.post-navigation {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+
+  .btn {
+    @include btn-post-nav;
+
+    color: var(--link-color);
+
+    &:hover {
+      background: #2a408e;
+      color: #ffffff;
+      border-color: #2a408e;
+    }
+
+    &.disabled {
+      @include btn-post-nav;
+
+      pointer-events: auto;
+      cursor: not-allowed;
+      background: none;
+      color: gray;
+
+      &:hover {
+        border-color: none;
+      }
+    }
+
+    &.btn-outline-primary.disabled:focus {
+      box-shadow: none;
+    }
+
+    &::before {
+      color: var(--text-muted-color);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      content: attr(prompt);
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      left: 0.5px;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      right: 0.5px;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-top: 0.3rem;
+    white-space: normal;
+  }
+} /* .post-navigation */
+
+@-webkit-keyframes fade-up {
+  from {
+    opacity: 0;
+    position: relative;
+    top: 2rem;
+  }
+
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    position: relative;
+    top: 2rem;
+  }
+
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+#toc-wrapper {
+  border-left: 1px solid rgba(158, 158, 158, 0.17);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  transition: top 0.2s ease-in-out;
+  -webkit-animation: fade-up 0.8s;
+  animation: fade-up 0.8s;
+
+  ul {
+    list-style: none;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    padding-left: 0;
+
+    li {
+      &:not(:last-child) {
+        margin: 0.4rem 0;
+      }
+
+      a {
+        padding: 0.2rem 0 0.2rem 1.25rem;
+      }
+    }
+
+    /* Overwrite TOC plugin style */
+
+    .toc-link {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        color: var(--toc-highlight);
+        text-decoration: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .is-active-link {
+      color: var(--toc-highlight) !important;
+      font-weight: 600;
+
+      &::before {
+        display: inline-block;
+        width: 1px;
+        left: -1px;
+        height: 1.25rem;
+        background-color: var(--toc-highlight) !important;
+      }
+    }
+
+    ul {
+      a {
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+/* --- Related Posts --- */
+
+#related-posts {
+  > h3 {
+    @include label(1.1rem, 600);
+  }
+
+  em {
+    @extend %normal-font-style;
+
+    color: var(--relate-post-date);
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .card {
+    border-color: var(--card-border-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 5px 0 var(--card-box-shadow);
+    transition: all 0.3s ease-in-out;
+
+    h3 {
+      @extend %text-color;
+    }
+
+    &:hover {
+      -webkit-transform: translate3d(0, -3px, 0);
+      transform: translate3d(0, -3px, 0);
+      box-shadow: 0 10px 15px -4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+#tail-wrapper {
+  min-height: 2rem;
+
+  > div:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  /* stylelint-disable-next-line selector-id-pattern */
+  #disqus_thread {
+    min-height: 8.5rem;
+  }
+}
+
+%btn-share-hovor {
+  color: var(--btn-share-hover-color) !important;
+}
+
+.share-label {
+  @include label(inherit, 400, inherit);
+
+  &::after {
+    content: ':';
+  }
+}
+
+@media all and (max-width: 576px) {
+  .preview-img[data-src] {
+    margin-top: 2.2rem;
+  }
+
+  .post-tail-bottom {
+    flex-wrap: wrap-reverse !important;
+
+    > div:first-child {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .post-content > p > img {
+    max-width: calc(100% + 1rem);
+  }
+}
+
+/* Hide SideBar and TOC */
+@media all and (max-width: 849px) {
+  .post-navigation {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  .preview-img[data-src] {
+    max-width: 100vw;
+    border-radius: 0;
+  }
+}
