@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-06-10T13:08:51.643Z</updated>
     <entry>
-        <id>http://example.com/2023/06/10/axios/</id>
+        <id>http://example.com/2023/06/10/axios/axios/</id>
         <title>axios</title>
-        <link rel="alternate" href="http://example.com/2023/06/10/axios/"/>
+        <link rel="alternate" href="http://example.com/2023/06/10/axios/axios/"/>
         <content type="html">&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i axios&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;发送请求&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发送请求&#34;&gt;#&lt;/a&gt; 发送请求&lt;/h2&gt;

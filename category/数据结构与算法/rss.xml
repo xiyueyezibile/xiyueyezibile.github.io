@@ -8,9 +8,9 @@
         <pubDate>Fri, 26 May 2023 18:06:01 +0800</pubDate>
         <lastBuildDate>Fri, 26 May 2023 18:06:01 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
             <title>动态规划</title>
-            <link>http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+            <link>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
             <pubDate>Fri, 26 May 2023 18:06:01 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;动态规划，无非就是利用&lt;strong&gt;历史记录&lt;/strong&gt;，来避免我们的重复计算。而这些&lt;strong&gt;历史记录&lt;/strong&gt;，我们得需要一些&lt;strong&gt;变量&lt;/strong&gt;来保存，一般是用&lt;strong&gt;一维数组&lt;/strong&gt;或者&lt;strong&gt;二维数组&lt;/strong&gt;来保存。下面我们先来讲下做动态规划题很重要的三个步骤，&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一步骤&lt;/strong&gt;：定义&lt;strong&gt;数组元素的含义&lt;/strong&gt;，上面说了，我们会用一个数组，来保存历史数组，假设用一维数组 dp [] 吧。这个时候有一个非常非常重要的点，就是规定你这个数组元素的含义，例如你的 dp [i] 是代表什么意思？&lt;/p&gt;

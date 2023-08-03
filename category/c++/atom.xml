@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-07-21T14:52:20.951Z</updated>
     <entry>
-        <id>http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/</id>
+        <id>http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/</id>
         <title>c++入门</title>
-        <link rel="alternate" href="http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/"/>
         <content type="html">&lt;h2 id=&#34;cc的作用领域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cc的作用领域&#34;&gt;#&lt;/a&gt; C/c++ 的作用领域&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;操作系统以及大型系统软件开发&lt;/li&gt;

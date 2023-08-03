@@ -8,9 +8,9 @@
         <pubDate>Sat, 20 May 2023 13:28:51 +0800</pubDate>
         <lastBuildDate>Sat, 20 May 2023 13:28:51 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</guid>
             <title>react-router-v6全解析</title>
-            <link>http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</link>
+            <link>http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</link>
             <pubDate>Sat, 20 May 2023 13:28:51 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;React Router 是一个基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZhY2Vib29rLmdpdGh1Yi5pby9yZWFjdC8=&#34;&gt;React&lt;/span&gt; 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。&lt;/p&gt;

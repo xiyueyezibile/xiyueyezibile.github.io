@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-08-01T15:42:39.434Z</updated>
     <entry>
-        <id>http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/</id>
+        <id>http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/</id>
         <title>canvas基础</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h2 id=&#34;canvas必须的属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvas必须的属性&#34;&gt;#&lt;/a&gt; canvas 必须的属性&lt;/h2&gt;
 &lt;p&gt;id,width,height&lt;/p&gt;
 &lt;h2 id=&#34;获取canvas语法提示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取canvas语法提示&#34;&gt;#&lt;/a&gt; 获取 canvas 语法提示&lt;/h2&gt;
@@ -79,9 +79,9 @@
         <updated>2023-08-01T15:42:39.434Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</id>
+        <id>http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</id>
         <title>SVG初上手</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/"/>
         <content type="html">&lt;p&gt;本文部分是参考文章整合，并进行错误纠正，详情请看参考文章。&lt;/p&gt;
 &lt;h2 id=&#34;优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优势&#34;&gt;#&lt;/a&gt; 优势&lt;/h2&gt;
 &lt;p&gt;SVG 图像是矢量图像，可以&lt;strong&gt;无限缩放&lt;/strong&gt;，而且在图像质量下降方面没有任何问题。为什么会这样呢？因为 SVG 图像是使用 &lt;strong&gt;XML 标记&lt;/strong&gt;构建的，浏览器通过绘制每个点和线来打印它们，而不是用预定义的像素填充某些空间。这确保 SVG 图像可以适应不同的屏幕大小和分辨率，即使是那些尚未发明的。&lt;/p&gt;
@@ -195,9 +195,9 @@
         <updated>2023-08-01T02:20:46.539Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/</id>
+        <id>http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/</id>
         <title>html全解</title>
-        <link rel="alternate" href="http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/"/>
         <content type="html">&lt;p&gt;这是我学习 html 的笔记，如果有看不懂的上网搜索&lt;/p&gt;
 &lt;h2 id=&#34;10-doctype和lang以及字符集的作用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-doctype和lang以及字符集的作用&#34;&gt;#&lt;/a&gt; 10-DOCTYPE 和 lang 以及字符集的作用&lt;/h2&gt;
 &lt;!DOCTYPE&gt;文本类型声明，作用是告诉浏览器使用哪种HTML版本来显示网页，必须写到最前面

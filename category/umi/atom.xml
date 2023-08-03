@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-05-15T13:39:03.435Z</updated>
     <entry>
-        <id>http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</id>
+        <id>http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</id>
         <title>Umi max菜单设置问题</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;p&gt;Umimax 根据路由来生产菜单侧边框&lt;/p&gt;
 &lt;p&gt;分辨子路由和生成二级菜单只看有无名字&lt;/p&gt;
 &lt;p&gt;如果不想让它出现在侧边框上则需要加上 &lt;code&gt;hideInMenu: true&lt;/code&gt;  属性&lt;/p&gt;
@@ -19,9 +19,9 @@
         <updated>2023-05-15T13:39:03.435Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/15/Umimax/</id>
+        <id>http://example.com/2023/05/15/Umi/Umimax/</id>
         <title>Umi max详解</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/Umimax/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/Umimax/"/>
         <content type="html">&lt;h2 id=&#34;全局初始状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局初始状态&#34;&gt;#&lt;/a&gt; 全局初始状态&lt;/h2&gt;
 &lt;p&gt;全局初始状态是一种特殊的 Model。&lt;/p&gt;
 &lt;p&gt;全局初始状态在整个 Umi 项目的最开始创建。编写  &lt;code&gt;src/app.ts&lt;/code&gt;  的导出方法  &lt;code&gt;getInitialState()&lt;/code&gt; ，其返回值将成为全局初始状态。例如：&lt;/p&gt;
@@ -129,9 +129,9 @@
         <updated>2023-05-15T13:37:56.514Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</id>
+        <id>http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</id>
         <title>UmiJS完全指南</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
         <content type="html">&lt;h2 id=&#34;启动项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动项目&#34;&gt;#&lt;/a&gt; 启动项目&lt;/h2&gt;
 &lt;p&gt;文档地址 https://v3.umijs.org/zh-CN/docs/mock&lt;/p&gt;
 &lt;p&gt;创建目录&lt;/p&gt;

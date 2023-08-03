@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-07-09T15:16:53.338Z</updated>
     <entry>
-        <id>http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</id>
+        <id>http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</id>
         <title>git快速上手</title>
-        <link rel="alternate" href="http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+        <link rel="alternate" href="http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
         <content type="html">&lt;h2 id=&#34;克隆别的的仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#克隆别的的仓库&#34;&gt;#&lt;/a&gt; 克隆别的的仓库&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; github地址&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;git安装配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git安装配置&#34;&gt;#&lt;/a&gt; git 安装配置&lt;/h2&gt;

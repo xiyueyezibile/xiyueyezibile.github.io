@@ -8,9 +8,9 @@
         <pubDate>Mon, 15 May 2023 21:39:03 +0800</pubDate>
         <lastBuildDate>Mon, 15 May 2023 21:39:03 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</guid>
             <title>Umi max菜单设置问题</title>
-            <link>http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</link>
+            <link>http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</link>
             <pubDate>Mon, 15 May 2023 21:39:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Umimax 根据路由来生产菜单侧边框&lt;/p&gt;
 &lt;p&gt;分辨子路由和生成二级菜单只看有无名字&lt;/p&gt;
@@ -22,9 +22,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/Umimax/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/Umimax/</guid>
             <title>Umi max详解</title>
-            <link>http://example.com/2023/05/15/Umimax/</link>
+            <link>http://example.com/2023/05/15/Umi/Umimax/</link>
             <pubDate>Mon, 15 May 2023 21:37:56 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;全局初始状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局初始状态&#34;&gt;#&lt;/a&gt; 全局初始状态&lt;/h2&gt;
 &lt;p&gt;全局初始状态是一种特殊的 Model。&lt;/p&gt;
@@ -132,9 +132,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
             <title>UmiJS完全指南</title>
-            <link>http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
+            <link>http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
             <pubDate>Mon, 15 May 2023 21:35:46 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;启动项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动项目&#34;&gt;#&lt;/a&gt; 启动项目&lt;/h2&gt;
 &lt;p&gt;文档地址 https://v3.umijs.org/zh-CN/docs/mock&lt;/p&gt;

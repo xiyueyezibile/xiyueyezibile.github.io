@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-05-26T10:06:01.431Z</updated>
     <entry>
-        <id>http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
+        <id>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
         <title>动态规划</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
         <content type="html">&lt;p&gt;动态规划，无非就是利用&lt;strong&gt;历史记录&lt;/strong&gt;，来避免我们的重复计算。而这些&lt;strong&gt;历史记录&lt;/strong&gt;，我们得需要一些&lt;strong&gt;变量&lt;/strong&gt;来保存，一般是用&lt;strong&gt;一维数组&lt;/strong&gt;或者&lt;strong&gt;二维数组&lt;/strong&gt;来保存。下面我们先来讲下做动态规划题很重要的三个步骤，&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一步骤&lt;/strong&gt;：定义&lt;strong&gt;数组元素的含义&lt;/strong&gt;，上面说了，我们会用一个数组，来保存历史数组，假设用一维数组 dp [] 吧。这个时候有一个非常非常重要的点，就是规定你这个数组元素的含义，例如你的 dp [i] 是代表什么意思？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第二步骤&lt;/strong&gt;：找出&lt;strong&gt;数组元素之间的关系式&lt;/strong&gt;，我觉得动态规划，还是有一点类似于我们高中学习时的&lt;strong&gt;归纳法&lt;/strong&gt;的，当我们要计算 dp [n] 时，是可以利用 dp [n-1]，dp [n-2]……dp [1]，来推出 dp [n] 的，也就是可以利用&lt;strong&gt;历史数据&lt;/strong&gt;来推出新的元素值，所以我们要找出数组元素之间的关系式，例如 dp [n] = dp [n-1] + dp [n-2]，这个就是他们的关系式了。而这一步，也是最难的一步，后面我会讲几种类型的题来说。&lt;/p&gt;

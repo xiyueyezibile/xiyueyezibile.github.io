@@ -1,0 +1,598 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="汐月也自闭了的个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="汐月也自闭了的个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="汐月也自闭了的个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/">
+
+
+
+  <title>
+canvas基础 - html |
+Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星河照耀</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">canvas基础
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-08-01 23:42:39">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-01T23:42:39+08:00">2023-08-01</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Xiyueyezibile</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230317181246.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185726.md.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185754.md.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185740.md.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185803.md.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185747.md.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/html/" itemprop="item" rel="index" title="分类于 html"><span itemprop="name">html</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="xiyueyezibile">
+    <meta itemprop="description" content="别怕路长梦远,总有星河照耀, 这个需求写不了">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="汐月也自闭了的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="canvas必须的属性"><a class="markdownIt-Anchor" href="#canvas必须的属性">#</a> canvas 必须的属性</h2>
+<p>id,width,height</p>
+<h2 id="获取canvas语法提示"><a class="markdownIt-Anchor" href="#获取canvas语法提示">#</a> 获取 canvas 语法提示</h2>
+<p>加上这段注释在 js 里面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** <span class="doctag">@type</span> &#123;<span class="type">HTMLCanvasElement</span>&#125; */</span></span><br></pre></td></tr></table></figure>
+<h2 id="第一个canvas"><a class="markdownIt-Anchor" href="#第一个canvas">#</a> 第一个 canvas</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.找到画布</span></span><br><span class="line">  <span class="keyword">const</span> root = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>)</span><br><span class="line">  <span class="comment">//2.找到画笔</span></span><br><span class="line">  <span class="keyword">const</span> ctx = root.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line">  <span class="comment">//绘制图形</span></span><br><span class="line">  <span class="comment">//矩形illRect(x,y,width,height)</span></span><br><span class="line">  ctx.<span class="title function_">fillRect</span>(<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="获取画笔"><a class="markdownIt-Anchor" href="#获取画笔">#</a> 获取画笔</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">canvas</span><span class="selector-class">.getContext</span>(&#x27;<span class="number">2</span>d&#x27;)</span><br></pre></td></tr></table></figure>
+<h2 id="一矩形绘制"><a class="markdownIt-Anchor" href="#一矩形绘制">#</a> 一。矩形绘制</h2>
+<h3 id="1填充模式"><a class="markdownIt-Anchor" href="#1填充模式">#</a> 1. 填充模式</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fillRect</span>(x,y,width,height)</span><br></pre></td></tr></table></figure>
+<h3 id="2路径模式"><a class="markdownIt-Anchor" href="#2路径模式">#</a> 2. 路径模式</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strokeRect</span>(x,y,width,height)</span><br></pre></td></tr></table></figure>
+<h3 id="3清除模式"><a class="markdownIt-Anchor" href="#3清除模式">#</a> 3. 清除模式</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">clearRect</span>(x,y,width,height)</span><br></pre></td></tr></table></figure>
+<h3 id="4拆开写法"><a class="markdownIt-Anchor" href="#4拆开写法">#</a> 4. 拆开写法</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">beginPath</span>()<span class="comment">//落笔(开始)</span></span><br><span class="line"><span class="built_in">rect</span>(x,y,width,height)</span><br><span class="line"><span class="built_in">fill</span>() || <span class="built_in">stroke</span>() || <span class="attribute">clear</span>()</span><br><span class="line"><span class="built_in">closePath</span>()<span class="comment">//抬起笔(结束)</span></span><br></pre></td></tr></table></figure>
+<h2 id="二圆弧绘制"><a class="markdownIt-Anchor" href="#二圆弧绘制">#</a> 二。圆弧绘制</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">arc</span>(x,y,半径r,开始角度startDeg，结束角度endDeg,顺逆时针true <span class="number">0</span>r false)<span class="comment">//绘制圆弧</span></span><br><span class="line"><span class="built_in">fill</span>()<span class="comment">//填充起始点和结束点直接闭合的区域，0度起始点x轴</span></span><br><span class="line"><span class="built_in">stroke</span>()<span class="comment">//绘制圆弧</span></span><br></pre></td></tr></table></figure>
+<p>注意：开始角度和结束角度看的是圆周率，3.14159… 表示 180 度</p>
+<p>​			可以用 Math.PI (3.1415926…) 获取</p>
+<h3 id="arcto绘制圆弧"><a class="markdownIt-Anchor" href="#arcto绘制圆弧">#</a> arcTo 绘制圆弧</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">arcTo</span>(第一个点x,第一个点y,第二个点x,第二个点y,圆弧半径)<span class="comment">//起点和两个点构成的两条切线和半径来画圆弧</span></span><br></pre></td></tr></table></figure>
+<h3 id="moveto移动画笔位置"><a class="markdownIt-Anchor" href="#moveto移动画笔位置">#</a> moveTo 移动画笔位置</h3>
+<p>moveTo (x,y) 移动画笔而且不会落在画布上</p>
+<h2 id="三线段绘制"><a class="markdownIt-Anchor" href="#三线段绘制">#</a> 三。线段绘制</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">lineTo</span>(x,y)<span class="comment">//从笔当前的位置移动到目标位置</span></span><br></pre></td></tr></table></figure>
+<h2 id="四贝塞尔曲线"><a class="markdownIt-Anchor" href="#四贝塞尔曲线">#</a> 四。贝塞尔曲线</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">quadraticCurveTo</span>(x,y,x2,y2)</span><br><span class="line"><span class="built_in">bezierCurveTo</span>(x,y,x2,y2,x3,y3)<span class="comment">//三次贝塞尔曲线</span></span><br></pre></td></tr></table></figure>
+<h2 id="五path2d"><a class="markdownIt-Anchor" href="#五path2d">#</a> 五.path2d</h2>
+<p>path2d 用来封装对象</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//爱心绘制</span></span><br><span class="line">  const Path = new <span class="built_in">Path2D</span>()</span><br><span class="line">  Path<span class="selector-class">.moveTo</span>(<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line">  Path<span class="selector-class">.bezierCurveTo</span>(<span class="number">350</span>,<span class="number">170</span>,<span class="number">400</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">300</span>)</span><br><span class="line">  Path<span class="selector-class">.bezierCurveTo</span>(<span class="number">200</span>,<span class="number">200</span>,<span class="number">250</span>,<span class="number">170</span>,<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line">  ctx<span class="selector-class">.stroke</span>(Path)</span><br></pre></td></tr></table></figure>
+<h2 id="六样式和颜色控制"><a class="markdownIt-Anchor" href="#六样式和颜色控制">#</a> 六。样式和颜色控制</h2>
+<h3 id="颜色"><a class="markdownIt-Anchor" href="#颜色">#</a> 颜色</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fillStyle = <span class="attribute">color</span></span><br><span class="line">strokeStyle = <span class="attribute">color</span></span><br></pre></td></tr></table></figure>
+<h3 id="全局透明度"><a class="markdownIt-Anchor" href="#全局透明度">#</a> 全局透明度</h3>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">globalAlpha = <span class="selector-attr">[0~1]</span></span><br></pre></td></tr></table></figure>
+<h2 id="七线性渐变和径向渐变"><a class="markdownIt-Anchor" href="#七线性渐变和径向渐变">#</a> 七。线性渐变和径向渐变</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">线性渐变</span><br><span class="line">let line = ctx<span class="selector-class">.createLinearGradient</span>(起点x,起点y,终点x,终点y)</span><br><span class="line">line<span class="selector-class">.addColorStop</span>(<span class="number">0</span>~<span class="number">1</span>,color)</span><br><span class="line">ctx<span class="selector-class">.fillStyle</span> = line</span><br><span class="line">例子:</span><br><span class="line">let line = ctx.<span class="built_in">createLinearGradient</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">600</span>,<span class="number">300</span>)</span><br><span class="line">  line.<span class="built_in">addColorStop</span>(<span class="number">0</span>,<span class="string">&quot;red&quot;</span>)</span><br><span class="line">  line.<span class="built_in">addColorStop</span>(<span class="number">1</span>,<span class="string">&quot;blue&quot;</span>)</span><br><span class="line">  ctx.fillStyle= line</span><br><span class="line">径向渐变</span><br><span class="line">let radia = ctx.<span class="built_in">createRadialGradient</span>(圆<span class="number">1</span>x，圆<span class="number">1</span>y，圆<span class="number">1</span>r，圆<span class="number">2</span>x，圆<span class="number">2</span>y，圆<span class="number">2</span>r)</span><br><span class="line">radia.<span class="built_in">addColorStop</span>(<span class="number">0</span>~<span class="number">1</span>,color)</span><br><span class="line">ctx.fillStyle = radia</span><br></pre></td></tr></table></figure>
+<h2 id="八圆锥渐变"><a class="markdownIt-Anchor" href="#八圆锥渐变">#</a> 八。圆锥渐变</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let cone = ctx<span class="selector-class">.createConicGradient</span>(角度,x,y)</span><br><span class="line">cone<span class="selector-class">.addColorStop</span>(<span class="number">0</span>~<span class="number">1</span>,color)</span><br><span class="line">ctx<span class="selector-class">.fillStyle</span> = cone</span><br><span class="line">例子：</span><br><span class="line">let cone = ctx<span class="selector-class">.createConicGradient</span>(<span class="number">0</span>,<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line">  cone<span class="selector-class">.addColorStop</span>(<span class="number">0</span>,&#x27;red&#x27;)</span><br><span class="line">  cone<span class="selector-class">.addColorStop</span>(<span class="number">1</span>,&quot;blue&quot;)</span><br><span class="line">  ctx<span class="selector-class">.fillStyle</span> = cone</span><br><span class="line">  ctx<span class="selector-class">.fillRect</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">600</span>,<span class="number">400</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="九pattern模式"><a class="markdownIt-Anchor" href="#九pattern模式">#</a> 九.pattern 模式</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const <span class="selector-tag">img</span> = new <span class="built_in">Image</span>()</span><br><span class="line"><span class="selector-tag">img</span><span class="selector-class">.src</span> = ...</span><br><span class="line"><span class="selector-tag">img</span><span class="selector-class">.onload</span> = () =&gt; &#123;</span><br><span class="line">	<span class="comment">//创建图案对象</span></span><br><span class="line">	let pattern = ctx<span class="selector-class">.createPattern</span>(图片对象img,重复方式&quot;repeat&quot;)</span><br><span class="line">	ctx<span class="selector-class">.fillStyle</span> = pattern</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十线段和虚线样式"><a class="markdownIt-Anchor" href="#十线段和虚线样式">#</a> 十。线段和虚线样式</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lineWidth = value<span class="comment">//线条粗细</span></span><br><span class="line">lineCap = &quot;butt&quot;默认 || &quot;round&quot;半圆 || square正方形<span class="comment">//设置端点样式</span></span><br><span class="line">lineJoin = &quot;mitter&quot;默认 || &quot;round&quot;磨圆 || &quot;bevel&quot;折平<span class="comment">//设置两个线段连接处的样式</span></span><br><span class="line">设置虚线</span><br><span class="line"><span class="built_in">setLineDash</span>([实线长度,虚线长度])</span><br><span class="line">lineDashOffset = value <span class="comment">//偏移</span></span><br></pre></td></tr></table></figure>
+<h2 id="十一阴影"><a class="markdownIt-Anchor" href="#十一阴影">#</a> 十一。阴影</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctx<span class="selector-class">.shadowOffsetX</span> = value</span><br><span class="line">ctx<span class="selector-class">.shadowOffsetY</span> = value</span><br><span class="line">ctx<span class="selector-class">.shadowBlur</span> = value</span><br><span class="line">ctx<span class="selector-class">.shadowColor</span> = <span class="attribute">color</span></span><br></pre></td></tr></table></figure>
+<h2 id="十二绘制图片"><a class="markdownIt-Anchor" href="#十二绘制图片">#</a> 十二。绘制图片</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>()</span><br><span class="line">img.<span class="property">src</span> = ...</span><br><span class="line">img.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"><span class="comment">//第一种绘制图片的方式</span></span><br><span class="line">ctx.<span class="title function_">drawImage</span>(img,x,y,width,height)</span><br><span class="line">ctx.<span class="title function_">drawImage</span>(img,裁剪x轴,裁剪y轴,裁剪宽度width,裁剪高度heigt,x,y,width,height)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十三绘制视频"><a class="markdownIt-Anchor" href="#十三绘制视频">#</a> 十三。绘制视频</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> video = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;video&#x27;</span>)</span><br><span class="line">video.<span class="property">src</span> = ...</span><br><span class="line"><span class="comment">//requestAnimationFrame()请求动画帧,video每过一帧执行一次</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">ctx.<span class="title function_">drawImage</span>(video,x,y,width,height)</span><br><span class="line"><span class="title function_">requestAnimationFrame</span>(render)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十四绘制文字"><a class="markdownIt-Anchor" href="#十四绘制文字">#</a> 十四。绘制文字</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ctx.<span class="property">font</span> = <span class="string">&quot;100px Microsoft Yahei&quot;</span></span><br><span class="line">ctx.<span class="title function_">fillText</span>(内容,x,y,最大像素)</span><br><span class="line">ctx.<span class="title function_">strokeText</span>(内容,x,y,最大像素)</span><br><span class="line"><span class="comment">//文本对齐选项</span></span><br><span class="line">ctx.<span class="property">textAlign</span> = <span class="string">&quot;center&quot;</span>水平居中 || <span class="string">&quot;end&quot;</span>末尾(right) || <span class="string">&quot;start&quot;</span>默认(left)</span><br><span class="line">ctx.<span class="property">textBaseline</span> = <span class="string">&quot;middle&quot;</span>垂直居中 || <span class="string">&quot;center&quot;</span>水平垂直居中 || <span class="string">&quot;top&quot;</span> || <span class="string">&quot;bottom&quot;</span> || <span class="title function_">alphabetic</span>(默认)基线对齐</span><br><span class="line"><span class="comment">//文本方向</span></span><br><span class="line">ctx.<span class="property">direction</span> = <span class="string">&quot;rtl&quot;</span>从右到左 <span class="comment">//一般不用</span></span><br><span class="line"><span class="comment">//预测量文本宽度</span></span><br><span class="line"><span class="keyword">let</span> text = ctx.<span class="title function_">measureText</span>(内容)<span class="comment">//返回一个对象，包含所占宽度的信息</span></span><br></pre></td></tr></table></figure>
+<h2 id="十五位移缩放旋转"><a class="markdownIt-Anchor" href="#十五位移缩放旋转">#</a> 十五。位移，缩放，旋转</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">位移</span><br><span class="line">ctx<span class="selector-class">.translate</span>(x,y)<span class="comment">//移动的是坐标系</span></span><br><span class="line">缩放</span><br><span class="line">ctx<span class="selector-class">.scale</span>(水平缩放倍数，竖直缩放倍数)<span class="comment">//缩放的是坐标系</span></span><br><span class="line">旋转</span><br><span class="line">ctx<span class="selector-class">.rotate</span>(度数)</span><br></pre></td></tr></table></figure>
+<h2 id="十六合成图像模式"><a class="markdownIt-Anchor" href="#十六合成图像模式">#</a> 十六。合成图像模式</h2>
+<p>globalCompositeOperation = value</p>
+<p><img data-src="C:%5CUsers%5C%E6%BD%98%E9%BA%92%E9%BA%9F%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230205223634680.png" alt="image-20230205223634680"></p>
+<p>属性很多翻文档</p>
+<p>destination-out: 之前内容存在于与新图像不重叠的部分，可用来使图片透明</p>
+<h2 id="十七裁剪"><a class="markdownIt-Anchor" href="#十七裁剪">#</a> 十七。裁剪</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx<span class="selector-class">.clip</span>(path2d对象或不写)</span><br></pre></td></tr></table></figure>
+<h2 id="十八状态的保存和恢复"><a class="markdownIt-Anchor" href="#十八状态的保存和恢复">#</a> 十八。状态的保存和恢复</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">save</span>()<span class="comment">//保存画布状态</span></span><br><span class="line"><span class="built_in">restore</span>()<span class="comment">//恢复画布状态</span></span><br></pre></td></tr></table></figure>
+<h2 id="十九像素操作"><a class="markdownIt-Anchor" href="#十九像素操作">#</a> 十九。像素操作</h2>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let imageData = ctx<span class="selector-class">.getImageData</span>(startX,startY,endX,endY)<span class="comment">//返回一个数组</span></span><br><span class="line">imageData<span class="selector-class">.data</span><span class="selector-attr">[i]</span>每四个是每一个像素点</span><br><span class="line">imageData<span class="selector-class">.data</span><span class="selector-attr">[0 + 4i]</span> r</span><br><span class="line">imageData<span class="selector-class">.data</span><span class="selector-attr">[1 + 4i]</span> g</span><br><span class="line">imageData<span class="selector-class">.data</span><span class="selector-attr">[2 + 4i]</span> <span class="selector-tag">b</span></span><br><span class="line">imageData<span class="selector-class">.data</span><span class="selector-attr">[3 + 4i]</span> <span class="selector-tag">a</span></span><br><span class="line">ctx<span class="selector-class">.putImageData</span>(imageData,放置x,放置y,clipStartX,clipStartY,clipEndX,clipEndY)</span><br></pre></td></tr></table></figure>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-08-01 23:43:20" itemprop="dateModified" datetime="2023-08-01T23:43:20+08:00">2023-08-01</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="xiyueyezibile 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="xiyueyezibile 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="xiyueyezibile 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>xiyueyezibile <i class="ic i-at"><em>@</em></i>汐月也自闭了的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/" title="canvas基础">http://example.com/2023/08/01/html/canvas基础/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185740.md.jpg" title="前端实现将彩色图变成黑白色">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Javascript</span>
+  <h3>前端实现将彩色图变成黑白色</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#canvas%E5%BF%85%E9%A1%BB%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text"> canvas 必须的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96canvas%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA"><span class="toc-number">2.</span> <span class="toc-text"> 获取 canvas 语法提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AAcanvas"><span class="toc-number">3.</span> <span class="toc-text"> 第一个 canvas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%94%BB%E7%AC%94"><span class="toc-number">4.</span> <span class="toc-text"> 获取画笔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E7%9F%A9%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text"> 一。矩形绘制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E5%A1%AB%E5%85%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text"> 1. 填充模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E8%B7%AF%E5%BE%84%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text"> 2. 路径模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E6%B8%85%E9%99%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.3.</span> <span class="toc-text"> 3. 清除模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E6%8B%86%E5%BC%80%E5%86%99%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text"> 4. 拆开写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%9C%86%E5%BC%A7%E7%BB%98%E5%88%B6"><span class="toc-number">6.</span> <span class="toc-text"> 二。圆弧绘制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#arcto%E7%BB%98%E5%88%B6%E5%9C%86%E5%BC%A7"><span class="toc-number">6.1.</span> <span class="toc-text"> arcTo 绘制圆弧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#moveto%E7%A7%BB%E5%8A%A8%E7%94%BB%E7%AC%94%E4%BD%8D%E7%BD%AE"><span class="toc-number">6.2.</span> <span class="toc-text"> moveTo 移动画笔位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%BA%BF%E6%AE%B5%E7%BB%98%E5%88%B6"><span class="toc-number">7.</span> <span class="toc-text"> 三。线段绘制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF"><span class="toc-number">8.</span> <span class="toc-text"> 四。贝塞尔曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94path2d"><span class="toc-number">9.</span> <span class="toc-text"> 五.path2d</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E6%A0%B7%E5%BC%8F%E5%92%8C%E9%A2%9C%E8%89%B2%E6%8E%A7%E5%88%B6"><span class="toc-number">10.</span> <span class="toc-text"> 六。样式和颜色控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-number">10.1.</span> <span class="toc-text"> 颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">10.2.</span> <span class="toc-text"> 全局透明度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98%E5%92%8C%E5%BE%84%E5%90%91%E6%B8%90%E5%8F%98"><span class="toc-number">11.</span> <span class="toc-text"> 七。线性渐变和径向渐变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E5%9C%86%E9%94%A5%E6%B8%90%E5%8F%98"><span class="toc-number">12.</span> <span class="toc-text"> 八。圆锥渐变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9Dpattern%E6%A8%A1%E5%BC%8F"><span class="toc-number">13.</span> <span class="toc-text"> 九.pattern 模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E7%BA%BF%E6%AE%B5%E5%92%8C%E8%99%9A%E7%BA%BF%E6%A0%B7%E5%BC%8F"><span class="toc-number">14.</span> <span class="toc-text"> 十。线段和虚线样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E9%98%B4%E5%BD%B1"><span class="toc-number">15.</span> <span class="toc-text"> 十一。阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E7%BB%98%E5%88%B6%E5%9B%BE%E7%89%87"><span class="toc-number">16.</span> <span class="toc-text"> 十二。绘制图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E7%BB%98%E5%88%B6%E8%A7%86%E9%A2%91"><span class="toc-number">17.</span> <span class="toc-text"> 十三。绘制视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E7%BB%98%E5%88%B6%E6%96%87%E5%AD%97"><span class="toc-number">18.</span> <span class="toc-text"> 十四。绘制文字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E4%BD%8D%E7%A7%BB%E7%BC%A9%E6%94%BE%E6%97%8B%E8%BD%AC"><span class="toc-number">19.</span> <span class="toc-text"> 十五。位移，缩放，旋转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E5%90%88%E6%88%90%E5%9B%BE%E5%83%8F%E6%A8%A1%E5%BC%8F"><span class="toc-number">20.</span> <span class="toc-text"> 十六。合成图像模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%83%E8%A3%81%E5%89%AA"><span class="toc-number">21.</span> <span class="toc-text"> 十七。裁剪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%85%AB%E7%8A%B6%E6%80%81%E7%9A%84%E4%BF%9D%E5%AD%98%E5%92%8C%E6%81%A2%E5%A4%8D"><span class="toc-number">22.</span> <span class="toc-text"> 十八。状态的保存和恢复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B9%9D%E5%83%8F%E7%B4%A0%E6%93%8D%E4%BD%9C"><span class="toc-number">23.</span> <span class="toc-text"> 十九。像素操作</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/06/10/html/html%E5%A4%A7%E5%85%A8/" rel="bookmark" title="html全解">html全解</a></li><li><a href="/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/" rel="bookmark" title="SVG初上手">SVG初上手</a></li><li class="active"><a href="/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/" rel="bookmark" title="canvas基础">canvas基础</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="xiyueyezibile"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">xiyueyezibile</p>
+  <div class="description" itemprop="description">这个需求写不了</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">42</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpeXVleWV6aWJpbGU=" title="https:&#x2F;&#x2F;github.com&#x2F;xiyueyezibile"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <a href="/2859439384@qq.com" title="2859439384@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C++">C++</a>
+</div>
+
+    <span><a href="/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/" title="c++入门">c++入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/" title="关于函数闭包的理解">关于函数闭包的理解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/07/25/Javascript/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" title="JavaScript语法基础">JavaScript语法基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/" title="memcpy与memmove">memcpy与memmove</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" title="音频可视化">音频可视化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" title="前后端实现websocket通信">前后端实现websocket通信</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="分类于 数据结构与算法">数据结构与算法</a>
+</div>
+
+    <span><a href="/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/JS%20Set%E4%BD%BF%E7%94%A8/" title="JS Set使用">JS Set使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/react-router/" title="分类于 react-router">react-router</a>
+</div>
+
+    <span><a href="/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/" title="react-router-v6全解析">react-router-v6全解析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" title="前端实现将彩色图变成黑白色">前端实现将彩色图变成黑白色</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">xiyueyezibile @ Xiyueyezibile</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">153k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:19</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/08/01/html/canvas基础/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

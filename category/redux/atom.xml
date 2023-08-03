@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-05-09T10:52:38.779Z</updated>
     <entry>
-        <id>http://example.com/2023/05/09/Redux/</id>
+        <id>http://example.com/2023/05/09/Redux/Redux/</id>
         <title>Redux</title>
-        <link rel="alternate" href="http://example.com/2023/05/09/Redux/"/>
+        <link rel="alternate" href="http://example.com/2023/05/09/Redux/Redux/"/>
         <content type="html">&lt;h2 id=&#34;redux是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#redux是什么&#34;&gt;#&lt;/a&gt; Redux 是什么？&lt;/h2&gt;
 &lt;p&gt;1. &lt;code&gt;redux&lt;/code&gt;  是一个独立专门用于做状态管理的 JS 库 (不是 react 插件库)&lt;br&gt;
  2. 它可以用在 react, angular, vue 等项目中，但基本与 react 配合使用&lt;br&gt;

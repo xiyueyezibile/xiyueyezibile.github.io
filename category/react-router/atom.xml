@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-05-20T05:28:51.270Z</updated>
     <entry>
-        <id>http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</id>
+        <id>http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</id>
         <title>react-router-v6全解析</title>
-        <link rel="alternate" href="http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/"/>
+        <link rel="alternate" href="http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/"/>
         <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;React Router 是一个基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZhY2Vib29rLmdpdGh1Yi5pby9yZWFjdC8=&#34;&gt;React&lt;/span&gt; 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;

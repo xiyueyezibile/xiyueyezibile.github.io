@@ -8,9 +8,9 @@
         <pubDate>Sat, 10 Jun 2023 21:08:51 +0800</pubDate>
         <lastBuildDate>Sat, 10 Jun 2023 21:08:51 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/06/10/axios/</guid>
+            <guid isPermalink="true">http://example.com/2023/06/10/axios/axios/</guid>
             <title>axios</title>
-            <link>http://example.com/2023/06/10/axios/</link>
+            <link>http://example.com/2023/06/10/axios/axios/</link>
             <pubDate>Sat, 10 Jun 2023 21:08:51 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i axios&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

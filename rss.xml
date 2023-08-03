@@ -8,9 +8,9 @@
         <pubDate>Tue, 01 Aug 2023 23:42:39 +0800</pubDate>
         <lastBuildDate>Tue, 01 Aug 2023 23:42:39 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/</guid>
             <title>canvas基础</title>
-            <link>http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/</link>
+            <link>http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/</link>
             <pubDate>Tue, 01 Aug 2023 23:42:39 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;canvas必须的属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvas必须的属性&#34;&gt;#&lt;/a&gt; canvas 必须的属性&lt;/h2&gt;
 &lt;p&gt;id,width,height&lt;/p&gt;
@@ -82,9 +82,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</guid>
+            <guid isPermalink="true">http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</guid>
             <title>前端实现将彩色图变成黑白色</title>
-            <link>http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</link>
+            <link>http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</link>
             <pubDate>Tue, 01 Aug 2023 23:41:25 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;canvasjs实现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvasjs实现&#34;&gt;#&lt;/a&gt; canvas+JS 实现&lt;/h2&gt;
 &lt;h3 id=&#34;前置知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前置知识&#34;&gt;#&lt;/a&gt; 前置知识&lt;/h3&gt;
@@ -99,9 +99,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+            <guid isPermalink="true">http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
             <title>前端设计模式|青训营</title>
-            <link>http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+            <link>http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
             <pubDate>Tue, 01 Aug 2023 10:23:58 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文部分是参考文章整合，并进行错误纠正，详情请看参考文章。&lt;/p&gt;
 &lt;h2 id=&#34;什么是设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是设计模式&#34;&gt;#&lt;/a&gt; 什么是设计模式？&lt;/h2&gt;
@@ -152,9 +152,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</guid>
+            <guid isPermalink="true">http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</guid>
             <title>SVG初上手</title>
-            <link>http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</link>
+            <link>http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</link>
             <pubDate>Tue, 01 Aug 2023 10:20:46 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文部分是参考文章整合，并进行错误纠正，详情请看参考文章。&lt;/p&gt;
 &lt;h2 id=&#34;优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优势&#34;&gt;#&lt;/a&gt; 优势&lt;/h2&gt;
@@ -268,9 +268,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">http://example.com/2023/07/25/Javascript/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</guid>
             <title>JavaScript语法基础</title>
-            <link>http://example.com/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</link>
+            <link>http://example.com/2023/07/25/Javascript/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</link>
             <pubDate>Tue, 25 Jul 2023 01:32:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;javascript背景概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript背景概述&#34;&gt;#&lt;/a&gt; JavaScript 背景概述&lt;/h2&gt;
 &lt;h3 id=&#34;什么是javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是javascript&#34;&gt;#&lt;/a&gt; 什么是 JavaScript&lt;/h3&gt;
@@ -729,9 +729,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/</guid>
             <title>c++入门</title>
-            <link>http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/</link>
+            <link>http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/</link>
             <pubDate>Fri, 21 Jul 2023 22:52:20 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;cc的作用领域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cc的作用领域&#34;&gt;#&lt;/a&gt; C/c++ 的作用领域&lt;/h2&gt;
 &lt;ol&gt;
@@ -877,9 +877,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/07/11/css%E5%A4%A7%E5%85%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/07/11/css/css%E5%A4%A7%E5%85%A8/</guid>
             <title>css大全</title>
-            <link>http://example.com/2023/07/11/css%E5%A4%A7%E5%85%A8/</link>
+            <link>http://example.com/2023/07/11/css/css%E5%A4%A7%E5%85%A8/</link>
             <pubDate>Tue, 11 Jul 2023 23:00:37 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;引入方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引入方式&#34;&gt;#&lt;/a&gt; 引入方式&lt;/h2&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;内部样式表：写到html内部&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;行内样式表：&amp;lt;div style=&amp;quot;color: red; &amp;quot; &amp;gt; &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;外部样式表：&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css文件路径&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1382,9 +1382,9 @@ cover 把背景图片扩展到足够大，以使背景图像完全覆盖背景�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
+            <guid isPermalink="true">http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
             <title>git快速上手</title>
-            <link>http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
+            <link>http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
             <pubDate>Sun, 09 Jul 2023 23:16:53 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;克隆别的的仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#克隆别的的仓库&#34;&gt;#&lt;/a&gt; 克隆别的的仓库&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; github地址&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1527,9 +1527,9 @@ cover 把背景图片扩展到足够大，以使背景图像完全覆盖背景�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/</guid>
             <title>html全解</title>
-            <link>http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/</link>
+            <link>http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/</link>
             <pubDate>Sat, 10 Jun 2023 21:13:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;这是我学习 html 的笔记，如果有看不懂的上网搜索&lt;/p&gt;
 &lt;h2 id=&#34;10-doctype和lang以及字符集的作用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-doctype和lang以及字符集的作用&#34;&gt;#&lt;/a&gt; 10-DOCTYPE 和 lang 以及字符集的作用&lt;/h2&gt;
@@ -1714,9 +1714,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/06/10/axios/</guid>
+            <guid isPermalink="true">http://example.com/2023/06/10/axios/axios/</guid>
             <title>axios</title>
-            <link>http://example.com/2023/06/10/axios/</link>
+            <link>http://example.com/2023/06/10/axios/axios/</link>
             <pubDate>Sat, 10 Jun 2023 21:08:51 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i axios&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1736,9 +1736,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</guid>
             <title>设置图形验证码</title>
-            <link>http://example.com/2023/05/27/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</link>
+            <link>http://example.com/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;svg-captcha&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#svg-captcha&#34;&gt;#&lt;/a&gt; svg-captcha&lt;/h3&gt;
@@ -1799,9 +1799,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
             <title>模块化</title>
-            <link>http://example.com/2023/05/27/%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+            <link>http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;在 node 中，默认支持的模块化规范叫做 CommonJS&lt;/p&gt;
 &lt;p&gt;在 CommonJS 中一个 js 文件就是一个模块&lt;/p&gt;
@@ -1906,9 +1906,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/REST%E5%92%8CAJAX/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/REST%E5%92%8CAJAX/</guid>
             <title>rest和ajax</title>
-            <link>http://example.com/2023/05/27/REST%E5%92%8CAJAX/</link>
+            <link>http://example.com/2023/05/27/nodeJS/REST%E5%92%8CAJAX/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;rest&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rest&#34;&gt;#&lt;/a&gt; REST&lt;/h2&gt;
 &lt;p&gt;REST 表示层状态的传输&lt;/p&gt;
@@ -2014,9 +2014,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
             <title>npm包管理器</title>
-            <link>http://example.com/2023/05/27/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+            <link>http://example.com/2023/05/27/nodeJS/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;package.json 是包的描述文件&lt;/p&gt;
 &lt;p&gt;node 中通过该文件对项目进行描述&lt;/p&gt;
@@ -2081,17 +2081,17 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/node%20http/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/node%20http/</guid>
             <title>http搭建服务器</title>
-            <link>http://example.com/2023/05/27/node%20http/</link>
+            <link>http://example.com/2023/05/27/nodeJS/node%20http/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;62&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; http = &lt;span class=&#34;built_in&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;http&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Url&lt;/span&gt; = &lt;span class=&#34;built_in&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;url&amp;#x27;&lt;/span&gt;)&lt;span class=&#34;comment&#34;&gt;//格式化url&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; port = &lt;span class=&#34;number&#34;&gt;3000&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt; = [&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;account&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;#x27;admin&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;password&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;#x27;123456&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//创建服务器实例&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; server = http.&lt;span class=&#34;title function_&#34;&gt;createServer&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;req,res&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;comment&#34;&gt;// console.log(req.url);//请求地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// console.log(req.method);//请求方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; url = &lt;span class=&#34;title class_&#34;&gt;Url&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;parse&lt;/span&gt;(req.&lt;span class=&#34;property&#34;&gt;url&lt;/span&gt;)&lt;span class=&#34;comment&#34;&gt;//url.query获取参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; pathname = url.&lt;span class=&#34;property&#34;&gt;pathname&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; method = req.&lt;span class=&#34;property&#34;&gt;method&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; datas = &lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(method==&lt;span class=&#34;string&#34;&gt;&amp;quot;GET&amp;quot;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(pathname == &lt;span class=&#34;string&#34;&gt;&amp;#x27;/reg&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        url = url.&lt;span class=&#34;property&#34;&gt;query&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;split&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;amp;&amp;#x27;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;map&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;params&#34;&gt;item&lt;/span&gt;=&amp;gt;&lt;/span&gt;item.&lt;span class=&#34;title function_&#34;&gt;split&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;=&amp;#x27;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;push&lt;/span&gt;(&amp;#123;&lt;span class=&#34;attr&#34;&gt;account&lt;/span&gt;:url[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;],&lt;span class=&#34;attr&#34;&gt;password&lt;/span&gt;:url[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;注册成功&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(method==&lt;span class=&#34;string&#34;&gt;&amp;quot;POST&amp;quot;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(pathname);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(pathname == &lt;span class=&#34;string&#34;&gt;&amp;#x27;/login&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        req.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;data&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;data&lt;/span&gt;)=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          datas += data.&lt;span class=&#34;title function_&#34;&gt;toString&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        req.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;end&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;function&#34;&gt;()=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          datas = &lt;span class=&#34;title class_&#34;&gt;JSON&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;parse&lt;/span&gt;(datas)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(datas);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;forEach&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;params&#34;&gt;item&lt;/span&gt;=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(item.&lt;span class=&#34;property&#34;&gt;account&lt;/span&gt; === datas.&lt;span class=&#34;property&#34;&gt;account&lt;/span&gt; &amp;amp;&amp;amp; item.&lt;span class=&#34;property&#34;&gt;password&lt;/span&gt; === datas.&lt;span class=&#34;property&#34;&gt;password&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;登录成功&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125; &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;登录失败&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;end&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//  res.end(&amp;#x27;???&amp;#x27;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//监听port端口号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server.&lt;span class=&#34;title function_&#34;&gt;listen&lt;/span&gt;(port, &lt;span class=&#34;function&#34;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;`服务器运行在 http://127.0.0.1:&lt;span class=&#34;subst&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;/`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/http%E5%8D%8F%E8%AE%AE/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/</guid>
             <title>http协议</title>
-            <link>http://example.com/2023/05/27/http%E5%8D%8F%E8%AE%AE/</link>
+            <link>http://example.com/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;一当在浏览器中输入地址以后发生了什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一当在浏览器中输入地址以后发生了什么&#34;&gt;#&lt;/a&gt; （一）当在浏览器中输入地址以后发生了什么？&lt;/h4&gt;
 &lt;p&gt;1.DNS 解析，获取网站的 ip 地址&lt;/p&gt;
@@ -2182,9 +2182,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/27/express/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/27/nodeJS/express/</guid>
             <title>express</title>
-            <link>http://example.com/2023/05/27/express/</link>
+            <link>http://example.com/2023/05/27/nodeJS/express/</link>
             <pubDate>Sat, 27 May 2023 10:21:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;code&gt;express&lt;/code&gt;  是 node 中的服务器软件&lt;/p&gt;
 &lt;p&gt;通过 express 可以快速的在 node 中搭建一个 web 服务器&lt;/p&gt;
@@ -2220,9 +2220,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</guid>
             <title>浮点型存储规则</title>
-            <link>http://example.com/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</link>
+            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</link>
             <pubDate>Fri, 26 May 2023 18:07:29 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;(-1)^S * M * 2^E&lt;/p&gt;
 &lt;p&gt;(-1)^S 表示符号位，S 为 0 为正，S 为 1 为负&lt;/p&gt;
@@ -2261,9 +2261,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/</guid>
             <title>memcpy与memmove</title>
-            <link>http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/</link>
+            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/</link>
             <pubDate>Fri, 26 May 2023 18:07:29 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;memcpy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#memcpy&#34;&gt;#&lt;/a&gt; memcpy&lt;/h2&gt;
 &lt;p&gt;memcpy 复制内存块&lt;/p&gt;
@@ -2277,9 +2277,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</guid>
             <title>C语言结构体类型所占空间的大小</title>
-            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</link>
+            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</link>
             <pubDate>Fri, 26 May 2023 18:07:29 +0800</pubDate>
             <description><![CDATA[ &lt;figure class=&#34;highlight c&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Node&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;char&lt;/span&gt; a;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;long&lt;/span&gt; b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;short&lt;/span&gt; s;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;short&lt;/span&gt; c;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;c语言结构体内存对齐规则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言结构体内存对齐规则&#34;&gt;#&lt;/a&gt; C 语言结构体内存对齐规则：&lt;/h2&gt;
@@ -2300,9 +2300,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</guid>
             <title>指针数组与数组指针</title>
-            <link>http://example.com/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</link>
+            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</link>
             <pubDate>Fri, 26 May 2023 18:07:29 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;含义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#含义&#34;&gt;#&lt;/a&gt; 含义&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;指针数组&lt;/strong&gt;：指针数组可以说成是” 指针的数组”，首先这个变量是一个数组，其次，” 指针” 修饰这个数组，意思是说这个数组的所有元素都是指针类型，在 32 位系统中，指针占四个字节。&lt;br&gt;
@@ -2318,9 +2318,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
             <title>数据类型转换</title>
-            <link>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+            <link>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
             <pubDate>Fri, 26 May 2023 18:07:29 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;自动类型转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自动类型转换&#34;&gt;#&lt;/a&gt; 自动类型转换&lt;/h2&gt;
 &lt;p&gt;自动类型转换按照&lt;strong&gt;数据长度增加&lt;/strong&gt;的方向进行，以保证数值不失真或精度不降低.&lt;/p&gt;
@@ -2331,9 +2331,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
             <title>动态规划</title>
-            <link>http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+            <link>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
             <pubDate>Fri, 26 May 2023 18:06:01 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;动态规划，无非就是利用&lt;strong&gt;历史记录&lt;/strong&gt;，来避免我们的重复计算。而这些&lt;strong&gt;历史记录&lt;/strong&gt;，我们得需要一些&lt;strong&gt;变量&lt;/strong&gt;来保存，一般是用&lt;strong&gt;一维数组&lt;/strong&gt;或者&lt;strong&gt;二维数组&lt;/strong&gt;来保存。下面我们先来讲下做动态规划题很重要的三个步骤，&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一步骤&lt;/strong&gt;：定义&lt;strong&gt;数组元素的含义&lt;/strong&gt;，上面说了，我们会用一个数组，来保存历史数组，假设用一维数组 dp [] 吧。这个时候有一个非常非常重要的点，就是规定你这个数组元素的含义，例如你的 dp [i] 是代表什么意思？&lt;/p&gt;
@@ -2362,9 +2362,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</guid>
             <title>react-router-v6全解析</title>
-            <link>http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</link>
+            <link>http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</link>
             <pubDate>Sat, 20 May 2023 13:28:51 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;React Router 是一个基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZhY2Vib29rLmdpdGh1Yi5pby9yZWFjdC8=&#34;&gt;React&lt;/span&gt; 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。&lt;/p&gt;
@@ -2492,9 +2492,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</guid>
             <title>Umi max菜单设置问题</title>
-            <link>http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</link>
+            <link>http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</link>
             <pubDate>Mon, 15 May 2023 21:39:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Umimax 根据路由来生产菜单侧边框&lt;/p&gt;
 &lt;p&gt;分辨子路由和生成二级菜单只看有无名字&lt;/p&gt;
@@ -2506,9 +2506,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/Umimax/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/Umimax/</guid>
             <title>Umi max详解</title>
-            <link>http://example.com/2023/05/15/Umimax/</link>
+            <link>http://example.com/2023/05/15/Umi/Umimax/</link>
             <pubDate>Mon, 15 May 2023 21:37:56 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;全局初始状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局初始状态&#34;&gt;#&lt;/a&gt; 全局初始状态&lt;/h2&gt;
 &lt;p&gt;全局初始状态是一种特殊的 Model。&lt;/p&gt;
@@ -2616,9 +2616,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
             <title>UmiJS完全指南</title>
-            <link>http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
+            <link>http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
             <pubDate>Mon, 15 May 2023 21:35:46 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;启动项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动项目&#34;&gt;#&lt;/a&gt; 启动项目&lt;/h2&gt;
 &lt;p&gt;文档地址 https://v3.umijs.org/zh-CN/docs/mock&lt;/p&gt;
@@ -2770,9 +2770,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/09/Redux/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/09/Redux/Redux/</guid>
             <title>Redux</title>
-            <link>http://example.com/2023/05/09/Redux/</link>
+            <link>http://example.com/2023/05/09/Redux/Redux/</link>
             <pubDate>Tue, 09 May 2023 18:52:38 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;redux是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#redux是什么&#34;&gt;#&lt;/a&gt; Redux 是什么？&lt;/h2&gt;
 &lt;p&gt;1. &lt;code&gt;redux&lt;/code&gt;  是一个独立专门用于做状态管理的 JS 库 (不是 react 插件库)&lt;br&gt;
@@ -2841,9 +2841,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</guid>
             <title>函数防抖与函数节流</title>
-            <link>http://example.com/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;** 作用：** 函数节流和函数防抖两个都是优化高频率执行 js 代码的一种手段。&lt;/p&gt;
 &lt;h2 id=&#34;含义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#含义&#34;&gt;#&lt;/a&gt; 含义&lt;/h2&gt;
@@ -2869,9 +2869,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
             <title>关于函数闭包的理解</title>
-            <link>http://example.com/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
 &lt;p&gt;当一个函数的返回值是另外一个函数，而返回的那个函数如果调用了其父函数内部的其它变量，如果返回的这个函数在外部被执行，就产生了闭包&lt;/p&gt;
@@ -2887,9 +2887,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</guid>
             <title>js开启摄像头</title>
-            <link>http://example.com/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</link>
+            <link>http://example.com/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;canvas-drawimage&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvas-drawimage&#34;&gt;#&lt;/a&gt; canvas drawImage&lt;/h3&gt;
@@ -2915,9 +2915,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/JS%20Set%E4%BD%BF%E7%94%A8/</guid>
             <title>JS Set使用</title>
-            <link>http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/</link>
+            <link>http://example.com/2023/05/04/Javascript/JS%20Set%E4%BD%BF%E7%94%A8/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Set 类似与 Array 数组，但 Set 里面的元素不能重复&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; set = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Set&lt;/span&gt;([&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;14&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(set)&lt;span class=&#34;comment&#34;&gt;//10 12 14&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; array = [&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;14&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(array)&lt;span class=&#34;comment&#34;&gt;//10 10 12 14&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -2936,17 +2936,17 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/call,bind,apply/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/call,bind,apply/</guid>
             <title>call,bind,apply</title>
-            <link>http://example.com/2023/05/04/call,bind,apply/</link>
+            <link>http://example.com/2023/05/04/Javascript/call,bind,apply/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写call方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myCall&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,...rest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//call第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt; = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this，this就指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = obj.&lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(...rest)&lt;span class=&#34;comment&#34;&gt;//立即执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//删除防止越来越多&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; result&lt;span class=&#34;comment&#34;&gt;//返回执行的结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;一个&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;我是&amp;#x27;&lt;/span&gt; + &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;name&lt;/span&gt; + a + b);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fng.&lt;span class=&#34;title function_&#34;&gt;myCall&lt;/span&gt;(obj,&lt;span class=&#34;string&#34;&gt;&amp;quot;好&amp;quot;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写apply方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myApply&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,arr&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//apply第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt; = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = obj.&lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(...arr)&lt;span class=&#34;comment&#34;&gt;//立即执行函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//删除防止越来越多&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; result&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fng.&lt;span class=&#34;title function_&#34;&gt;myApply&lt;/span&gt;(obj,[&lt;span class=&#34;string&#34;&gt;&amp;quot;牛逼的&amp;quot;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写bind方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myBind&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,...rest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//bind第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; _this = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//1.返回一个函数，不会立即执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//2.函数的返回值里面调用call方法，当调用时就会执行更改this指向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;...otherrest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; _this.&lt;span class=&#34;title function_&#34;&gt;call&lt;/span&gt;(obj,...rest,...otherrest)&lt;span class=&#34;comment&#34;&gt;//执行时改变其this指向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; s = fng.&lt;span class=&#34;title function_&#34;&gt;myBind&lt;/span&gt;(obj,&lt;span class=&#34;string&#34;&gt;&amp;quot;厉害的&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;s&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/*&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;  总结：call方法和bind方法非常相似，在Function上定义方法不要用箭头函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        箭头函数导致this指向不会变，手写实现this指向改变都是把调用函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        变成改变this指向的对象下面的一个方法，然后在删除&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        而bind较不一样，要返回一个改变this指向的函数，通过前两种方法设置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        返回函数的返回值this指向改变去实现bind方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</guid>
             <title>base64转文件</title>
-            <link>http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</link>
+            <link>http://example.com/2023/05/04/Javascript/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;match方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#match方法&#34;&gt;#&lt;/a&gt; match 方法&lt;/h3&gt;
@@ -2980,9 +2980,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Array includes</title>
-            <link>http://example.com/2023/05/04/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>http://example.com/2023/05/04/Javascript/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;strong&gt; &lt;code&gt;includes()&lt;/code&gt; &lt;/strong&gt; 方法用来判断一个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTYlOTUlQjAlRTclQkIlODQmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;数组&lt;/span&gt;是否包含一个指定的值，根据情况，如果包含则返回  &lt;code&gt;true&lt;/code&gt; ，否则返回  &lt;code&gt;false&lt;/code&gt; 。&lt;/p&gt;
 &lt;figure class=&#34;highlight ts&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;arr.&lt;span class=&#34;title function_&#34;&gt;includes&lt;/span&gt;(searchElement) &lt;span class=&#34;comment&#34;&gt;// return true or false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;arr.&lt;span class=&#34;title function_&#34;&gt;includes&lt;/span&gt;(searchElement, fromIndex) &lt;span class=&#34;comment&#34;&gt;// return true or false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -2994,9 +2994,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
             <title>音频可视化</title>
-            <link>http://example.com/2023/05/04/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;用到的知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用到的知识&#34;&gt;#&lt;/a&gt; 用到的知识&lt;/h2&gt;
 &lt;h3 id=&#34;devicepixelratio-设备像素比&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devicepixelratio-设备像素比&#34;&gt;#&lt;/a&gt; devicePixelRatio 设备像素比&lt;/h3&gt;
@@ -3040,9 +3040,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</guid>
             <title>图片转base64</title>
-            <link>http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;filereader-异步读取文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#filereader-异步读取文件&#34;&gt;#&lt;/a&gt; FileReader 异步读取文件&lt;/h3&gt;
@@ -3066,9 +3066,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
             <title>图片懒加载</title>
-            <link>http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;intersectionobserver&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intersectionobserver&#34;&gt;#&lt;/a&gt; IntersectionObserver&lt;/h3&gt;
@@ -3093,9 +3093,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</guid>
             <title>使内容滚动到盒子底部</title>
-            <link>http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;通常用于评论之类的部分，出现新内容后自动滚动到盒子的底部，优化用户体验&lt;/p&gt;
 &lt;h2 id=&#34;react中使用ref获取元素对象并修改&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#react中使用ref获取元素对象并修改&#34;&gt;#&lt;/a&gt; React 中使用 Ref 获取元素对象并修改&lt;/h2&gt;
@@ -3135,9 +3135,9 @@ chrome/Opera Blink&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</guid>
+            <guid isPermalink="true">http://example.com/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</guid>
             <title>前后端实现websocket通信</title>
-            <link>http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</link>
+            <link>http://example.com/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</link>
             <pubDate>Thu, 04 May 2023 20:49:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;后端nodejshttp原生&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后端nodejshttp原生&#34;&gt;#&lt;/a&gt; 后端 nodeJS (http 原生)&lt;/h2&gt;
 &lt;h3 id=&#34;安装ws&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装ws&#34;&gt;#&lt;/a&gt; 安装 ws&lt;/h3&gt;

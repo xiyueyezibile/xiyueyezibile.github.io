@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-08-01T15:42:39.434Z</updated>
     <entry>
-        <id>http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/</id>
+        <id>http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/</id>
         <title>canvas基础</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/canvas%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/html/canvas%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h2 id=&#34;canvas必须的属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvas必须的属性&#34;&gt;#&lt;/a&gt; canvas 必须的属性&lt;/h2&gt;
 &lt;p&gt;id,width,height&lt;/p&gt;
 &lt;h2 id=&#34;获取canvas语法提示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取canvas语法提示&#34;&gt;#&lt;/a&gt; 获取 canvas 语法提示&lt;/h2&gt;
@@ -79,9 +79,9 @@
         <updated>2023-08-01T15:42:39.434Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</id>
+        <id>http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</id>
         <title>前端实现将彩色图变成黑白色</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/"/>
         <content type="html">&lt;h2 id=&#34;canvasjs实现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvasjs实现&#34;&gt;#&lt;/a&gt; canvas+JS 实现&lt;/h2&gt;
 &lt;h3 id=&#34;前置知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前置知识&#34;&gt;#&lt;/a&gt; 前置知识&lt;/h3&gt;
 &lt;h4 id=&#34;canvasgetimagedata&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvasgetimagedata&#34;&gt;#&lt;/a&gt; canvas.getImageData()&lt;/h4&gt;
@@ -96,9 +96,9 @@
         <updated>2023-08-01T15:41:25.330Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+        <id>http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
         <title>前端设计模式|青训营</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
         <content type="html">&lt;p&gt;本文部分是参考文章整合，并进行错误纠正，详情请看参考文章。&lt;/p&gt;
 &lt;h2 id=&#34;什么是设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是设计模式&#34;&gt;#&lt;/a&gt; 什么是设计模式？&lt;/h2&gt;
 &lt;p&gt;设计模式是对软件设计开发过程中反复出现的某类问题的&lt;strong&gt;通用解决方案&lt;/strong&gt;。设计模式更多的是指导思想和方法论，而不是现成的代码，当然每种设计模式都有每种语言中的具体实现方式。学习设计模式更多的是理解各种模式的内在思想和解决的问题，毕竟这是前人无数经验总结成的最佳实践，而代码实现则是对加深理解的辅助。&lt;/p&gt;
@@ -149,9 +149,9 @@
         <updated>2023-08-01T02:23:58.413Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</id>
+        <id>http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/</id>
         <title>SVG初上手</title>
-        <link rel="alternate" href="http://example.com/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/"/>
+        <link rel="alternate" href="http://example.com/2023/08/01/html/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/"/>
         <content type="html">&lt;p&gt;本文部分是参考文章整合，并进行错误纠正，详情请看参考文章。&lt;/p&gt;
 &lt;h2 id=&#34;优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优势&#34;&gt;#&lt;/a&gt; 优势&lt;/h2&gt;
 &lt;p&gt;SVG 图像是矢量图像，可以&lt;strong&gt;无限缩放&lt;/strong&gt;，而且在图像质量下降方面没有任何问题。为什么会这样呢？因为 SVG 图像是使用 &lt;strong&gt;XML 标记&lt;/strong&gt;构建的，浏览器通过绘制每个点和线来打印它们，而不是用预定义的像素填充某些空间。这确保 SVG 图像可以适应不同的屏幕大小和分辨率，即使是那些尚未发明的。&lt;/p&gt;
@@ -265,9 +265,9 @@
         <updated>2023-08-01T02:20:46.539Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
+        <id>http://example.com/2023/07/25/Javascript/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
         <title>JavaScript语法基础</title>
-        <link rel="alternate" href="http://example.com/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="http://example.com/2023/07/25/Javascript/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h2 id=&#34;javascript背景概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript背景概述&#34;&gt;#&lt;/a&gt; JavaScript 背景概述&lt;/h2&gt;
 &lt;h3 id=&#34;什么是javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是javascript&#34;&gt;#&lt;/a&gt; 什么是 JavaScript&lt;/h3&gt;
 &lt;p&gt;JavaScript（简称 JS）一种直译式&lt;strong&gt;脚本语言&lt;/strong&gt;，一种基于对象和事件驱动并具有安全性的客户端脚本语言；&lt;br&gt;
@@ -726,9 +726,9 @@
         <updated>2023-07-24T17:32:10.473Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/</id>
+        <id>http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/</id>
         <title>c++入门</title>
-        <link rel="alternate" href="http://example.com/2023/07/21/c++%E5%85%A5%E9%97%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/07/21/C++/c++%E5%85%A5%E9%97%A8/"/>
         <content type="html">&lt;h2 id=&#34;cc的作用领域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cc的作用领域&#34;&gt;#&lt;/a&gt; C/c++ 的作用领域&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;操作系统以及大型系统软件开发&lt;/li&gt;
@@ -874,9 +874,9 @@
         <updated>2023-07-21T14:52:20.951Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/07/11/css%E5%A4%A7%E5%85%A8/</id>
+        <id>http://example.com/2023/07/11/css/css%E5%A4%A7%E5%85%A8/</id>
         <title>css大全</title>
-        <link rel="alternate" href="http://example.com/2023/07/11/css%E5%A4%A7%E5%85%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/07/11/css/css%E5%A4%A7%E5%85%A8/"/>
         <content type="html">&lt;h2 id=&#34;引入方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引入方式&#34;&gt;#&lt;/a&gt; 引入方式&lt;/h2&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;内部样式表：写到html内部&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;行内样式表：&amp;lt;div style=&amp;quot;color: red; &amp;quot; &amp;gt; &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;外部样式表：&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css文件路径&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;元素转换方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元素转换方式&#34;&gt;#&lt;/a&gt; 元素转换方式&lt;/h2&gt;
@@ -1379,9 +1379,9 @@ cover 把背景图片扩展到足够大，以使背景图像完全覆盖背景�
         <updated>2023-07-11T15:00:37.614Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</id>
+        <id>http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</id>
         <title>git快速上手</title>
-        <link rel="alternate" href="http://example.com/2023/07/09/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+        <link rel="alternate" href="http://example.com/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
         <content type="html">&lt;h2 id=&#34;克隆别的的仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#克隆别的的仓库&#34;&gt;#&lt;/a&gt; 克隆别的的仓库&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; github地址&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;git安装配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git安装配置&#34;&gt;#&lt;/a&gt; git 安装配置&lt;/h2&gt;
@@ -1524,9 +1524,9 @@ cover 把背景图片扩展到足够大，以使背景图像完全覆盖背景�
         <updated>2023-07-09T15:13:57.343Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/</id>
+        <id>http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/</id>
         <title>html全解</title>
-        <link rel="alternate" href="http://example.com/2023/06/10/html%E5%A4%A7%E5%85%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/06/10/html/html%E5%A4%A7%E5%85%A8/"/>
         <content type="html">&lt;p&gt;这是我学习 html 的笔记，如果有看不懂的上网搜索&lt;/p&gt;
 &lt;h2 id=&#34;10-doctype和lang以及字符集的作用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-doctype和lang以及字符集的作用&#34;&gt;#&lt;/a&gt; 10-DOCTYPE 和 lang 以及字符集的作用&lt;/h2&gt;
 &lt;!DOCTYPE&gt;文本类型声明，作用是告诉浏览器使用哪种HTML版本来显示网页，必须写到最前面
@@ -1711,9 +1711,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-06-10T13:13:10.417Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/06/10/axios/</id>
+        <id>http://example.com/2023/06/10/axios/axios/</id>
         <title>axios</title>
-        <link rel="alternate" href="http://example.com/2023/06/10/axios/"/>
+        <link rel="alternate" href="http://example.com/2023/06/10/axios/axios/"/>
         <content type="html">&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i axios&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;发送请求&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发送请求&#34;&gt;#&lt;/a&gt; 发送请求&lt;/h2&gt;
@@ -1733,9 +1733,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-06-10T13:08:51.643Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</id>
+        <id>http://example.com/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/</id>
         <title>设置图形验证码</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
         <content type="html">&lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;svg-captcha&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#svg-captcha&#34;&gt;#&lt;/a&gt; svg-captcha&lt;/h3&gt;
 &lt;p&gt;一个图形验证码的第三方包&lt;/p&gt;
@@ -1796,9 +1796,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.851Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/%E6%A8%A1%E5%9D%97%E5%8C%96/</id>
+        <id>http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/</id>
         <title>模块化</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
         <content type="html">&lt;p&gt;在 node 中，默认支持的模块化规范叫做 CommonJS&lt;/p&gt;
 &lt;p&gt;在 CommonJS 中一个 js 文件就是一个模块&lt;/p&gt;
 &lt;h3 id=&#34;commonjs规范&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#commonjs规范&#34;&gt;#&lt;/a&gt; CommonJS 规范：&lt;/h3&gt;
@@ -1903,9 +1903,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.847Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/REST%E5%92%8CAJAX/</id>
+        <id>http://example.com/2023/05/27/nodeJS/REST%E5%92%8CAJAX/</id>
         <title>rest和ajax</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/REST%E5%92%8CAJAX/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/REST%E5%92%8CAJAX/"/>
         <content type="html">&lt;h2 id=&#34;rest&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rest&#34;&gt;#&lt;/a&gt; REST&lt;/h2&gt;
 &lt;p&gt;REST 表示层状态的传输&lt;/p&gt;
 &lt;p&gt;请求的方法：&lt;/p&gt;
@@ -2011,9 +2011,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.844Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
+        <id>http://example.com/2023/05/27/nodeJS/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
         <title>npm包管理器</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
         <content type="html">&lt;p&gt;package.json 是包的描述文件&lt;/p&gt;
 &lt;p&gt;node 中通过该文件对项目进行描述&lt;/p&gt;
 &lt;p&gt;每一个 node 项目必须有 package.json&lt;/p&gt;
@@ -2078,17 +2078,17 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.840Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/node%20http/</id>
+        <id>http://example.com/2023/05/27/nodeJS/node%20http/</id>
         <title>http搭建服务器</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/node%20http/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/node%20http/"/>
         <content type="html">&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;62&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; http = &lt;span class=&#34;built_in&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;http&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Url&lt;/span&gt; = &lt;span class=&#34;built_in&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;url&amp;#x27;&lt;/span&gt;)&lt;span class=&#34;comment&#34;&gt;//格式化url&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; port = &lt;span class=&#34;number&#34;&gt;3000&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt; = [&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;account&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;#x27;admin&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;password&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;#x27;123456&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//创建服务器实例&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; server = http.&lt;span class=&#34;title function_&#34;&gt;createServer&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;req,res&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;comment&#34;&gt;// console.log(req.url);//请求地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// console.log(req.method);//请求方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; url = &lt;span class=&#34;title class_&#34;&gt;Url&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;parse&lt;/span&gt;(req.&lt;span class=&#34;property&#34;&gt;url&lt;/span&gt;)&lt;span class=&#34;comment&#34;&gt;//url.query获取参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; pathname = url.&lt;span class=&#34;property&#34;&gt;pathname&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; method = req.&lt;span class=&#34;property&#34;&gt;method&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; datas = &lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(method==&lt;span class=&#34;string&#34;&gt;&amp;quot;GET&amp;quot;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(pathname == &lt;span class=&#34;string&#34;&gt;&amp;#x27;/reg&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        url = url.&lt;span class=&#34;property&#34;&gt;query&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;split&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;amp;&amp;#x27;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;map&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;params&#34;&gt;item&lt;/span&gt;=&amp;gt;&lt;/span&gt;item.&lt;span class=&#34;title function_&#34;&gt;split&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;=&amp;#x27;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;push&lt;/span&gt;(&amp;#123;&lt;span class=&#34;attr&#34;&gt;account&lt;/span&gt;:url[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;],&lt;span class=&#34;attr&#34;&gt;password&lt;/span&gt;:url[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;注册成功&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(method==&lt;span class=&#34;string&#34;&gt;&amp;quot;POST&amp;quot;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(pathname);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(pathname == &lt;span class=&#34;string&#34;&gt;&amp;#x27;/login&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        req.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;data&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;data&lt;/span&gt;)=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          datas += data.&lt;span class=&#34;title function_&#34;&gt;toString&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        req.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;end&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;function&#34;&gt;()=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          datas = &lt;span class=&#34;title class_&#34;&gt;JSON&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;parse&lt;/span&gt;(datas)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(datas);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable constant_&#34;&gt;DATA&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;forEach&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;params&#34;&gt;item&lt;/span&gt;=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(item.&lt;span class=&#34;property&#34;&gt;account&lt;/span&gt; === datas.&lt;span class=&#34;property&#34;&gt;account&lt;/span&gt; &amp;amp;&amp;amp; item.&lt;span class=&#34;property&#34;&gt;password&lt;/span&gt; === datas.&lt;span class=&#34;property&#34;&gt;password&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;登录成功&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125; &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              res.&lt;span class=&#34;title function_&#34;&gt;writeHead&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                    &lt;span class=&#34;string&#34;&gt;&amp;quot;content-Type&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/html;charset=utf8&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                res.&lt;span class=&#34;title function_&#34;&gt;end&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;登录失败&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;end&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//  res.end(&amp;#x27;???&amp;#x27;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//监听port端口号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server.&lt;span class=&#34;title function_&#34;&gt;listen&lt;/span&gt;(port, &lt;span class=&#34;function&#34;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;`服务器运行在 http://127.0.0.1:&lt;span class=&#34;subst&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;/`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <updated>2023-05-27T02:21:10.837Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/http%E5%8D%8F%E8%AE%AE/</id>
+        <id>http://example.com/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/</id>
         <title>http协议</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/http%E5%8D%8F%E8%AE%AE/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/"/>
         <content type="html">&lt;h4 id=&#34;一当在浏览器中输入地址以后发生了什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一当在浏览器中输入地址以后发生了什么&#34;&gt;#&lt;/a&gt; （一）当在浏览器中输入地址以后发生了什么？&lt;/h4&gt;
 &lt;p&gt;1.DNS 解析，获取网站的 ip 地址&lt;/p&gt;
 &lt;p&gt;2. 浏览器需要和服务器建立连接 (tcp/ip)&lt;/p&gt;
@@ -2179,9 +2179,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.831Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/27/express/</id>
+        <id>http://example.com/2023/05/27/nodeJS/express/</id>
         <title>express</title>
-        <link rel="alternate" href="http://example.com/2023/05/27/express/"/>
+        <link rel="alternate" href="http://example.com/2023/05/27/nodeJS/express/"/>
         <content type="html">&lt;p&gt;&lt;code&gt;express&lt;/code&gt;  是 node 中的服务器软件&lt;/p&gt;
 &lt;p&gt;通过 express 可以快速的在 node 中搭建一个 web 服务器&lt;/p&gt;
 &lt;p&gt;使用步骤：&lt;/p&gt;
@@ -2217,9 +2217,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-27T02:21:10.828Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</id>
+        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/</id>
         <title>浮点型存储规则</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/"/>
         <content type="html">&lt;p&gt;(-1)^S * M * 2^E&lt;/p&gt;
 &lt;p&gt;(-1)^S 表示符号位，S 为 0 为正，S 为 1 为负&lt;/p&gt;
 &lt;p&gt;M 表示有效数组，大于等于 1，小于 2&lt;/p&gt;
@@ -2258,9 +2258,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:07:29.770Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/</id>
+        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/</id>
         <title>memcpy与memmove</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/"/>
         <content type="html">&lt;h2 id=&#34;memcpy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#memcpy&#34;&gt;#&lt;/a&gt; memcpy&lt;/h2&gt;
 &lt;p&gt;memcpy 复制内存块&lt;/p&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;void* memcpy(void* des,const void* src,size_t num);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//把num个字节从src复制到des,返回指向des首地址的void指针&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;注：des 与 src不应重叠并且至少有num个字节大小&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -2274,9 +2274,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:07:29.764Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</id>
+        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/</id>
         <title>C语言结构体类型所占空间的大小</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/"/>
         <content type="html">&lt;figure class=&#34;highlight c&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Node&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;char&lt;/span&gt; a;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;long&lt;/span&gt; b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;short&lt;/span&gt; s;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;short&lt;/span&gt; c;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;c语言结构体内存对齐规则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言结构体内存对齐规则&#34;&gt;#&lt;/a&gt; C 语言结构体内存对齐规则：&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;对齐数 = 编译器默认的一个对齐数 与 该成员大小的较小值&lt;/strong&gt;&lt;/p&gt;
@@ -2297,9 +2297,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:07:29.761Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</id>
+        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/</id>
         <title>指针数组与数组指针</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/"/>
         <content type="html">&lt;h2 id=&#34;含义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#含义&#34;&gt;#&lt;/a&gt; 含义&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;指针数组&lt;/strong&gt;：指针数组可以说成是” 指针的数组”，首先这个变量是一个数组，其次，” 指针” 修饰这个数组，意思是说这个数组的所有元素都是指针类型，在 32 位系统中，指针占四个字节。&lt;br&gt;
 &lt;strong&gt;数组指针&lt;/strong&gt;：数组指针可以说成是” 数组的指针”，首先这个变量是一个指针，其次，” 数组” 修饰这个指针，意思是说这个指针存放着一个数组的首地址，或者说这个指针指向一个数组的首地址。&lt;/p&gt;
@@ -2315,9 +2315,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:07:29.757Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</id>
+        <id>http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</id>
         <title>数据类型转换</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
         <content type="html">&lt;h2 id=&#34;自动类型转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自动类型转换&#34;&gt;#&lt;/a&gt; 自动类型转换&lt;/h2&gt;
 &lt;p&gt;自动类型转换按照&lt;strong&gt;数据长度增加&lt;/strong&gt;的方向进行，以保证数值不失真或精度不降低.&lt;/p&gt;
 &lt;h2 id=&#34;强制类型转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#强制类型转换&#34;&gt;#&lt;/a&gt; 强制类型转换&lt;/h2&gt;
@@ -2328,9 +2328,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:07:29.751Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
+        <id>http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
         <title>动态规划</title>
-        <link rel="alternate" href="http://example.com/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+        <link rel="alternate" href="http://example.com/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
         <content type="html">&lt;p&gt;动态规划，无非就是利用&lt;strong&gt;历史记录&lt;/strong&gt;，来避免我们的重复计算。而这些&lt;strong&gt;历史记录&lt;/strong&gt;，我们得需要一些&lt;strong&gt;变量&lt;/strong&gt;来保存，一般是用&lt;strong&gt;一维数组&lt;/strong&gt;或者&lt;strong&gt;二维数组&lt;/strong&gt;来保存。下面我们先来讲下做动态规划题很重要的三个步骤，&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一步骤&lt;/strong&gt;：定义&lt;strong&gt;数组元素的含义&lt;/strong&gt;，上面说了，我们会用一个数组，来保存历史数组，假设用一维数组 dp [] 吧。这个时候有一个非常非常重要的点，就是规定你这个数组元素的含义，例如你的 dp [i] 是代表什么意思？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第二步骤&lt;/strong&gt;：找出&lt;strong&gt;数组元素之间的关系式&lt;/strong&gt;，我觉得动态规划，还是有一点类似于我们高中学习时的&lt;strong&gt;归纳法&lt;/strong&gt;的，当我们要计算 dp [n] 时，是可以利用 dp [n-1]，dp [n-2]……dp [1]，来推出 dp [n] 的，也就是可以利用&lt;strong&gt;历史数据&lt;/strong&gt;来推出新的元素值，所以我们要找出数组元素之间的关系式，例如 dp [n] = dp [n-1] + dp [n-2]，这个就是他们的关系式了。而这一步，也是最难的一步，后面我会讲几种类型的题来说。&lt;/p&gt;
@@ -2359,9 +2359,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-26T10:06:01.431Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</id>
+        <id>http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/</id>
         <title>react-router-v6全解析</title>
-        <link rel="alternate" href="http://example.com/2023/05/20/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/"/>
+        <link rel="alternate" href="http://example.com/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/"/>
         <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;React Router 是一个基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZhY2Vib29rLmdpdGh1Yi5pby9yZWFjdC8=&#34;&gt;React&lt;/span&gt; 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
@@ -2489,9 +2489,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-20T05:28:51.270Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</id>
+        <id>http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/</id>
         <title>Umi max菜单设置问题</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;p&gt;Umimax 根据路由来生产菜单侧边框&lt;/p&gt;
 &lt;p&gt;分辨子路由和生成二级菜单只看有无名字&lt;/p&gt;
 &lt;p&gt;如果不想让它出现在侧边框上则需要加上 &lt;code&gt;hideInMenu: true&lt;/code&gt;  属性&lt;/p&gt;
@@ -2503,9 +2503,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-15T13:39:03.435Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/15/Umimax/</id>
+        <id>http://example.com/2023/05/15/Umi/Umimax/</id>
         <title>Umi max详解</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/Umimax/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/Umimax/"/>
         <content type="html">&lt;h2 id=&#34;全局初始状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局初始状态&#34;&gt;#&lt;/a&gt; 全局初始状态&lt;/h2&gt;
 &lt;p&gt;全局初始状态是一种特殊的 Model。&lt;/p&gt;
 &lt;p&gt;全局初始状态在整个 Umi 项目的最开始创建。编写  &lt;code&gt;src/app.ts&lt;/code&gt;  的导出方法  &lt;code&gt;getInitialState()&lt;/code&gt; ，其返回值将成为全局初始状态。例如：&lt;/p&gt;
@@ -2613,9 +2613,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-15T13:37:56.514Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</id>
+        <id>http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</id>
         <title>UmiJS完全指南</title>
-        <link rel="alternate" href="http://example.com/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
+        <link rel="alternate" href="http://example.com/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
         <content type="html">&lt;h2 id=&#34;启动项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动项目&#34;&gt;#&lt;/a&gt; 启动项目&lt;/h2&gt;
 &lt;p&gt;文档地址 https://v3.umijs.org/zh-CN/docs/mock&lt;/p&gt;
 &lt;p&gt;创建目录&lt;/p&gt;
@@ -2767,9 +2767,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-15T13:35:46.257Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/09/Redux/</id>
+        <id>http://example.com/2023/05/09/Redux/Redux/</id>
         <title>Redux</title>
-        <link rel="alternate" href="http://example.com/2023/05/09/Redux/"/>
+        <link rel="alternate" href="http://example.com/2023/05/09/Redux/Redux/"/>
         <content type="html">&lt;h2 id=&#34;redux是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#redux是什么&#34;&gt;#&lt;/a&gt; Redux 是什么？&lt;/h2&gt;
 &lt;p&gt;1. &lt;code&gt;redux&lt;/code&gt;  是一个独立专门用于做状态管理的 JS 库 (不是 react 插件库)&lt;br&gt;
  2. 它可以用在 react, angular, vue 等项目中，但基本与 react 配合使用&lt;br&gt;
@@ -2838,9 +2838,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-09T10:52:38.779Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/</id>
         <title>函数防抖与函数节流</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
         <content type="html">&lt;p&gt;** 作用：** 函数节流和函数防抖两个都是优化高频率执行 js 代码的一种手段。&lt;/p&gt;
 &lt;h2 id=&#34;含义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#含义&#34;&gt;#&lt;/a&gt; 含义&lt;/h2&gt;
 &lt;p&gt;** 函数节流：** 在一定时间内 js 方法只跑一次 (比如人的眨眼睛，就是一定时间内眨一次)。这是函数节流最形象的解释；&lt;br&gt;
@@ -2866,9 +2866,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.304Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/</id>
         <title>关于函数闭包的理解</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/"/>
         <content type="html">&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
 &lt;p&gt;当一个函数的返回值是另外一个函数，而返回的那个函数如果调用了其父函数内部的其它变量，如果返回的这个函数在外部被执行，就产生了闭包&lt;/p&gt;
 &lt;h2 id=&#34;优点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h2&gt;
@@ -2884,9 +2884,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.300Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</id>
+        <id>http://example.com/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/</id>
         <title>js开启摄像头</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/"/>
         <content type="html">&lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;canvas-drawimage&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#canvas-drawimage&#34;&gt;#&lt;/a&gt; canvas drawImage&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;drawImage(image，sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)&lt;/code&gt;&lt;/p&gt;
@@ -2912,9 +2912,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.296Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/</id>
+        <id>http://example.com/2023/05/04/Javascript/JS%20Set%E4%BD%BF%E7%94%A8/</id>
         <title>JS Set使用</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/JS%20Set%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/JS%20Set%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;p&gt;Set 类似与 Array 数组，但 Set 里面的元素不能重复&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; set = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Set&lt;/span&gt;([&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;14&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(set)&lt;span class=&#34;comment&#34;&gt;//10 12 14&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; array = [&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;14&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(array)&lt;span class=&#34;comment&#34;&gt;//10 10 12 14&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;除了 new 时初始化元素，也可以通过 add 添加元素&lt;/p&gt;
@@ -2933,17 +2933,17 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.291Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/call,bind,apply/</id>
+        <id>http://example.com/2023/05/04/Javascript/call,bind,apply/</id>
         <title>call,bind,apply</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/call,bind,apply/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/call,bind,apply/"/>
         <content type="html">&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写call方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myCall&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,...rest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//call第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt; = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this，this就指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = obj.&lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(...rest)&lt;span class=&#34;comment&#34;&gt;//立即执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//删除防止越来越多&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; result&lt;span class=&#34;comment&#34;&gt;//返回执行的结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;一个&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;我是&amp;#x27;&lt;/span&gt; + &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;name&lt;/span&gt; + a + b);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fng.&lt;span class=&#34;title function_&#34;&gt;myCall&lt;/span&gt;(obj,&lt;span class=&#34;string&#34;&gt;&amp;quot;好&amp;quot;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写apply方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myApply&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,arr&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//apply第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt; = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = obj.&lt;span class=&#34;title function_&#34;&gt;fng&lt;/span&gt;(...arr)&lt;span class=&#34;comment&#34;&gt;//立即执行函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; obj.&lt;span class=&#34;property&#34;&gt;fng&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//删除防止越来越多&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; result&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fng.&lt;span class=&#34;title function_&#34;&gt;myApply&lt;/span&gt;(obj,[&lt;span class=&#34;string&#34;&gt;&amp;quot;牛逼的&amp;quot;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//手写bind方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Function&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;myBind&lt;/span&gt; = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;obj,...rest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//判断是否为null或undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//bind第一个参数为这些时指向全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(obj == &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt; || obj == &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    obj = &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; _this = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;comment&#34;&gt;//谁调用this指向谁&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//1.返回一个函数，不会立即执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//2.函数的返回值里面调用call方法，当调用时就会执行更改this指向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;...otherrest&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; _this.&lt;span class=&#34;title function_&#34;&gt;call&lt;/span&gt;(obj,...rest,...otherrest)&lt;span class=&#34;comment&#34;&gt;//执行时改变其this指向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; s = fng.&lt;span class=&#34;title function_&#34;&gt;myBind&lt;/span&gt;(obj,&lt;span class=&#34;string&#34;&gt;&amp;quot;厉害的&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;s&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;前端&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/*&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;  总结：call方法和bind方法非常相似，在Function上定义方法不要用箭头函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        箭头函数导致this指向不会变，手写实现this指向改变都是把调用函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        变成改变this指向的对象下面的一个方法，然后在删除&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        而bind较不一样，要返回一个改变this指向的函数，通过前两种方法设置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        返回函数的返回值this指向改变去实现bind方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <updated>2023-05-04T12:49:24.288Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</id>
+        <id>http://example.com/2023/05/04/Javascript/base64%E8%BD%AC%E6%96%87%E4%BB%B6/</id>
         <title>base64转文件</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/base64%E8%BD%AC%E6%96%87%E4%BB%B6/"/>
         <content type="html">&lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;match方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#match方法&#34;&gt;#&lt;/a&gt; match 方法&lt;/h3&gt;
 &lt;p&gt;match 本身是 JavaScript 语言中字符串对象的一个方法，该方法的签名是  match ([string] | [RegExp])&lt;/p&gt;
@@ -2977,9 +2977,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.284Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+        <id>http://example.com/2023/05/04/Javascript/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
         <title>Array includes</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;p&gt;&lt;strong&gt; &lt;code&gt;includes()&lt;/code&gt; &lt;/strong&gt; 方法用来判断一个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTYlOTUlQjAlRTclQkIlODQmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;数组&lt;/span&gt;是否包含一个指定的值，根据情况，如果包含则返回  &lt;code&gt;true&lt;/code&gt; ，否则返回  &lt;code&gt;false&lt;/code&gt; 。&lt;/p&gt;
 &lt;figure class=&#34;highlight ts&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;arr.&lt;span class=&#34;title function_&#34;&gt;includes&lt;/span&gt;(searchElement) &lt;span class=&#34;comment&#34;&gt;// return true or false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;arr.&lt;span class=&#34;title function_&#34;&gt;includes&lt;/span&gt;(searchElement, fromIndex) &lt;span class=&#34;comment&#34;&gt;// return true or false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
@@ -2991,9 +2991,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.280Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
         <title>音频可视化</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
         <content type="html">&lt;h2 id=&#34;用到的知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用到的知识&#34;&gt;#&lt;/a&gt; 用到的知识&lt;/h2&gt;
 &lt;h3 id=&#34;devicepixelratio-设备像素比&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devicepixelratio-设备像素比&#34;&gt;#&lt;/a&gt; devicePixelRatio 设备像素比&lt;/h3&gt;
 &lt;p&gt;window.devicePixelRatio = 物理像素 / 逻辑像素&lt;br&gt;
@@ -3037,9 +3037,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.277Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/</id>
         <title>图片转base64</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/"/>
         <content type="html">&lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;filereader-异步读取文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#filereader-异步读取文件&#34;&gt;#&lt;/a&gt; FileReader 异步读取文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;FileReader&lt;/code&gt;  提供了如下方法：&lt;/p&gt;
@@ -3063,9 +3063,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.274Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</id>
         <title>图片懒加载</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
         <content type="html">&lt;h2 id=&#34;所需知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#所需知识&#34;&gt;#&lt;/a&gt; 所需知识&lt;/h2&gt;
 &lt;h3 id=&#34;intersectionobserver&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intersectionobserver&#34;&gt;#&lt;/a&gt; IntersectionObserver&lt;/h3&gt;
 &lt;figure class=&#34;highlight csharp&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; io = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; IntersectionObserver(callback, options)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -3090,9 +3090,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.269Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/</id>
         <title>使内容滚动到盒子底部</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/"/>
         <content type="html">&lt;p&gt;通常用于评论之类的部分，出现新内容后自动滚动到盒子的底部，优化用户体验&lt;/p&gt;
 &lt;h2 id=&#34;react中使用ref获取元素对象并修改&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#react中使用ref获取元素对象并修改&#34;&gt;#&lt;/a&gt; React 中使用 Ref 获取元素对象并修改&lt;/h2&gt;
 &lt;p&gt;在这里我们会用到 scrollIntoView () 这个方法&lt;/p&gt;
@@ -3132,9 +3132,9 @@ chrome/Opera Blink&lt;/p&gt;
         <updated>2023-05-04T12:49:24.265Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</id>
+        <id>http://example.com/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/</id>
         <title>前后端实现websocket通信</title>
-        <link rel="alternate" href="http://example.com/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/"/>
+        <link rel="alternate" href="http://example.com/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/"/>
         <content type="html">&lt;h2 id=&#34;后端nodejshttp原生&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后端nodejshttp原生&#34;&gt;#&lt;/a&gt; 后端 nodeJS (http 原生)&lt;/h2&gt;
 &lt;h3 id=&#34;安装ws&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装ws&#34;&gt;#&lt;/a&gt; 安装 ws&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i ws&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
