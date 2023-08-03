@@ -5,9 +5,9 @@
     <link href="http://example.com" />
     <updated>2023-07-09T15:13:57.343Z</updated>
     <entry>
-        <id>http://example.com/2023/07/09/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</id>
+        <id>http://example.com/2023/07/09/react/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</id>
         <title>从0搭建react项目</title>
-        <link rel="alternate" href="http://example.com/2023/07/09/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/"/>
+        <link rel="alternate" href="http://example.com/2023/07/09/react/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/"/>
         <content type="html">&lt;h2 id=&#34;create-react-app-搭建react项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-react-app-搭建react项目&#34;&gt;#&lt;/a&gt; create-react-app 搭建 react 项目&lt;/h2&gt;
 &lt;p&gt;使用 &lt;code&gt;pnpm install -g create-react-app&lt;/code&gt;  命令全局安装 react 脚手架。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;npx create-react-app my-app --template typescript&lt;/code&gt;  创建基于 TypeScript 的 react 项目。&lt;/p&gt;
