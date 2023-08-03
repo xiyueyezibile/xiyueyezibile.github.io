@@ -1,220 +1,605 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Redux | 汐月也自闭了的个人博客</title><meta name="author" content="xiyueyezibile"><meta name="copyright" content="xiyueyezibile"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Redux是什么?1.redux 是一个独立专门用于做状态管理的 JS 库(不是 react 插件库)2.它可以用在 react, angular, vue 等项目中, 但基本与 react 配合使用3.作用: 集中式管理 react 应用中多个组件共享的状态 在React中有专门React-reudx进行状态管理 需要使用到Redux的情况 总体原则: 大型项目状态管理复杂才用 某个组件的状态，">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Redux">
-<meta property="og:url" content="http://example.com/2023/05/09/Redux/index.html">
-<meta property="og:site_name" content="汐月也自闭了的个人博客">
-<meta property="og:description" content="Redux是什么?1.redux 是一个独立专门用于做状态管理的 JS 库(不是 react 插件库)2.它可以用在 react, angular, vue 等项目中, 但基本与 react 配合使用3.作用: 集中式管理 react 应用中多个组件共享的状态 在React中有专门React-reudx进行状态管理 需要使用到Redux的情况 总体原则: 大型项目状态管理复杂才用 某个组件的状态，">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
-<meta property="article:published_time" content="2023-05-09T10:52:38.779Z">
-<meta property="article:modified_time" content="2023-05-20T05:50:44.899Z">
-<meta property="article:author" content="xiyueyezibile">
-<meta property="article:tag" content="xiyueyezibile">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/05/09/Redux/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: true,
-    post: true
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: {"limitCount":50,"languages":{"author":"作者: xiyueyezibile","link":"链接: ","source":"来源: 汐月也自闭了的个人博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'mediumZoom',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  }
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Redux',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2023-05-20 13:50:44'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="汐月也自闭了的个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="汐月也自闭了的个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="汐月也自闭了的个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+<link rel="canonical" href="http://example.com/2023/05/09/Redux/">
+
+
+
+  <title>
+Redux - Redux |
+Xiyueyezibile = 汐月也自闭了的个人博客 = 1</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Redux
+  </h1>
   
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+<div class="meta">
+  <span class="item" title="创建时间：2023-05-09 18:52:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-05-09T18:52:38+08:00">2023-05-09</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.9k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Xiyueyezibile</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Redux/" itemprop="item" rel="index" title="分类于 Redux"><span itemprop="name">Redux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/Redux/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/https:/cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
+    <meta itemprop="name" content="xiyueyezibile">
+    <meta itemprop="description" content="1, 这个需求写不了">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="汐月也自闭了的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdnjson.com/images/2023/05/09/QQ20230509185803.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="汐月也自闭了的个人博客"><span class="site-name">汐月也自闭了的个人博客</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Redux</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-09T10:52:38.779Z" title="发表于 2023-05-09 18:52:38">2023-05-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-20T05:50:44.899Z" title="更新于 2023-05-20 13:50:44">2023-05-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Redux/">Redux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Redux"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Redux是什么"><a href="#Redux是什么" class="headerlink" title="Redux是什么?"></a>Redux是什么?</h2><p>1.<code>redux</code> 是一个独立专门用于做状态管理的 JS 库(不是 react 插件库)<br>2.它可以用在 react, angular, vue 等项目中, 但基本与 react 配合使用<br>3.作用: 集中式管理 react 应用中多个组件共享的状态</p>
-<p>在<code>React</code>中有专门<code>React-reudx</code>进行状态管理</p>
-<h2 id="需要使用到Redux的情况"><a href="#需要使用到Redux的情况" class="headerlink" title="需要使用到Redux的情况"></a>需要使用到Redux的情况</h2><ol>
-<li>总体原则: 大型项目状态管理复杂才用</li>
+
+    <h2 id="redux是什么"><a class="markdownIt-Anchor" href="#redux是什么">#</a> Redux 是什么？</h2>
+<p>1. <code>redux</code>  是一个独立专门用于做状态管理的 JS 库 (不是 react 插件库)<br>
+ 2. 它可以用在 react, angular, vue 等项目中，但基本与 react 配合使用<br>
+ 3. 作用：集中式管理 react 应用中多个组件共享的状态</p>
+<p>在 <code>React</code>  中有专门 <code>React-reudx</code>  进行状态管理</p>
+<h2 id="需要使用到redux的情况"><a class="markdownIt-Anchor" href="#需要使用到redux的情况">#</a> 需要使用到 Redux 的情况</h2>
+<ol>
+<li>总体原则：大型项目状态管理复杂才用</li>
 <li>某个组件的状态，需要共享</li>
 <li>某个状态需要在任何地方都可以拿到</li>
 <li>一个组件需要改变全局状态</li>
 <li>一个组件需要改变另一个组件的状态</li>
 </ol>
-<h2 id="安装redux"><a href="#安装redux" class="headerlink" title="安装redux"></a>安装redux</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i redux</span><br></pre></td></tr></table></figure>
-
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>1）首先我们要确定我们要做什么<br>2）让Action Creators创建<code>action</code>（也就是你要做的事情）<br>3）通过<code>dispatch</code>将<code>action</code>分发出去<br>4）<code>store</code>对要使用的<code>reducer</code>进行绑定，然后将<code>action</code>分发到对应的<code>reducer</code>上<br>5）在<code>reducer</code>上进行相应的<code>action</code>操作并返回结果给<code>store</code><br>6）组件就可以通过<code>store</code>的API像<code>store</code>进行获取操作返回的结果</p>
-<h2 id="创建action"><a href="#创建action" class="headerlink" title="创建action"></a>创建action</h2><p>actions英文直译过来就是行动、动作的意思，那么我们就可以猜到他表示的是“<strong>怎么做</strong>”，简单来说actions就是一个<strong>对象</strong>，actions里面有两个属性分别为<strong>type</strong>和<strong>data</strong>：</p>
+<h2 id="安装redux"><a class="markdownIt-Anchor" href="#安装redux">#</a> 安装 redux</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i redux</span><br></pre></td></tr></table></figure>
+<h2 id="流程"><a class="markdownIt-Anchor" href="#流程">#</a> 流程</h2>
+<p>1）首先我们要确定我们要做什么<br>
+ 2）让 Action Creators 创建 <code>action</code> （也就是你要做的事情）<br>
+3）通过 <code>dispatch</code>  将 <code>action</code>  分发出去<br>
+ 4） <code>store</code>  对要使用的 <code>reducer</code>  进行绑定，然后将 <code>action</code>  分发到对应的 <code>reducer</code>  上<br>
+ 5）在 <code>reducer</code>  上进行相应的 <code>action</code>  操作并返回结果给 <code>store</code> <br>
+6）组件就可以通过 <code>store</code>  的 API 像 <code>store</code>  进行获取操作返回的结果</p>
+<h2 id="创建action"><a class="markdownIt-Anchor" href="#创建action">#</a> 创建 action</h2>
+<p>actions 英文直译过来就是行动、动作的意思，那么我们就可以猜到他表示的是 “<strong>怎么做</strong>”，简单来说 actions 就是一个<strong>对象</strong>，actions 里面有两个属性分别为<strong> type</strong> 和<strong> data</strong>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 为防止出现拼写错误，我们对行为名字进行抽离</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">ADDCOUNT</span> = <span class="string">&#x27;addCount&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">CREATJIAN</span> = <span class="string">&#x27;lessCount&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="variable constant_">ADDCOUNT</span>, <span class="variable constant_">CREATJIAN</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;../redux/constant&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">creatAdd</span> = data =&gt; (&#123; <span class="attr">type</span>: <span class="variable constant_">ADDCOUNT</span>, data &#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">creatJian</span> = data =&gt; (&#123; <span class="attr">type</span>: <span class="variable constant_">CREATJIAN</span>, data &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="创建reducer"><a href="#创建reducer" class="headerlink" title="创建reducer"></a>创建reducer</h2><p><code>reducer</code>用于将<code>store</code>发过来的<code>action</code>完成并将结果返回给<code>store</code>，他接收两个参数<code>preState</code>（旧状态）和<code>action</code>（动作）并返回一个<code>newState</code>（新状态）。</p>
+<h2 id="创建reducer"><a class="markdownIt-Anchor" href="#创建reducer">#</a> 创建 reducer</h2>
+<p><code>reducer</code>  用于将 <code>store</code>  发过来的 <code>action</code>  完成并将结果返回给 <code>store</code> ，他接收两个参数 <code>preState</code> （旧状态）和 <code>action</code> （动作）并返回一个 <code>newState</code> （新状态）。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="variable constant_">ADDCOUNT</span>, <span class="variable constant_">CREATJIAN</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./constant&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> inin = <span class="number">0</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">countReducer</span> (pre = inin, action) &#123;</span><br><span class="line">  <span class="comment">///从action解析出type和data</span></span><br><span class="line">  <span class="keyword">const</span> &#123; type, data &#125; = action</span><br><span class="line">  <span class="comment">///通过类型进行匹配，判断怎么做</span></span><br><span class="line">  <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADDCOUNT</span>:</span><br><span class="line">      <span class="keyword">return</span> pre + data</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">CREATJIAN</span>:</span><br><span class="line">      <span class="keyword">return</span> pre - data</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> pre</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="创建store"><a href="#创建store" class="headerlink" title="创建store"></a>创建store</h2><p><code>store</code>有且只能有一个，他相当于一个最高指挥家，他负责把<code>action</code>动作交给对应的<code>reducer</code>进行执行，也就是说将state、action和reducer联系在一起的对象。</p>
+<h2 id="创建store"><a class="markdownIt-Anchor" href="#创建store">#</a> 创建 store</h2>
+<p><code>store</code>  有且只能有一个，他相当于一个最高指挥家，他负责把 <code>action</code>  动作交给对应的 <code>reducer</code>  进行执行，也就是说将 state、action 和 reducer 联系在一起的对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; legacy_createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;redux&#x27;</span></span><br><span class="line"><span class="keyword">import</span> countReducer <span class="keyword">from</span> <span class="string">&#x27;./count_reducer&#x27;</span></span><br><span class="line"><span class="comment">///将reducer和store联系起来</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">legacy_createStore</span>(countReducer)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p><strong>legacy_createStore</strong></p>
-<h2 id="发送action"><a href="#发送action" class="headerlink" title="发送action"></a>发送action</h2><p><code>store.dispatch(action)</code></p>
-<p>当store返回<code>state</code>时触发<code>store.subscribe(()=&gt;&#123;&#125;)</code></p>
-<p><code>store.getState()</code>获取返回的值</p>
-<h2 id="Redux三大基本原则"><a href="#Redux三大基本原则" class="headerlink" title="Redux三大基本原则"></a>Redux三大基本原则</h2><p>1.单一数据源</p>
-<p>2.state是只读的</p>
-<p>3.使用纯函数来执行修改</p>
+<h2 id="发送action"><a class="markdownIt-Anchor" href="#发送action">#</a> 发送 action</h2>
+<p><code>store.dispatch(action)</code></p>
+<p>当 store 返回 <code>state</code>  时触发 <code>store.subscribe(()=&gt;&#123;&#125;)</code></p>
+<p><code>store.getState()</code>  获取返回的值</p>
+<h2 id="redux三大基本原则"><a class="markdownIt-Anchor" href="#redux三大基本原则">#</a> Redux 三大基本原则</h2>
+<p>1. 单一数据源</p>
+<p>2.state 是只读的</p>
+<p>3. 使用纯函数来执行修改</p>
 <ul>
 <li>纯函数：输入的内容是什么，输出的内容仍旧是什么</li>
 <li>非纯函数：输入的内容与输出的内容不同，输入的内容再利用非纯函数处理以后将会被改变</li>
 </ul>
-<h1 id="React-redux"><a href="#React-redux" class="headerlink" title="React-redux"></a>React-redux</h1><h2 id="为什么需要使用-React-Redux"><a href="#为什么需要使用-React-Redux" class="headerlink" title="为什么需要使用 React-Redux"></a>为什么需要使用 React-Redux</h2><p>在 Redux 使用中，组件和 <code>Redux Store </code>打交道，读取 Store 的状态，用于初始化组件的状态，同时还要监听 Store 的状态改变；当 Store 状态发生变化时，需要更新组件状态，从而驱动组件重新渲染；当需要更新 Store 状态时，就要派发 action 对象；而且需要根据当前 props 和 state，渲染出用户界面。这个操作过程事情太多了，不容易理解、操作与管理。</p>
-<h2 id="安装React-redux"><a href="#安装React-redux" class="headerlink" title="安装React-redux"></a>安装React-redux</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i redux react-redux --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="provider"><a href="#provider" class="headerlink" title="provider"></a>provider</h2><p>第一步：Provider 嵌套到根组件</p>
-<p>此步骤，是把redux的store 挂载到全局。在App下 任何一个组件页面都能拿到。</p>
+<h1 id="react-redux"><a class="markdownIt-Anchor" href="#react-redux">#</a> React-redux</h1>
+<h2 id="为什么需要使用-react-redux"><a class="markdownIt-Anchor" href="#为什么需要使用-react-redux">#</a> 为什么需要使用 React-Redux</h2>
+<p>在 Redux 使用中，组件和  <code>Redux Store </code> 打交道，读取 Store 的状态，用于初始化组件的状态，同时还要监听 Store 的状态改变；当 Store 状态发生变化时，需要更新组件状态，从而驱动组件重新渲染；当需要更新 Store 状态时，就要派发 action 对象；而且需要根据当前 props 和 state，渲染出用户界面。这个操作过程事情太多了，不容易理解、操作与管理。</p>
+<h2 id="安装react-redux"><a class="markdownIt-Anchor" href="#安装react-redux">#</a> 安装 React-redux</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i redux react-redux --save</span><br></pre></td></tr></table></figure>
+<h2 id="provider"><a class="markdownIt-Anchor" href="#provider">#</a> provider</h2>
+<p>第一步：Provider 嵌套到根组件</p>
+<p>此步骤，是把 redux 的 store 挂载到全局。在 App 下 任何一个组件页面都能拿到。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">    &#123;<span class="comment">/*store为你引入的store*/</span>&#125;</span><br><span class="line">    &lt;<span class="title class_">Provider</span> store=&#123;store&#125;&gt;</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">Head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Audio<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Generated by create next app&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Head</span>&gt;</span></span></span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;classes.main&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;</span></span><br><span class="line"><span class="language-xml">          datas</span></span><br><span class="line"><span class="language-xml">        &#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    &lt;/<span class="title class_">Provider</span>&gt;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="connext"><a href="#connext" class="headerlink" title="connext"></a>connext</h2><p>第二步：调用 state 和 action</p>
+<h2 id="connext"><a class="markdownIt-Anchor" href="#connext">#</a> connext</h2>
+<p>第二步：调用 state 和 action</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useDispatch, useSelector &#125; <span class="keyword">from</span> <span class="string">&#x27;react-redux&#x27;</span></span><br><span class="line"><span class="comment">//按需引用</span></span><br><span class="line"><span class="keyword">let</span> &#123;play,position,move&#125; = <span class="title function_">useSelector</span>(<span class="function">(<span class="params">state</span>)=&gt;</span>(&#123;</span><br><span class="line">    <span class="attr">play</span>:state.<span class="property">reducer</span>.<span class="property">play</span>,</span><br><span class="line">    <span class="attr">position</span>:state.<span class="property">positionReducer</span>.<span class="property">position</span>,</span><br><span class="line">    <span class="attr">move</span>:state.<span class="property">positionReducer</span>.<span class="property">move</span></span><br><span class="line">  &#125;))</span><br><span class="line"><span class="comment">//派发器</span></span><br><span class="line">  <span class="keyword">const</span> dispatch = <span class="title function_">useDispatch</span>()</span><br><span class="line">  <span class="title function_">dispatch</span>(&#123;<span class="attr">type</span>:<span class="string">&#x27;run&#x27;</span>,position&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="封装数据和行为"><a class="markdownIt-Anchor" href="#封装数据和行为">#</a> 封装数据和行为</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Num</span> = &#123;</span><br><span class="line">    <span class="comment">//数据</span></span><br><span class="line">  <span class="attr">state</span>:&#123;</span><br><span class="line">    <span class="attr">play</span>:<span class="number">0</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">    <span class="comment">//行为(方法)</span></span><br><span class="line">  <span class="title function_">change</span>(<span class="params">play</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(play) &#123;</span><br><span class="line">      play = <span class="number">0</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      play = <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> play</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Num</span></span><br></pre></td></tr></table></figure>
+<h2 id="封装reducer"><a class="markdownIt-Anchor" href="#封装reducer">#</a> 封装 reducer</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Num</span> <span class="keyword">from</span> <span class="string">&quot;../Num/positionNum&quot;</span></span><br><span class="line"><span class="keyword">const</span> initState = &#123;</span><br><span class="line">  ...<span class="title class_">Num</span>.<span class="property">state</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reducer</span> = (<span class="params">state = initState,action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> newstate = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state))</span><br><span class="line">  <span class="keyword">switch</span>(action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;run&#x27;</span>:</span><br><span class="line">      newstate.<span class="property">position</span> = <span class="title class_">Num</span>.<span class="title function_">run</span>(action.<span class="property">position</span>)</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;move&#x27;</span>:</span><br><span class="line">        newstate.<span class="property">move</span> = <span class="title class_">Num</span>.<span class="title function_">move</span>(action.<span class="property">move</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newstate</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> reducer </span><br></pre></td></tr></table></figure>
+<h2 id="主仓库store"><a class="markdownIt-Anchor" href="#主仓库store">#</a> 主仓库 store</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">&quot;./reducer/reducer&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> positionReducer <span class="keyword">from</span> <span class="string">&quot;./reducer/positionReducer&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; combineReducers, legacy_createStore &#125; <span class="keyword">from</span> <span class="string">&quot;redux&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> reducers =  <span class="title function_">combineReducers</span>(&#123;reducer,positionReducer&#125;)<span class="comment">//连接多个reducer</span></span><br><span class="line"><span class="keyword">const</span> store = <span class="title function_">legacy_createStore</span>(reducers)<span class="comment">//创建store</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+<h2 id="构建项目"><a class="markdownIt-Anchor" href="#构建项目">#</a> 构建项目</h2>
 
-<h2 id="封装数据和行为"><a href="#封装数据和行为" class="headerlink" title="封装数据和行为"></a>封装数据和行为</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Num</span> = &#123;</span><br><span class="line">    <span class="comment">//数据</span></span><br><span class="line">  <span class="attr">state</span>:&#123;</span><br><span class="line">    <span class="attr">play</span>:<span class="number">0</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">    <span class="comment">//行为(方法)</span></span><br><span class="line">  <span class="title function_">change</span>(<span class="params">play</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(play) &#123;</span><br><span class="line">      play = <span class="number">0</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      play = <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> play</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Num</span></span><br></pre></td></tr></table></figure>
+  </div>
 
-<h2 id="封装reducer"><a href="#封装reducer" class="headerlink" title="封装reducer"></a>封装reducer</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Num</span> <span class="keyword">from</span> <span class="string">&quot;../Num/positionNum&quot;</span></span><br><span class="line"><span class="keyword">const</span> initState = &#123;</span><br><span class="line">  ...<span class="title class_">Num</span>.<span class="property">state</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reducer</span> = (<span class="params">state = initState,action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> newstate = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state))</span><br><span class="line">  <span class="keyword">switch</span>(action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;run&#x27;</span>:</span><br><span class="line">      newstate.<span class="property">position</span> = <span class="title class_">Num</span>.<span class="title function_">run</span>(action.<span class="property">position</span>)</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;move&#x27;</span>:</span><br><span class="line">        newstate.<span class="property">move</span> = <span class="title class_">Num</span>.<span class="title function_">move</span>(action.<span class="property">move</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newstate</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> reducer </span><br></pre></td></tr></table></figure>
+   <footer>
 
-<h2 id="主仓库store"><a href="#主仓库store" class="headerlink" title="主仓库store"></a>主仓库store</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">&quot;./reducer/reducer&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> positionReducer <span class="keyword">from</span> <span class="string">&quot;./reducer/positionReducer&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; combineReducers, legacy_createStore &#125; <span class="keyword">from</span> <span class="string">&quot;redux&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> reducers =  <span class="title function_">combineReducers</span>(&#123;reducer,positionReducer&#125;)<span class="comment">//连接多个reducer</span></span><br><span class="line"><span class="keyword">const</span> store = <span class="title function_">legacy_createStore</span>(reducers)<span class="comment">//创建store</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-05-20 13:50:44" itemprop="dateModified" datetime="2023-05-20T13:50:44+08:00">2023-05-20</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="xiyueyezibile 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="xiyueyezibile 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="xiyueyezibile 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>xiyueyezibile <i class="ic i-at"><em>@</em></i>汐月也自闭了的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2023/05/09/Redux/" title="Redux">http://example.com/2023/05/09/Redux/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclga70tsj20zk0m84mr.jpg" title="函数防抖与函数节流">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Javascript</span>
+  <h3>函数防抖与函数节流</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuibk9fj20zk0m8ay2.jpg" title="UmiJS完全指南">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Umi</span>
+  <h3>UmiJS完全指南</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#redux%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text"> Redux 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%B0redux%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text"> 需要使用到 Redux 的情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85redux"><span class="toc-number">3.</span> <span class="toc-text"> 安装 redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text"> 流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAaction"><span class="toc-number">5.</span> <span class="toc-text"> 创建 action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAreducer"><span class="toc-number">6.</span> <span class="toc-text"> 创建 reducer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-number">7.</span> <span class="toc-text"> 创建 store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E9%80%81action"><span class="toc-number">8.</span> <span class="toc-text"> 发送 action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redux%E4%B8%89%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99"><span class="toc-number">9.</span> <span class="toc-text"> Redux 三大基本原则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#react-redux"><span class="toc-number"></span> <span class="toc-text"> React-redux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8-react-redux"><span class="toc-number">1.</span> <span class="toc-text"> 为什么需要使用 React-Redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85react-redux"><span class="toc-number">2.</span> <span class="toc-text"> 安装 React-redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#provider"><span class="toc-number">3.</span> <span class="toc-text"> provider</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#connext"><span class="toc-number">4.</span> <span class="toc-text"> connext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E6%95%B0%E6%8D%AE%E5%92%8C%E8%A1%8C%E4%B8%BA"><span class="toc-number">5.</span> <span class="toc-text"> 封装数据和行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85reducer"><span class="toc-number">6.</span> <span class="toc-text"> 封装 reducer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E4%BB%93%E5%BA%93store"><span class="toc-number">7.</span> <span class="toc-text"> 主仓库 store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">8.</span> <span class="toc-text"> 构建项目</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/05/09/Redux/" rel="bookmark" title="Redux">Redux</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="xiyueyezibile"
+      data-src="/images/https:/cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
+  <p class="name" itemprop="name">xiyueyezibile</p>
+  <div class="description" itemprop="description">这个需求写不了</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">42</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpeXVleWV6aWJpbGU=" title="https:&#x2F;&#x2F;github.com&#x2F;xiyueyezibile"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <a href="/2859439384@qq.com" title="2859439384@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" title="使内容滚动到盒子底部">使内容滚动到盒子底部</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
+</div>
+
+    <span><a href="/2023/05/27/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" title="npm包管理器">npm包管理器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/" title="浮点型存储规则">浮点型存储规则</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/" title="图片转base64">图片转base64</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/memcpy%E4%B8%8Ememmove/" title="memcpy与memmove">memcpy与memmove</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/" title="指针数组与数组指针">指针数组与数组指针</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/base64%E8%BD%AC%E6%96%87%E4%BB%B6/" title="base64转文件">base64转文件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" title="音频可视化">音频可视化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/axios/" title="分类于 axios">axios</a>
+</div>
+
+    <span><a href="/2023/06/10/axios/" title="axios">axios</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
+</div>
+
+    <span><a href="/2023/05/27/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">模块化</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">xiyueyezibile @ Xiyueyezibile</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">153k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:19</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/05/09/Redux/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
 
 
 
-<h2 id="构建项目"><a href="#构建项目" class="headerlink" title="构建项目"></a>构建项目</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">xiyueyezibile</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/05/09/Redux/">http://example.com/2023/05/09/Redux/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">汐月也自闭了的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/15/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" title="UmiJS完全指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">UmiJS完全指南</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/04/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/" title="函数防抖与函数节流"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">函数防抖与函数节流</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xiyueyezibile</div><div class="author-info__description">这个需求写不了</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiyueyezibile"><i class="fab fa-github"></i><span>点击跳转</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xiyueyezibile" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="/2859439384@qq.com" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">汐月也自闭了的个人博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Redux%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">Redux是什么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%B0Redux%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text">需要使用到Redux的情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85redux"><span class="toc-number">3.</span> <span class="toc-text">安装redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAaction"><span class="toc-number">5.</span> <span class="toc-text">创建action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAreducer"><span class="toc-number">6.</span> <span class="toc-text">创建reducer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-number">7.</span> <span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E9%80%81action"><span class="toc-number">8.</span> <span class="toc-text">发送action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redux%E4%B8%89%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99"><span class="toc-number">9.</span> <span class="toc-text">Redux三大基本原则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React-redux"><span class="toc-number"></span> <span class="toc-text">React-redux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8-React-Redux"><span class="toc-number">1.</span> <span class="toc-text">为什么需要使用 React-Redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85React-redux"><span class="toc-number">2.</span> <span class="toc-text">安装React-redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#provider"><span class="toc-number">3.</span> <span class="toc-text">provider</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#connext"><span class="toc-number">4.</span> <span class="toc-text">connext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E6%95%B0%E6%8D%AE%E5%92%8C%E8%A1%8C%E4%B8%BA"><span class="toc-number">5.</span> <span class="toc-text">封装数据和行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85reducer"><span class="toc-number">6.</span> <span class="toc-text">封装reducer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E4%BB%93%E5%BA%93store"><span class="toc-number">7.</span> <span class="toc-text">主仓库store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">8.</span> <span class="toc-text">构建项目</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/canvas%E5%9F%BA%E7%A1%80/" title="canvas基础">canvas基础</a><time datetime="2023-08-01T15:42:39.434Z" title="发表于 2023-08-01 23:42:39">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" title="前端实现将彩色图变成黑白色">前端实现将彩色图变成黑白色</a><time datetime="2023-08-01T15:41:25.330Z" title="发表于 2023-08-01 23:41:25">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="前端设计模式|青训营">前端设计模式|青训营</a><time datetime="2023-08-01T02:23:58.413Z" title="发表于 2023-08-01 10:23:58">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/" title="SVG初上手">SVG初上手</a><time datetime="2023-08-01T02:20:46.539Z" title="发表于 2023-08-01 10:20:46">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" title="JavaScript语法基础">JavaScript语法基础</a><time datetime="2023-07-24T17:32:10.473Z" title="发表于 2023-07-25 01:32:10">2023-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xiyueyezibile</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+</body>
+</html>

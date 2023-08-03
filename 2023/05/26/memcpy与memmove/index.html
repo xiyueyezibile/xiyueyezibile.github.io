@@ -1,173 +1,549 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>memcpy与memmove | 汐月也自闭了的个人博客</title><meta name="author" content="xiyueyezibile"><meta name="copyright" content="xiyueyezibile"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="memcpymemcpy复制内存块 1234#include&lt;string.h&gt;void* memcpy(void* des,const void* src,size_t num);&#x2F;&#x2F;把num个字节从src复制到des,返回指向des首地址的void指针注：des 与 src不应重叠并且至少有num个字节大小  my_memcpy12345678910111213void* my_m">
-<meta property="og:type" content="article">
-<meta property="og:title" content="memcpy与memmove">
-<meta property="og:url" content="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/index.html">
-<meta property="og:site_name" content="汐月也自闭了的个人博客">
-<meta property="og:description" content="memcpymemcpy复制内存块 1234#include&lt;string.h&gt;void* memcpy(void* des,const void* src,size_t num);&#x2F;&#x2F;把num个字节从src复制到des,返回指向des首地址的void指针注：des 与 src不应重叠并且至少有num个字节大小  my_memcpy12345678910111213void* my_m">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
-<meta property="article:published_time" content="2023-05-26T10:07:29.764Z">
-<meta property="article:modified_time" content="2023-07-25T12:34:20.198Z">
-<meta property="article:author" content="xiyueyezibile">
-<meta property="article:tag" content="xiyueyezibile">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: true,
-    post: true
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: {"limitCount":50,"languages":{"author":"作者: xiyueyezibile","link":"链接: ","source":"来源: 汐月也自闭了的个人博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'mediumZoom',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  }
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'memcpy与memmove',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2023-07-25 20:34:20'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="汐月也自闭了的个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="汐月也自闭了的个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="汐月也自闭了的个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+<link rel="canonical" href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/">
+
+
+
+  <title>
+memcpy与memmove - C语言 |
+Xiyueyezibile = 汐月也自闭了的个人博客 = 1</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">memcpy与memmove
+  </h1>
   
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+<div class="meta">
+  <span class="item" title="创建时间：2023-05-26 18:07:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-05-26T18:07:29+08:00">2023-05-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>990</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Xiyueyezibile</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="item" rel="index" title="分类于 C语言"><span itemprop="name">C语言</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/https:/cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
+    <meta itemprop="name" content="xiyueyezibile">
+    <meta itemprop="description" content="1, 这个需求写不了">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="汐月也自闭了的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i0.hdslb.com/bfs/article/9e645618b6abbf3648d77db9e36771a44f4132c8.jpg@942w_1203h_progressive.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="汐月也自闭了的个人博客"><span class="site-name">汐月也自闭了的个人博客</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">memcpy与memmove</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-26T10:07:29.764Z" title="发表于 2023-05-26 18:07:29">2023-05-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-25T12:34:20.198Z" title="更新于 2023-07-25 20:34:20">2023-07-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="memcpy与memmove"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="memcpy"><a href="#memcpy" class="headerlink" title="memcpy"></a>memcpy</h2><p>memcpy复制内存块</p>
+
+    <h2 id="memcpy"><a class="markdownIt-Anchor" href="#memcpy">#</a> memcpy</h2>
+<p>memcpy 复制内存块</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;string.h&gt;</span><br><span class="line">void* memcpy(void* des,const void* src,size_t num);</span><br><span class="line">//把num个字节从src复制到des,返回指向des首地址的void指针</span><br><span class="line">注：des 与 src不应重叠并且至少有num个字节大小</span><br></pre></td></tr></table></figure>
+<h2 id="my_memcpy"><a class="markdownIt-Anchor" href="#my_memcpy">#</a> my_memcpy</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void* my_memcpy(void* des,const void* src, size_t num)</span><br><span class="line">&#123;</span><br><span class="line">	assert(des &amp;&amp; src);</span><br><span class="line">	void* ret = des;</span><br><span class="line">	while (num--)</span><br><span class="line">	&#123;</span><br><span class="line">		//一个字节一个字节的复制</span><br><span class="line">		*(char*)des = *(char*)src;</span><br><span class="line">		des = (char*)des + 1;</span><br><span class="line">		src = (char*)src + 1;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="memmove"><a class="markdownIt-Anchor" href="#memmove">#</a> memmove</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;sring.h&gt;</span><br><span class="line">void *memmove(void* des,const void * src,size_t num);</span><br><span class="line">//把num个字节从src复制到des,返回指向des首地址的void指针,src与des可以出现重叠</span><br></pre></td></tr></table></figure>
+<h2 id="my_memmove"><a class="markdownIt-Anchor" href="#my_memmove">#</a> my_memmove</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//memmove较与memcpy的一个区别就是des和src允许重合</span><br><span class="line">//如果有重合的部分，我们需要保证src改变之前就被复制到des里面</span><br><span class="line">void* my_memmove(void* des,const void* src, size_t num)</span><br><span class="line">&#123;</span><br><span class="line">	assert(des &amp;&amp; src);</span><br><span class="line">	void* ret = des;</span><br><span class="line">	while (num--)</span><br><span class="line">	&#123;</span><br><span class="line">		if (src &gt; des)</span><br><span class="line">		&#123;</span><br><span class="line">		//当src的地址&gt;des的地址时，des的改变并不会影响src</span><br><span class="line">			*(char*)des = *(char*)src;</span><br><span class="line">			src = (char*)src + 1;</span><br><span class="line">			des = (char*)des + 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">		//当src的地址&lt;=des的地址时,如果直接顺序复制可能会改变src</span><br><span class="line">		//如果是逆序则不会改变</span><br><span class="line">			*((char*)des + num) = *((char*)src + num);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="my-memcpy"><a href="#my-memcpy" class="headerlink" title="my_memcpy"></a>my_memcpy</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void* my_memcpy(void* des,const void* src, size_t num)</span><br><span class="line">&#123;</span><br><span class="line">	assert(des &amp;&amp; src);</span><br><span class="line">	void* ret = des;</span><br><span class="line">	while (num--)</span><br><span class="line">	&#123;</span><br><span class="line">		//一个字节一个字节的复制</span><br><span class="line">		*(char*)des = *(char*)src;</span><br><span class="line">		des = (char*)des + 1;</span><br><span class="line">		src = (char*)src + 1;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </div>
 
-<h2 id="memmove"><a href="#memmove" class="headerlink" title="memmove"></a>memmove</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;sring.h&gt;</span><br><span class="line">void *memmove(void* des,const void * src,size_t num);</span><br><span class="line">//把num个字节从src复制到des,返回指向des首地址的void指针,src与des可以出现重叠</span><br></pre></td></tr></table></figure>
+   <footer>
 
-<h2 id="my-memmove"><a href="#my-memmove" class="headerlink" title="my_memmove"></a>my_memmove</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//memmove较与memcpy的一个区别就是des和src允许重合</span><br><span class="line">//如果有重合的部分，我们需要保证src改变之前就被复制到des里面</span><br><span class="line">void* my_memmove(void* des,const void* src, size_t num)</span><br><span class="line">&#123;</span><br><span class="line">	assert(des &amp;&amp; src);</span><br><span class="line">	void* ret = des;</span><br><span class="line">	while (num--)</span><br><span class="line">	&#123;</span><br><span class="line">		if (src &gt; des)</span><br><span class="line">		&#123;</span><br><span class="line">		//当src的地址&gt;des的地址时，des的改变并不会影响src</span><br><span class="line">			*(char*)des = *(char*)src;</span><br><span class="line">			src = (char*)src + 1;</span><br><span class="line">			des = (char*)des + 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">		//当src的地址&lt;=des的地址时,如果直接顺序复制可能会改变src</span><br><span class="line">		//如果是逆序则不会改变</span><br><span class="line">			*((char*)des + num) = *((char*)src + num);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-07-25 20:34:20" itemprop="dateModified" datetime="2023-07-25T20:34:20+08:00">2023-07-25</time>
+  </span>
+</div>
 
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">xiyueyezibile</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/">http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">汐月也自闭了的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/" title="浮点型存储规则"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">浮点型存储规则</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/" title="C语言结构体类型所占空间的大小"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C语言结构体类型所占空间的大小</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdnjson.com/images/2023/05/09/QQ20230509185726.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xiyueyezibile</div><div class="author-info__description">这个需求写不了</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiyueyezibile"><i class="fab fa-github"></i><span>点击跳转</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xiyueyezibile" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="/2859439384@qq.com" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">汐月也自闭了的个人博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#memcpy"><span class="toc-number">1.</span> <span class="toc-text">memcpy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my-memcpy"><span class="toc-number">2.</span> <span class="toc-text">my_memcpy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memmove"><span class="toc-number">3.</span> <span class="toc-text">memmove</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my-memmove"><span class="toc-number">4.</span> <span class="toc-text">my_memmove</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/canvas%E5%9F%BA%E7%A1%80/" title="canvas基础">canvas基础</a><time datetime="2023-08-01T15:42:39.434Z" title="发表于 2023-08-01 23:42:39">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" title="前端实现将彩色图变成黑白色">前端实现将彩色图变成黑白色</a><time datetime="2023-08-01T15:41:25.330Z" title="发表于 2023-08-01 23:41:25">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="前端设计模式|青训营">前端设计模式|青训营</a><time datetime="2023-08-01T02:23:58.413Z" title="发表于 2023-08-01 10:23:58">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/01/SVG%E5%88%9D%E4%B8%8A%E6%89%8B/" title="SVG初上手">SVG初上手</a><time datetime="2023-08-01T02:20:46.539Z" title="发表于 2023-08-01 10:20:46">2023-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/25/Javascript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" title="JavaScript语法基础">JavaScript语法基础</a><time datetime="2023-07-24T17:32:10.473Z" title="发表于 2023-07-25 01:32:10">2023-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xiyueyezibile</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="xiyueyezibile 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="xiyueyezibile 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="xiyueyezibile 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>xiyueyezibile <i class="ic i-at"><em>@</em></i>汐月也自闭了的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2023/05/26/memcpy%E4%B8%8Ememmove/" title="memcpy与memmove">http://example.com/2023/05/26/memcpy与memmove/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciryrr3rj20zk0m8nhk.jpg" title="C语言结构体类型所占空间的大小">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> C语言</span>
+  <h3>C语言结构体类型所占空间的大小</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewr8iypj20zk0m8b29.jpg" title="浮点型存储规则">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> C语言</span>
+  <h3>浮点型存储规则</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#memcpy"><span class="toc-number">1.</span> <span class="toc-text"> memcpy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my_memcpy"><span class="toc-number">2.</span> <span class="toc-text"> my_memcpy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memmove"><span class="toc-number">3.</span> <span class="toc-text"> memmove</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my_memmove"><span class="toc-number">4.</span> <span class="toc-text"> my_memmove</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="bookmark" title="数据类型转换">数据类型转换</a></li><li><a href="/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/" rel="bookmark" title="指针数组与数组指针">指针数组与数组指针</a></li><li><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/" rel="bookmark" title="C语言结构体类型所占空间的大小">C语言结构体类型所占空间的大小</a></li><li class="active"><a href="/2023/05/26/memcpy%E4%B8%8Ememmove/" rel="bookmark" title="memcpy与memmove">memcpy与memmove</a></li><li><a href="/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/" rel="bookmark" title="浮点型存储规则">浮点型存储规则</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="xiyueyezibile"
+      data-src="/images/https:/cdnjson.com/images/2023/05/09/QQ20230509185726.jpg">
+  <p class="name" itemprop="name">xiyueyezibile</p>
+  <div class="description" itemprop="description">这个需求写不了</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">42</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpeXVleWV6aWJpbGU=" title="https:&#x2F;&#x2F;github.com&#x2F;xiyueyezibile"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <a href="/2859439384@qq.com" title="2859439384@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/05/26/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/05/26/%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%98%E5%82%A8%E8%A7%84%E5%88%99/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="数据类型转换">数据类型转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/08/01/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" title="前端实现将彩色图变成黑白色">前端实现将彩色图变成黑白色</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Umi/" title="分类于 Umi">Umi</a>
+</div>
+
+    <span><a href="/2023/05/15/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/" title="Umi max菜单设置问题">Umi max菜单设置问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/04/hexo%E6%93%8D%E4%BD%9C/" title="hexo操作">hexo操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
+</div>
+
+    <span><a href="/2023/05/27/node%20http/" title="http搭建服务器">http搭建服务器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2023/05/26/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/" title="指针数组与数组指针">指针数组与数组指针</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/%E5%9B%BE%E7%89%87%E8%BD%ACbase64/" title="图片转base64">图片转base64</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="分类于 数据结构与算法">数据结构与算法</a>
+</div>
+
+    <span><a href="/2023/05/26/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Umi/" title="分类于 Umi">Umi</a>
+</div>
+
+    <span><a href="/2023/05/15/Umimax/" title="Umi max详解">Umi max详解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" title="前后端实现websocket通信">前后端实现websocket通信</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">xiyueyezibile @ Xiyueyezibile</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">153k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:19</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/05/26/memcpy与memmove/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
