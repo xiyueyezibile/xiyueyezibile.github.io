@@ -6,7 +6,7 @@
     <updated>2023-08-05T16:15:21.472Z</updated>
     <entry>
         <id>http://example.com/2023/08/06/C++/c++%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</id>
-        <title></title>
+        <title>c++类和对象</title>
         <link rel="alternate" href="http://example.com/2023/08/06/C++/c++%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"/>
         <content type="html">&lt;h2 id=&#34;类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类&#34;&gt;#&lt;/a&gt; 类&lt;/h2&gt;
 &lt;p&gt;c++ 是基于面向对象，但不是纯面向对象的语言，它可以面向对象与面向过程一起写。&lt;/p&gt;
