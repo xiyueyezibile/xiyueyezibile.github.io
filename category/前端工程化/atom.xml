@@ -115,7 +115,7 @@ webpack 在编译代码过程中，会触发一系列 Tapable 钩子事件，插
 &lt;p&gt;它会以一个或多个文件作为打包的入口，将整个项目所有文件组合成一个或多个文件输出出去。输出的文件就是编译好的文件。&lt;br&gt;
 打包工具一般会输出一个或多个文件，这些文件就是编译后的文件，我们一般会将其称为 bundle&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;功能结束&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#功能结束&#34;&gt;#&lt;/a&gt; 功能结束&lt;/h2&gt;
+&lt;h2 id=&#34;功能介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#功能介绍&#34;&gt;#&lt;/a&gt; 功能介绍&lt;/h2&gt;
 &lt;p&gt;Webpack 本身功能是有限的&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;开发模式：仅能编译 JS 中的  &lt;code&gt;ES Module&lt;/code&gt;  语法&lt;/li&gt;
