@@ -27,12 +27,12 @@
   <meta name="keywords" content="前端,博客,汐月也自闭了,c++" />
 
 
-<link rel="canonical" href="http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/">
+<link rel="canonical" href="http://example.com/2023/08/28/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96/">
 
 
 
   <title>
-模块化 - nodeJS |
+模块化 - 前端工程化 |
 Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星河照耀</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -64,19 +64,19 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2023-05-27 10:21:10">
+  <span class="item" title="创建时间：2023-08-28 17:52:35">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-05-27T10:21:10+08:00">2023-05-27</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-28T17:52:35+08:00">2023-08-28</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>2.9k</span>
+    <span>3.5k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
       </div>
       <div id="imgs" class="pjax">
         <ul>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185740.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230317181246.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185754.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185726.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185803.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185747.md.jpg"></li>
-          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185754.md.jpg"></li>
-          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185740.md.jpg"></li>
         </ul>
       </div>
     </header>
@@ -148,12 +148,12 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/nodeJS/" itemprop="item" rel="index" title="分类于 nodeJS"><span itemprop="name">nodeJS</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="item" rel="index" title="分类于 前端工程化"><span itemprop="name">前端工程化</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/28/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -168,46 +168,61 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   <div class="body md" itemprop="articleBody">
     
 
-    <p>在 node 中，默认支持的模块化规范叫做 CommonJS</p>
+    <p>模块化，顾名思义，就是将相同功能的代码封装为一个功能模块，以便在其他地方多次进行复用，不过代码复用并非模块化一条路可以走：</p>
+<p>在 node 中，默认支持的模块化规范叫做<strong> CommonJS</strong></p>
 <p>在 CommonJS 中一个 js 文件就是一个模块</p>
-<h3 id="commonjs规范"><a class="markdownIt-Anchor" href="#commonjs规范">#</a> CommonJS 规范：</h3>
-<p>​	- 引入模块</p>
+<h2 id="commonjs规范"><a class="markdownIt-Anchor" href="#commonjs规范">#</a> CommonJS 规范：</h2>
+<h3 id="-引入模块"><a class="markdownIt-Anchor" href="#-引入模块">#</a> - 引入模块</h3>
 <p>使用 <code>require(“模块的路径”)</code>  函数来引入模块</p>
 <p>模块名要以 <code>./</code>  或 <code>../</code>  开头</p>
-<p>在定义模块时，模块中的内容默认是不能被外部看到的</p>
-<p>可以通过 <code>exports</code>  来设置要向外部暴露的内容</p>
-<p><code>module.exports</code>  同时导出多个值</p>
-<p>​	- 引入核心模块</p>
+<p>在定义模块时，模块中的内容默认是不能被外部看到的。</p>
+<p>可以通过 <code>exports</code>  来设置要向外部暴露的内容。</p>
+<p><code>module.exports</code>  同时导出多个值。</p>
+<h3 id="-引入核心模块"><a class="markdownIt-Anchor" href="#-引入核心模块">#</a> - 引入核心模块</h3>
 <p><code>require(&quot;核心模块名字&quot;)</code></p>
 <p>cjs 为扩展名，表示是一个 CommonJS 模块</p>
 <p>也可以用文件夹作为一个模块， <code>require(&quot;./文件名&quot;)</code></p>
-<p>所以 CommonJS 的模块都会包装到一个函数中</p>
-<p>（function（exports，require，module，_ _filename,__dirname）{</p>
-<p>}）</p>
+<p>所有 CommonJS 的模块都会包装到一个函数中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"><span class="built_in">exports</span>，<span class="built_in">require</span>，<span class="variable language_">module</span>，_ _filename,__dirname</span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>默认 node 中的模块化标准是 CommonJS</p>
-<h3 id="要变成es模块有两种方法"><a class="markdownIt-Anchor" href="#要变成es模块有两种方法">#</a> 要变成 ES 模块，有两种方法：</h3>
+<h3 id="要变成es规范有两种方法"><a class="markdownIt-Anchor" href="#要变成es规范有两种方法">#</a> 要变成 ES 规范，有两种方法：</h3>
 <p>1. 文件后缀名为.mjs</p>
 <p>2. 创建 package.json 文件，修改 type 属性为 module</p>
-<h3 id="es模块化"><a class="markdownIt-Anchor" href="#es模块化">#</a> ES 模块化：</h3>
+<h2 id="amd"><a class="markdownIt-Anchor" href="#amd">#</a> AMD</h2>
+<p>在 cjs 规范中，模块是同步加载的（毕竟它是设计给服务端 nodejs 的），也就是说，即使不需要依赖其他模块的代码，依然需要等待前面模块加载完毕之后才能开始执行，在模块越来越大之后无疑会损失更多性能，因此 AMD（Asynchronous Module Definition 异步模块定义）便应运而生，顾名思义，这个规范实现了模块的异步加载。</p>
+<h2 id="cmd"><a class="markdownIt-Anchor" href="#cmd">#</a> CMD</h2>
+<p>CMD 的基本逻辑跟 AMD 是一致的，只不过在写法上 CMD 采用了 cjs 的部分语法，且 CMD 仅支持浏览器端使用，并在模块加载方面针对浏览器端运行的代码做了些许优化。同样需要引入三方库来支持 CMD 规范，比较常用的是 <code>sea.js</code></p>
+<h2 id="es模块化"><a class="markdownIt-Anchor" href="#es模块化">#</a> ES 模块化：</h2>
 <p>通过 export 导出变量</p>
-<p><code>export let a  = 10</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> a  = <span class="number">10</span></span><br></pre></td></tr></table></figure>
 <p>导入用 import</p>
-<p><code>import &quot;./m3.mjs&quot;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;./m3.mjs&quot;</span></span><br></pre></td></tr></table></figure>
 <p>es 模块不能省略扩展名</p>
-<p>导入值  import {a,b} from “./m3.mjs”</p>
-<p>import {a as m,b} from “./m3.mjs”</p>
+<p>导入值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;a,b&#125; <span class="keyword">from</span> <span class="string">&quot;./m3.mjs&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;a <span class="keyword">as</span> m,b&#125; <span class="keyword">from</span> <span class="string">&quot;./m3.mjs&quot;</span></span><br></pre></td></tr></table></figure>
 <p>as 把 a 名字改成 m，a 就不能用了</p>
-<p>import * as m4 from “./m3.mjs”</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> m4 <span class="keyword">from</span> <span class="string">&quot;./m3.mjs&quot;</span></span><br></pre></td></tr></table></figure>
 <p>* 表示导入所有，以对象形式，并且改名为 m4</p>
 <p>// 设置默认导出</p>
-<p>export default function sum(a,b) {</p>
-<p>return a + b</p>
-<p>}</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a,b</span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>// 导入默认导出，默认导出内容可以随便起名，一个模块只有一个默认导出</p>
-<p>import asd from “./m3.mjs”</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asd <span class="keyword">from</span> <span class="string">&quot;./m3.mjs&quot;</span> </span><br></pre></td></tr></table></figure>
 <p>// 可以同时导出</p>
-<p>import asd,{a,b} from “./m3.mjs”</p>
-<h5 id="通过es模块化导入的都是常量constes模块运行在严格模式下"><a class="markdownIt-Anchor" href="#通过es模块化导入的都是常量constes模块运行在严格模式下">#</a> 通过 ES 模块化导入的都是常量（const），es 模块运行在严格模式下</h5>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asd,&#123;a,b&#125; <span class="keyword">from</span> <span class="string">&quot;./m3.mjs&quot;</span> </span><br></pre></td></tr></table></figure>
+<p><strong>通过 ES 模块化导入的都是常量（const），es 模块运行在严格模式下</strong></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h2>
+<ul>
+<li>
+<p>nodejs 直接支持 commonjs 和 es6 模块，浏览器端直接支持 es6 模块，其余情况下均需要第三方工具预编译或运行时支持</p>
+</li>
+<li>
+<p>commonjs 采用同步方式加载模块，而其余三者则使用异步方式对模块进行加载</p>
+</li>
+<li>
+<p>commonjs、AMD 和 CMD 模块导出的均是对象值的复制，而 es6 模块采用具名方式导出时导出的是地址，后者被导出内容在模块内发生变化时会反映到外部。</p>
+</li>
+</ul>
 <h2 id="核心模块"><a class="markdownIt-Anchor" href="#核心模块">#</a> 核心模块</h2>
 <p>node 中自带的模块，可以在 node 中直接使用</p>
 <p>global 是 node 中的全局对象，作用类似于 window</p>
@@ -279,7 +294,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-05-27 10:24:21" itemprop="dateModified" datetime="2023-05-27T10:24:21+08:00">2023-05-27</time>
+    <time title="修改时间：2023-08-28 17:53:00" itemprop="dateModified" datetime="2023-08-28T17:53:00+08:00">2023-08-28</time>
   </span>
 </div>
 
@@ -315,7 +330,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">http://example.com/2023/05/27/nodeJS/模块化/</a>
+    <a href="http://example.com/2023/08/28/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">http://example.com/2023/08/28/前端工程化/模块化/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -334,22 +349,14 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
     <div class="item left">
       
 
-  <a href="/2023/05/27/nodeJS/REST%E5%92%8CAJAX/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185754.md.jpg" title="rest和ajax">
+  <a href="/2023/08/27/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185726.md.jpg" title="npm包管理工具">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> nodeJS</span>
-  <h3>rest和ajax</h3>
+  <span class="category"><i class="ic i-flag"></i> 前端工程化</span>
+  <h3>npm包管理工具</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185754.md.jpg" title="设置图形验证码">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> nodeJS</span>
-  <h3>设置图形验证码</h3>
-  </a>
-
     </div>
 </div>
 
@@ -366,11 +373,11 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#commonjs%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text"> CommonJS 规范：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%81%E5%8F%98%E6%88%90es%E6%A8%A1%E5%9D%97%E6%9C%89%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> 要变成 ES 模块，有两种方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#es%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text"> ES 模块化：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E8%BF%87es%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AF%BC%E5%85%A5%E7%9A%84%E9%83%BD%E6%98%AF%E5%B8%B8%E9%87%8Fconstes%E6%A8%A1%E5%9D%97%E8%BF%90%E8%A1%8C%E5%9C%A8%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E4%B8%8B"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 通过 ES 模块化导入的都是常量（const），es 模块运行在严格模式下</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97"><span class="toc-number"></span> <span class="toc-text"> 核心模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#process"><span class="toc-number">1.</span> <span class="toc-text"> Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#path"><span class="toc-number">2.</span> <span class="toc-text"> Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs"><span class="toc-number">3.</span> <span class="toc-text"> fs</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#commonjs%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text"> CommonJS 规范：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97"><span class="toc-number">1.1.</span> <span class="toc-text"> - 引入模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-%E5%BC%95%E5%85%A5%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97"><span class="toc-number">1.2.</span> <span class="toc-text"> - 引入核心模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%81%E5%8F%98%E6%88%90es%E8%A7%84%E8%8C%83%E6%9C%89%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text"> 要变成 ES 规范，有两种方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#amd"><span class="toc-number">2.</span> <span class="toc-text"> AMD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cmd"><span class="toc-number">3.</span> <span class="toc-text"> CMD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#es%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text"> ES 模块化：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text"> 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97"><span class="toc-number">6.</span> <span class="toc-text"> 核心模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#process"><span class="toc-number">6.1.</span> <span class="toc-text"> Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#path"><span class="toc-number">6.2.</span> <span class="toc-text"> Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs"><span class="toc-number">6.3.</span> <span class="toc-text"> fs</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2023/05/27/nodeJS/express/" rel="bookmark" title="express">express</a></li><li><a href="/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/" rel="bookmark" title="http协议">http协议</a></li><li><a href="/2023/05/27/nodeJS/node%20http/" rel="bookmark" title="http搭建服务器">http搭建服务器</a></li><li><a href="/2023/05/27/nodeJS/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" rel="bookmark" title="npm包管理器">npm包管理器</a></li><li><a href="/2023/05/27/nodeJS/REST%E5%92%8CAJAX/" rel="bookmark" title="rest和ajax">rest和ajax</a></li><li class="active"><a href="/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/" rel="bookmark" title="模块化">模块化</a></li><li><a href="/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/" rel="bookmark" title="设置图形验证码">设置图形验证码</a></li>
+          <li><a href="/2023/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" rel="bookmark" title="webpack入门指南">webpack入门指南</a></li><li><a href="/2023/08/20/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack%E4%B8%ADplugin%E4%B8%8Eloader%E5%85%A5%E9%97%A8%E8%AE%B2%E8%A7%A3/" rel="bookmark" title="webpack中plugin与loader入门讲解">webpack中plugin与loader入门讲解</a></li><li><a href="/2023/08/27/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" rel="bookmark" title="npm包管理工具">npm包管理工具</a></li><li class="active"><a href="/2023/08/28/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96/" rel="bookmark" title="模块化">模块化</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -444,12 +451,10 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/05/27/nodeJS/REST%E5%92%8CAJAX/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -474,7 +479,27 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
 </div>
 
-    <span><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80/memcpy%E4%B8%8Ememmove/" title="memcpy与memmove">memcpy与memmove</a></span>
+    <span><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="数据类型转换">数据类型转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="前端设计模式|青训营">前端设计模式|青训营</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" title="音频可视化">音频可视化</a></span>
   </li>
 
       
@@ -484,7 +509,17 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" title="分类于 前端工程化">前端工程化</a>
 </div>
 
-    <span><a href="/2023/08/27/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="npm包管理工具">npm包管理工具</a></span>
+    <span><a href="/2023/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="webpack入门指南">webpack入门指南</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/Array%20includes%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Array includes">Array includes</a></span>
   </li>
 
       
@@ -501,10 +536,10 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="分类于 数据结构与算法">数据结构与算法</a>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" title="分类于 前端工程化">前端工程化</a>
 </div>
 
-    <span><a href="/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a></span>
+    <span><a href="/2023/08/20/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack%E4%B8%ADplugin%E4%B8%8Eloader%E5%85%A5%E9%97%A8%E8%AE%B2%E8%A7%A3/" title="webpack中plugin与loader入门讲解">webpack中plugin与loader入门讲解</a></span>
   </li>
 
       
@@ -514,27 +549,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
 </div>
 
-    <span><a href="/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" title="使内容滚动到盒子底部">使内容滚动到盒子底部</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
-</div>
-
-    <span><a href="/2023/05/27/nodeJS/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81/" title="设置图形验证码">设置图形验证码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Umi/" title="分类于 Umi">Umi</a>
-</div>
-
-    <span><a href="/2023/05/15/Umi/UmiJS%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" title="UmiJS完全指南">UmiJS完全指南</a></span>
+    <span><a href="/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/" title="前端实现将彩色图变成黑白色">前端实现将彩色图变成黑白色</a></span>
   </li>
 
       
@@ -544,7 +559,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
 </div>
 
-    <span><a href="/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/" title="js开启摄像头">js开启摄像头</a></span>
+    <span><a href="/2023/05/04/Javascript/base64%E8%BD%AC%E6%96%87%E4%BB%B6/" title="base64转文件">base64转文件</a></span>
   </li>
 
       
@@ -554,17 +569,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/Umi/" title="分类于 Umi">Umi</a>
 </div>
 
-    <span><a href="/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/" title="Umi max菜单设置问题">Umi max菜单设置问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/react-router/" title="分类于 react-router">react-router</a>
-</div>
-
-    <span><a href="/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/" title="react-router-v6全解析">react-router-v6全解析</a></span>
+    <span><a href="/2023/05/15/Umi/Umimax/" title="Umi max详解">Umi max详解</a></span>
   </li>
 
   </ul>
@@ -607,7 +612,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/05/27/nodeJS/模块化/',
+    path: '2023/08/28/前端工程化/模块化/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
