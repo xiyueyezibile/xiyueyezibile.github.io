@@ -5,8 +5,115 @@
         <link>http://example.com</link>
         <description>这个需求写不了</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 01 Aug 2023 23:41:25 +0800</pubDate>
-        <lastBuildDate>Tue, 01 Aug 2023 23:41:25 +0800</lastBuildDate>
+        <pubDate>Sat, 02 Sep 2023 23:21:10 +0800</pubDate>
+        <lastBuildDate>Sat, 02 Sep 2023 23:21:10 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/09/02/Javascript/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+            <title>文件操作</title>
+            <link>http://example.com/2023/09/02/Javascript/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+            <pubDate>Sat, 02 Sep 2023 23:21:10 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;blob&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#blob&#34;&gt;#&lt;/a&gt; Blob&lt;/h2&gt;
+&lt;p&gt;Blob 对象表示一个不可变、原始数据的类文件对象。我们直接来看这么使用它：&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; blob = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Blob&lt;/span&gt;([&lt;span class=&#34;string&#34;&gt;&amp;#x27;hello world&amp;#x27;&lt;/span&gt;], &amp;#123; &lt;span class=&#34;attr&#34;&gt;type&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;#x27;text/plain&amp;#x27;&lt;/span&gt; &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第一个参数是个数组，数组项可以是 ArrayBuffer, String 等等，第二个是配置项，最常用的就是 type 属性，可以传入 text/plain, text/html 等&lt;/p&gt;
+&lt;h3 id=&#34;file&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#file&#34;&gt;#&lt;/a&gt; File&lt;/h3&gt;
+&lt;p&gt;文件（File）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容，继承了 Blob。&lt;/p&gt;
+&lt;p&gt;通常 File 对象来源有两个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;  元素上选择文件后返回的 FileList 对象&lt;/li&gt;
+&lt;li&gt;拖放操作生成的 DataTransfer 对象（dataTransfer.files）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; file = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;File&lt;/span&gt;([&lt;span class=&#34;string&#34;&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;], &lt;span class=&#34;string&#34;&gt;&amp;quot;foo.txt&amp;quot;&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;type&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;text/plain&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;lastModified&lt;/span&gt;: &lt;span class=&#34;title class_&#34;&gt;Date&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;now&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;filereader&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#filereader&#34;&gt;#&lt;/a&gt; FileReader&lt;/h3&gt;
+&lt;p&gt;FileReader 对象允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，可以读取 Blob 和 File 的数据。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;error&lt;/td&gt;
+&lt;td&gt;一个 DOMException，表示读取文件时发生的错误&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readyState&lt;/td&gt;
+&lt;td&gt;0 代表还没加载，1 代表加载中，2 代表加载完成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;result&lt;/td&gt;
+&lt;td&gt;文件的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;事件&lt;/td&gt;
+&lt;td&gt;说明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;------------------------------------------------&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onabort&lt;/td&gt;
+&lt;td&gt;读取操作被中断事件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onerror&lt;/td&gt;
+&lt;td&gt;读取操作发生错误的事件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onload&lt;/td&gt;
+&lt;td&gt;读取操作完成的事件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onloadstart&lt;/td&gt;
+&lt;td&gt;该事件在读取操作开始时触发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onloadend&lt;/td&gt;
+&lt;td&gt;该事件在读取操作结束时（要么成功，要么失败）触发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;onprogress&lt;/td&gt;
+&lt;td&gt;读取 Blob 时触发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;方法&lt;/td&gt;
+&lt;td&gt;说明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;------------------&lt;/td&gt;
+&lt;td&gt;-------------------------------------------------&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;abort&lt;/td&gt;
+&lt;td&gt;中止读取&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readAsArrayBuffer&lt;/td&gt;
+&lt;td&gt;开始读取数据，读取完后 result 是 ArrayBuffer 对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readAsBinaryString&lt;/td&gt;
+&lt;td&gt;开始读取数据，读取完后 result 是二进制数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readAsDataURL&lt;/td&gt;
+&lt;td&gt;开始读取数据，读取完后 result 是 Base64 字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readAsText&lt;/td&gt;
+&lt;td&gt;开始读取数据，读取完后 result 是字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/08/01/Javascript/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%B0%86%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%8F%98%E6%88%90%E9%BB%91%E7%99%BD%E8%89%B2/</guid>
             <title>前端实现将彩色图变成黑白色</title>
