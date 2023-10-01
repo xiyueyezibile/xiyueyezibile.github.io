@@ -117,10 +117,10 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185747.md.jpg"></li>
-          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185740.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185754.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230317181246.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185740.md.jpg"></li>
+          <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185747.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185803.md.jpg"></li>
           <li class="item" data-background-image="https://cdnjson.com/images/2023/05/09/QQ20230509185726.md.jpg"></li>
         </ul>
@@ -171,7 +171,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
     <p>原型和原型链的关系错综复杂，最近借鉴了网上各位大神的文章，终于感觉搞懂了，于是马上写了这篇文章理清思路。</p>
 <h2 id="图示"><a class="markdownIt-Anchor" href="#图示">#</a> 图示</h2>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Foo</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> <span class="title class_">Foo</span>();</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91d22816f55b43be94f2f41c55b38240~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2055&amp;h=1154&amp;s=198256&amp;e=png&amp;b=ffffff" alt="image.png"></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91d22816f55b43be94f2f41c55b38240~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=2055&amp;h=1154&amp;s=198256&amp;e=png&amp;b=ffffff" alt="image.png"></p>
 <h2 id="概念"><a class="markdownIt-Anchor" href="#概念">#</a> 概念</h2>
 <p>在开始讲解之前我们要理清一些概念：</p>
 <ol>
@@ -191,16 +191,16 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Foo</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> <span class="title class_">Foo</span>();</span><br></pre></td></tr></table></figure>
 <h3 id="最初版乞丐图"><a class="markdownIt-Anchor" href="#最初版乞丐图">#</a> 最初版乞丐图</h3>
 <p>我们先从<strong> foo 实例对象</strong>，以及<strong> Foo 构造函数</strong>和<strong> Foo 的原型对象</strong>的关系下手:</p>
-<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc78902b6c87467c947c78108e82d2a2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=697&amp;h=422&amp;s=42376&amp;e=png&amp;b=ffffff" alt="image.png"><br>
+<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc78902b6c87467c947c78108e82d2a2~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=697&amp;h=422&amp;s=42376&amp;e=png&amp;b=ffffff" alt="image.png"><br>
  验证一下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Foo</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> <span class="title class_">Foo</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(foo.<span class="property">constructor</span> === <span class="title class_">Foo</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Foo</span>.<span class="property"><span class="keyword">prototype</span></span> === foo.<span class="property">__proto__</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Foo</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> === <span class="title class_">Foo</span>)</span><br></pre></td></tr></table></figure>
 <p>结果:</p>
-<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7283be88ec6142a5ae60f8f89d97b9c9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=966&amp;h=72&amp;s=3236&amp;e=png&amp;b=fefdfd" alt="image.png"></p>
+<p><img data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ee0fec2ca8a4fa592b2745020be4474~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1343&amp;h=845&amp;s=106502&amp;e=png&amp;b=ffffff" alt="image.png"></p>
 <p>分析:</p>
 <p>第三行中 <code>foo.constructor === Foo</code> ，foo 上是没有 <code>constructor</code>  的，它的 <code>constructor</code>  是继承而来的，顺着 <code>__proto__</code> 找到 Foo 的原型对象，它有 <code>constructor</code>  属性，并且指向 Foo 构造函数，所以成立。</p>
 <h3 id="路径完善图"><a class="markdownIt-Anchor" href="#路径完善图">#</a> 路径完善图</h3>
 <p>上图离我们最终形态差的还是有点远，前面说到对象应该有 <code>__proto__</code> 和 <code>constructor</code> , 函数应该有 <code>__proto__</code> 和 <code>constructor</code>  和 <code>prototype</code>  属性，现在我们补齐:</p>
-<p><img data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ee0fec2ca8a4fa592b2745020be4474~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1343&amp;h=845&amp;s=106502&amp;e=png&amp;b=ffffff" alt="image.png"><br>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f72aa2f19c3b440fb913ebe807e37236~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=2055&amp;h=1154&amp;s=198256&amp;e=png&amp;b=ffffff" alt="image.png"><br>
  验证一下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Foo</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> <span class="title class_">Foo</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Foo</span>.<span class="property">__proto__</span> === <span class="title class_">Function</span>.<span class="property"><span class="keyword">prototype</span></span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Foo</span>.<span class="property">constructor</span> === <span class="title class_">Function</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Foo</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">__proto__</span> === <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>)</span><br></pre></td></tr></table></figure>
 <p>结果:</p>
@@ -238,7 +238,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-10-01 19:57:42" itemprop="dateModified" datetime="2023-10-01T19:57:42+08:00">2023-10-01</time>
+    <time title="修改时间：2023-10-01 20:01:44" itemprop="dateModified" datetime="2023-10-01T20:01:44+08:00">2023-10-01</time>
   </span>
 </div>
 
@@ -293,7 +293,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
     <div class="item left">
       
 
-  <a href="/2023/09/24/Javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E8%AE%B2%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185726.md.jpg" title="尝试一图讲清proto,prototype,原型之间的关系">
+  <a href="/2023/09/24/Javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E8%AE%B2%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdnjson.com&#x2F;images&#x2F;2023&#x2F;05&#x2F;09&#x2F;QQ20230509185747.md.jpg" title="尝试一图讲清proto,prototype,原型之间的关系">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Javascript</span>
   <h3>尝试一图讲清proto,prototype,原型之间的关系</h3>
@@ -420,50 +420,10 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/html/" title="分类于 html">html</a>
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="分类于 数据结构与算法">数据结构与算法</a>
 </div>
 
-    <span><a href="/2023/06/10/html/html%E5%A4%A7%E5%85%A8/" title="html全解">html全解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Umi/" title="分类于 Umi">Umi</a>
-</div>
-
-    <span><a href="/2023/05/15/Umi/Umimax/" title="Umi max详解">Umi max详解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/react-router/" title="分类于 react-router">react-router</a>
-</div>
-
-    <span><a href="/2023/05/20/react-router/react-router-v6%E5%85%A8%E8%A7%A3%E6%9E%90/" title="react-router-v6全解析">react-router-v6全解析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/css/" title="分类于 css">css</a>
-</div>
-
-    <span><a href="/2023/07/11/css/css%E5%A4%A7%E5%85%A8/" title="css大全">css大全</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
-</div>
-
-    <span><a href="/2023/05/26/C%E8%AF%AD%E8%A8%80/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88/" title="指针数组与数组指针">指针数组与数组指针</a></span>
+    <span><a href="/2023/05/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a></span>
   </li>
 
       
@@ -473,17 +433,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
 </div>
 
-    <span><a href="/2023/05/27/nodeJS/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">模块化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/html/" title="分类于 html">html</a>
-</div>
-
-    <span><a href="/2023/09/10/html/pixi/" title="pixi.js">pixi.js</a></span>
+    <span><a href="/2023/05/27/nodeJS/REST%E5%92%8CAJAX/" title="rest和ajax">rest和ajax</a></span>
   </li>
 
       
@@ -493,7 +443,7 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
 </div>
 
-    <span><a href="/2023/05/04/Javascript/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0websocket%E9%80%9A%E4%BF%A1/" title="前后端实现websocket通信">前后端实现websocket通信</a></span>
+    <span><a href="/2023/05/04/Javascript/%E4%BD%BF%E5%86%85%E5%AE%B9%E6%BB%9A%E5%8A%A8%E5%88%B0%E7%9B%92%E5%AD%90%E5%BA%95%E9%83%A8/" title="使内容滚动到盒子底部">使内容滚动到盒子底部</a></span>
   </li>
 
       
@@ -503,17 +453,67 @@ Xiyueyezibile = 汐月也自闭了的个人博客 = 别怕路长梦远,总有星
 <a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
 </div>
 
-    <span><a href="/2023/05/04/Javascript/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/" title="图片懒加载">图片懒加载</a></span>
+    <span><a href="/2023/10/01/Javascript/%E5%B0%9D%E8%AF%95%E4%B8%80%E5%9B%BE%E7%90%86%E6%B8%85prototype,proto,%E5%8E%9F%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" title="尝试一图理清prototype,proto,原型之间的关系">尝试一图理清prototype,proto,原型之间的关系</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Umi/" title="分类于 Umi">Umi</a>
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
 </div>
 
-    <span><a href="/2023/05/15/Umi/Umimax%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/" title="Umi max菜单设置问题">Umi max菜单设置问题</a></span>
+    <span><a href="/2023/05/04/Javascript/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" title="音频可视化">音频可视化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%E4%B8%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/" title="函数防抖与函数节流">函数防抖与函数节流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/nodeJS/" title="分类于 nodeJS">nodeJS</a>
+</div>
+
+    <span><a href="/2023/05/27/nodeJS/http%E5%8D%8F%E8%AE%AE/" title="http协议">http协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Javascript/" title="分类于 Javascript">Javascript</a>
+</div>
+
+    <span><a href="/2023/05/04/Javascript/js%E5%BC%80%E5%90%AF%E6%91%84%E5%83%8F%E5%A4%B4/" title="js开启摄像头">js开启摄像头</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Redux/" title="分类于 Redux">Redux</a>
+</div>
+
+    <span><a href="/2023/05/09/Redux/Redux/" title="Redux">Redux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/git/" title="分类于 git">git</a>
+</div>
+
+    <span><a href="/2023/07/09/git/git%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" title="git快速上手">git快速上手</a></span>
   </li>
 
   </ul>
