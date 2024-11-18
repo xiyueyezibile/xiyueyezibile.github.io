@@ -57,6 +57,21 @@ module.exports = {
             title: "一文搞懂webpack配置",
             path: "/frontend/webpackAwesome",
           },
+          {
+            title: "前端模块化",
+            path: "/frontend/frontendModule",
+          },
+        ],
+      },
+      {
+        title: "计算机网络",
+        path: "/network",
+        collapsable: false,
+        children: [
+          {
+            title: "快速了解计算机网络 - HTTP篇",
+            path: "/network/http",
+          },
         ],
       },
     ],
