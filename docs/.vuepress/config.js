@@ -1,7 +1,7 @@
 module.exports = {
   title: "xiyue 的博客",
   description: "种一棵树最好的时间是十年前，其次是现在。",
-  base: "/blog/",
+  base: "/",
   theme: "reco",
   locales: {
     "/": {
@@ -40,6 +40,22 @@ module.exports = {
           {
             title: "pnpm + monorepo 为何是组件库/工具库的最佳方案",
             path: "/frontend/pnpmMonorepo",
+          },
+          {
+            title: "尝试一图理清prototype、proto、原型对象之间的关系",
+            path: "/frontend/prototype",
+          },
+          {
+            title: "zustand 源码解析",
+            path: "/frontend/zustand",
+          },
+          {
+            title: "详细教程搭建 react 项目",
+            path: "/frontend/createReact",
+          },
+          {
+            title: "一文搞懂webpack配置",
+            path: "/frontend/webpackAwesome",
           },
         ],
       },

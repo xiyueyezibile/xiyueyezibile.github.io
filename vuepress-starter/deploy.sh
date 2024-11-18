@@ -13,7 +13,8 @@ git init
 git add -A
 git commit -m 'deploy'
 
+git remote add upstream https://github.com/xiyueyezibile/xiyueyezibile.github.io.git
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:xiyueyezibile/xiyueyezibile.github.io.git
+git push -f upstream main
 
 cd -

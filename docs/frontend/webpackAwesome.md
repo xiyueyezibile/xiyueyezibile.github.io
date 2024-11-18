@@ -1,0 +1,1068 @@
+---
+title: 一文搞懂 webpack 配置
+author: xiyue
+date: '2024-10-17'
+---
+
+## 为什么需要打包工具
+
+> 开发时，我们会使用框架(React, Vue), ES6 模块化语法, Less/Sass 预处理器等语法进行开发，这样代码想要在浏览器运行时必须经过编译成浏览器能识别的JS, CSS, HTML等，才能运行。 所以我们需要打包工具帮助我们完成这些事 除此，打包工具还能进行压缩代码，做兼容性处理，提升代码性能等
+
+## 基本使用
+
+> 它会以一个或多个文件作为打包的入口，将整个项目所有文件组合成一个或多个文件输出出去。输出的文件就是编译好的文件。 打包工具一般会输出一个或多个文件，这些文件就是编译后的文件，我们一般会将其称为bundle
+
+## 功能结束
+
+Webpack 本身功能是有限的
+
+-   开发模式：仅能编译 JS 中的 `ES Module` 语法
+-   生产模式：能编译 JS 中的 `ES Module` 语法，还能压缩 JS 代码
+
+## 创建目录
+
+```
+- src
+  - main.js
+  - js
+    - count.js
+    - sum.js
+- public
+    - index.html
+```
+
+public/index.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+</head>
+<body>
+  <h1>hello webpack</h1>
+  <script src="../src/main.js"></script>
+</body>
+</html>
+```
+
+src/main.js
+
+```
+import count from "./js/count"
+import sum from "./js/sum"
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+```
+
+src/js/count.js
+
+```
+export default function count(x, y) {
+  return x - y
+}
+```
+
+src/js/sum.js
+
+```
+export default function sum(...args) {
+  return args.reduce((acc, cur) => acc + cur, 0)
+}
+```
+
+当我们打开 `public/index.html` 时，控制台会报错`Uncaught SyntaxError: Cannot use import statement outside a module`，因为浏览器不认识`ES6 Module`的语法。 这时，我们就需要使用Webpack来编译打包我们的代码，使浏览器可以识别。
+
+## 安装
+
+```
+npm init -y
+npm install webpack webpack-cli --save-dev
+```
+
+## 打包
+
+```
+npx webpack ./src/main.js --mode=development // 开发模式
+```
+
+然后就会在根目录下出现一个dist目录，里面有一个main.js文件，这就是我们打包后的文件。 我们更改一下我们的pubilc/index.html文件,把`<script src="../src/main.js"></script>`改成`<script src="../dist/main.js"></script>`
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+</head>
+<body>
+  <h1>hello webpack</h1>
+  <script src="../dist/main.js"></script>
+</body>
+</html>
+```
+
+然后浏览器就可以运行了。 当你查看dist/main.js文件时，会发现里面多了很多东西，我们看不懂。 我们现在使用生产模式进行打包，生产模式会进行代码压缩。
+
+```
+npx webpack ./src/main.js --mode=production //  生产模式
+```
+
+压缩之后的代码
+
+```
+;(() => {
+  "use strict"
+  console.log(1), console.log([1, 2, 3, 4].reduce((o, e) => o + e, 0))
+})()
+```
+
+## 核心概念
+
+-   entry：入口文件，Webpack 执行构建的第一步从 entry 开始，可抽象成输入。
+-   output：输出文件，Webpack 执行构建的最后一步输出文件，可抽象成输出。
+-   module：模块，在 Webpack 里一切皆模块，一个模块对应着一个文件。
+-   loader：webpack本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要配置 loader 转换器。
+-   plugin：扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑。
+-   mode: 模式，模式指定了 webpack 使用相应环境下的配置。
+
+## 配置文件
+
+名字固定: `webpack.config.js` 配置文件都是在 `nodeJS` 环境下运行的，都是`CommonJS`规范。
+
+```
+// webpack.config.js
+const path = require("path")
+module.exports = {
+  // 入口
+  entry: "./src/main.js", // 相对路径
+  // 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, "dist"), // 绝对路径
+    // 文件名
+    filename: "main.js",
+  },
+  // 加载器
+  module: {
+    rules: [
+      // loader的配置
+    ],
+  },
+  // 插件
+  plugins: [
+    // plugin的配置
+  ],
+  // 模式
+  mode: "development", // 开发环境
+}
+```
+
+有了配置文件，打包命令就可以简化了
+
+```
+npx webpack
+```
+
+## 处理样式资源
+
+Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要配置 loader 转换器。
+
+### 处理 CSS 资源
+
+添加 `src/css/index.css` 文件
+
+```
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+```
+
+修改 `src/main.js`
+
+```
+import count from "./js/count"
+import sum from "./js/sum"
+import "./css/index.css"
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+```
+
+安装 `css-loader`
+
+```
+npm i css-loader style-loader -D
+```
+
+然后在配置文件中配置 `css-loader`
+
+```
+// webpack.config.js
+// 加载器
+  module: {
+    rules: [
+      // loader的配置
+      {
+        test: /.css$/, // 只检测.css结尾的文件,当匹配时调用use
+        // use执行顺序从右到左，从下到上
+        use: [
+          "style-loader", // 将js中css通过创建style标签的形式添加到html文件中
+          "css-loader", // 将css资源编译成commonjs的模块到js中
+        ],
+      },
+    ],
+  },
+```
+
+### 处理less资源
+
+添加 `src/less/index.less` 文件
+
+```
+.box2 {
+  width: 100px;
+  height: 100px;
+  background: deeppink;
+}
+```
+
+修改 `src/main.js`
+
+```
+import count from "./js/count"
+import sum from "./js/sum"
+import "./css/index.css"
+import "./less/index.less"
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+```
+
+安装 `less-loader`
+
+```
+npm i less-loader less -D
+```
+
+修改配置文件
+
+```
+// webpack.config.js
+{
+  test: /.less$/i,
+  use: [
+    // compiles Less to CSS
+    "style-loader",
+    "css-loader",
+    "less-loader",
+  ],
+},
+```
+
+### 处理sass资源
+
+修改 `src/sass/index.scss` 文件
+
+```
+.box3 {
+  width: 100px;
+  height: 100px;
+  background: hotpink;
+}
+```
+
+修改 `src/main.js`
+
+```
+import count from "./js/count"
+import sum from "./js/sum"
+import "./css/index.css"
+import "./less/index.less"
+import "./sass/index.scss"
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+```
+
+安装 `sass-loader`
+
+```
+npm i sass-loader sass -D
+```
+
+修改配置文件
+
+```
+// webpack.config.js
+{
+  test: /.s[ac]ss$/i,
+  use: [
+    // 将 JS 字符串生成为 style 节点
+    "style-loader",
+    // 将 CSS 转化成 CommonJS 模块
+    "css-loader",
+    // 将 Sass 编译成 CSS
+    "sass-loader",
+  ],
+},
+```
+
+### 处理图片资源
+
+webpack5 内置了file-loader和url-loader，所以不需要再安装,会自动处理。 但我们有时需要对其进行一些优化。 添加 `src/images/1.png` 修改 `src/css/index.css`
+
+```
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  background-image: url('../images/1.png');
+}
+```
+
+修改 `public/index.html`
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+</head>
+<body>
+  <h1>hello webpack</h1>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <script src="../dist/main.js"></script>
+</body>
+</html>
+```
+
+**需求**: 我们想把小图片转为base64,减少http请求。大图片不转换为base64,减少打包体积。 修改配置文件
+
+```
+// webpack.config.js
+{
+  test: /.(png|jpg|gif|jpeg)$/,
+  type: "asset",
+  parser: {
+    dataUrlCondition: {
+      // 小于8kb的图片转base64
+      maxSize: 8 * 1024, // 8kb
+    },
+  },
+},
+```
+
+### 修改输出目录
+
+当打包的文件多了，如果都打包到一个文件下，会显得很乱 所以需要进行输出目录配置
+
+```
+// webpack.config.js
+module.exports = {
+  // ...
+  // 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, "dist"), // 绝对路径
+    // 入口文件(一般为js文件)打包输出文件名
+    filename: "static/js/main.js",
+  },
+  // 加载器
+  module: {
+    rules: [
+      // ...
+      {
+        test: /.(png|jpg|gif|jpeg)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            // 小于8kb的图片转base64
+            maxSize: 8 * 1024, // 8kb
+          },
+        },
+        generator: {
+          // 输出图片名称
+          filename: "static/images/[hash:10][ext][query]", // 图片名称,[hash:10]表示hash值的长度为10位,[ext]表示文件后缀,[query]表示文件名
+        },
+      },
+    ],
+  }
+}
+```
+
+### 清空上次打包内容
+
+如果我们不加以配置，每次观看最新的打包效果，都需要手动删除之前的dist文件夹，这样很麻烦，所以需要配置清空上次打包内容。
+
+```
+// webpack.config.js
+// 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, "dist"), // 绝对路径
+    // 入口文件(一般为js文件)打包输出文件名
+    filename: "static/js/main.js",
+    clean: true, // 打包前先清空输出目录
+  },
+```
+
+### 处理字体图标资源
+
+```
+// webpack.config.js
+{
+  test: /.(woff|woff2|eot|ttf|otf)$/,
+  type: "asset/resource",
+  generator: {
+    // 输出图片名称
+    filename: "static/media/[hash][ext][query]", // 图片名称
+  },
+},
+```
+
+### 处理其他资源
+
+比如音视频等资源 在处理字体图标资源的test匹配后面加相关后缀即可
+
+### 处理js资源
+
+Webpack 本身对于 js 的处理是有限的，只能处理 ES 模块化语法，所以我们需要进行一些处理。
+
+-   针对 js 兼容性采用 Babel 来完成
+-   针对代码格式，采用 Eslint 来完成
+
+### eslint
+
+可组装的 JavaScript 和 JSX 检查工具。 关键是写eslint的配置文件 **安装**
+
+```
+npm i eslint eslint-webpack-plugin -D
+```
+
+修改配置文件
+
+```
+// webpack.config.js
+const ESLintPlugin = require("eslint-webpack-plugin")
+// 插件
+  plugins: [
+    // plugin的配置
+    new ESLintPlugin({
+      // 指定检测的文件
+      context: path.resolve(__dirname, "src"),
+    }),
+  ],
+```
+
+添加 eslint 配置文件
+
+```
+// .eslintrc or .eslintrc.js or .eslintrc.json区别在于配置格式不一样
+// .eslintrc.js
+module.exports = {
+  // 继承 Eslint 规则
+  extends: ["eslint:recommended"],
+  env: {
+    node: true, // 启用node中的全局变量
+    browser: true, // 启用浏览器中的全局变量
+  },
+  parserOptions: {
+    ecmaVersion: 6, // 指定ECMAScript的版本
+    sourceType: "module", // 指定源代码的类型，module表示CommonJS的模块化规范，script表示ECMAScript的规范
+  },
+  rules: {
+    "no-var": 2, // 不能使用 var 定义变量
+  },
+}
+```
+
+`.eslintignore` 可以配置忽略检查的目录
+
+```
+dist
+node_modules
+```
+
+### babel
+
+主要用于将 ES6 语法编写的代码转换为向后兼容的代码
+
+```
+// babel.config.js or babel.config.json or .babalrc or .babalrc.js or .babalrc.json
+// babel.config.js
+module.exports = {
+  // 智能预设，能编译ES6语法
+  presets: ["@babel/preset-env"],
+}
+```
+
+**安装**
+
+```
+npm i babel-loader @babel/core @babel/preset-env -D
+```
+
+**配置**
+
+```
+// webpack.config.js
+{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  loader: "babel-loader", // 使用babel-loader
+},
+```
+
+### 处理 html 资源
+
+我们希望有一个插件来自动引入script，而不是自己手动修改 `index.html` 文件 **安装**
+
+```
+npm i html-webpack-plugin -D
+```
+
+**配置**
+
+```
+// webpack.config.js
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+​
+new HtmlWebpackPlugin({
+      // 模板，以public/index.html文件创建心得html文件
+      // 1. 结构和原来一致，会自动引入打包的资源
+      template: path.resolve(__dirname, "public/index.html"),
+    }),
+```
+
+## 搭建开发服务器
+
+每次改代码都需要打包才能看到效果，实在是太麻烦了，我们希望每次保存之后自动重新打包。 **安装**
+
+```
+npm i webpack-dev-server -D
+```
+
+**配置**
+
+```
+// webpack.config.js
+devServer: {
+    host: "127.0.0.1", // 主机地址
+    port: 3000, // 端口
+    open: true, // 自动打开浏览器
+  },
+```
+
+**启动**
+
+```
+npx webpack serve
+```
+
+## 生产模式优化
+
+我们把生产模式和开发模式分别用配置文件 创建 `config`目录 把 `webpack.config.js` 移入 `config` 目录，并改名为 `webpack.config.dev.js` 再复制一份 `webpack.config.dev.js` 改名为 `webpack.config.prod.js` `webpack.config.prod.js`和`webpack.config.dev.js`中所有绝对路径都需要回退一层目录 `webpack.config.prod.js`不需要`devServer`,可以删除,`mode`改为"production" `webpack.config.dev.js`修改 `output`的绝对路径
+
+```
+path: undefined,// 开发模式没有输出
+```
+
+运行某个配置文件
+
+```
+npx webpack --config config/webpack.config.prod.js
+npx webpack server --config config/webpack.config.dev.js
+```
+
+### 提取 CSS 为单独文件
+
+现在 CSS 是通过 js 进行添加, 这会导致闪屏现象 **安装**
+
+```
+npm i mini-css-extract-plugin -D
+```
+
+**配置**
+
+```
+// config/webpack.config.prod.js
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// 把所有的 "style-loader" 替换成 MiniCssExtractPlugin.loader
+// ...
+new MiniCssExtractPlugin({
+      filename: "static/css/main.css",
+    })
+```
+
+### CSS 兼容性处理
+
+**安装**
+
+```
+npm i postcss-loader postcss postcss-preset-env -D
+```
+
+postcss 要在 `css-loader` 后面,在 `less-loader` 前面
+
+```
+{
+  loader: "postcss-loader",
+  options: {
+    postcssOptions: {
+      plugins: [
+        "postcss-preset-env", // 解决大多数样式兼容问题
+      ],
+    },
+  },
+},
+```
+
+这里要看到效果还需要修改 `package.json`
+
+```
+"browserslist":[
+    "last 2 version",
+    "> 1%",
+    "not dead",
+  ]
+```
+
+### 压缩 CSS
+
+**安装**
+
+```
+npm i css-minimizer-webpack-plugin -D
+```
+
+**配置**
+
+```
+// config/webpack.config.prod.js
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// ...
+new CssMinimizerPlugin()
+```
+
+### 压缩 JS 和 html
+
+默认生产模式会对 JS 和 html进行压缩
+
+## 提升开发体验优化
+
+### Source Map(源代码映射)
+
+打包之后的代码我们很难看懂，不好调试，我们希望我们可以去调试打包之后的代码，以提高开发体验。 SourceMap 会生成xx.map，里面包含源代码和构建后代码每一行的映射关系，浏览器在运行打包后的代码时，如果遇到报错，会去查找对应的 SourceMap 文件，然后把报错位置映射到源代码上，这样就便于我们进行调试了。 SourceMap 有很多格式，但实际开发只需要关注两种情况
+
+-   开发模式：cheap-module-source-map 打包速度快，只包含行映射
+
+```
+// config/webpack.config.dev.js
+module.exports = {
+  // ...
+  devtool: "cheap-module-source-map",
+}
+```
+
+-   生产模式：source-map 包含列，行，源代码，构建后代码的源代码位置映射,但打包速度慢
+
+```
+// config/webpack.config.prod.js
+module.exports = {
+  // ...
+  devtool: "source-map",
+}
+```
+
+### HotModuleReplacement(HMR)
+
+HMR 允许在运行时更新各种模块，而无需完全刷新。 原本更改一个模块会重新打包所有模块，HMR会使用之前打包的结果，只更新有变化的模块，大大提高了开发效率。
+
+```
+devServer: {
+    host: "127.0.0.1", // 主机地址
+    port: 3000, // 端口
+    open: true, // 自动打开浏览器
+    hot: true, // 开启HMR
+  },
+```
+
+在 Webpack5 中, HMR默认是开启的，不需要进行显式的配置 但 js 更改还是会整页刷新，如果想要 js 也开启
+
+```
+// 如果支持热更新
+import count from "./js/count.js"
+if(module.hot) {
+  module.hot.accept("./js/count.js");
+}
+```
+
+上面这样写会很麻烦 在实际开发中我们会使用其他loader来解决 比如： `vue-loader`,`react-hot-loader`
+
+### OneOf
+
+OneOf 可以让loader只运行一次，如果多个loader对同一个文件生效，那么只会运行第一个，后面的会被忽略。
+
+```
+module.exports = {
+  module: {
+    rules: [
+      // 每个文件只能被其中一个loader处理
+      oneOf: [
+        {
+        test: /.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
+      {
+        test: /.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
+      ],
+    ],
+  },
+};
+```
+
+上面配置了两个css-loader，但只会运行第一个，因为第二个被OneOf给忽略掉了
+
+### include/exclude
+
+include指定一个文件夹，文件夹下的文件会全部打包，不会忽略 exclude指定一个文件夹，文件夹下的文件不会打包，会忽略
+
+### cache(缓存)
+
+每次打包都要经过eslint检查和babel编译，如果每次都重新编译，会非常消耗性能，所以需要缓存。 当然，主要是 js 需要缓存
+
+```
+{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  loader: "babel-loader", // 使用babel-loader
+  options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+  },
+},
+```
+
+### Thead
+
+多线程打包，可以加快打包速度 我们启动进程的数量就是我们 CPU 的核数 获取 CPU 核数
+
+```
+const os = require("os");
+const cpus = os.cpus().length;
+```
+
+**安装**
+
+```
+npm install thread-loader --save-dev
+```
+
+**配置**
+
+```
+// config/webpack.config.prod.js
+const os = require("os")
+const threads = os.cpus().length
+// webpack内置压缩plugin
+const TerserWebpackPlugin = require("terser-webpack-plugin")
+​
+​
+{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  use: [
+    {
+      loader: "thread-loader",
+      options: {
+        works: threads, // 开启几个线程
+      },
+    },
+    {
+      loader: "babel-loader",
+      options: {
+        cacheDirectory: true, // 开启缓存
+        cacheCompression: false, // 关闭缓存文件压缩
+      },
+    },,
+  ], // 使用babel-loader
+            options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+  },
+},
+​
+// plugin的配置
+    new ESLintPlugin({
+      // 指定检测的文件
+      context: path.resolve(__dirname, "../src"),
+      threads,
+    }),
+​
+new TerserWebpackPlugin({
+      parallel: threads,
+    }),
+```
+
+## 减少代码体积
+
+### TreeSaking
+
+TreeSaking 是一个 webpack 插件，它能够分析出你的代码中那些部分是永远不会被用到，然后剔除掉这部分。 webpack 默认开启
+
+### 处理Babel
+
+Babel 为编译的每个文件都插入了辅助代码，使代码体积过大 我们可以将它们作为一个独立模块来避免重复引入 **安装**
+
+```
+npm install @babel/plugin-transform-runtime --save-dev
+```
+
+**配置**
+
+```
+// config/webpack.config.prod.js
+{
+  loader: "babel-loader",
+  options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+    plugins: ["@babel/plugin-transform-runtime"], // 开启babel-plugin-transform-runtime
+  },
+},
+```
+
+### Code Split(代码分割)
+
+打包会将所有js文件打包到一个文件，导致加载时间过长，我们可以将代码拆分成多个文件，然后按需加载。
+
+#### 多入口
+
+```
+// webpack.config.js
+entry: [
+  app: './src/app.js',
+  main: './src/main.js',
+],
+output: {
+  path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',// 以[name]自己的文件名作为文件名
+}
+```
+
+#### 多入口公共模块
+
+多入口文件的公共的代码提升为公共模块单独打包
+
+```
+// webpack.config.js
+entry: [
+  app: './src/app.js',
+  main: './src/main.js',
+],
+output: {
+  path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',// 以[name]自己的文件名作为文件名
+},
+optimization: {
+  // 代码分割配置
+  splitChunks: {
+    chunks: 'all', // 所有模块都进行分割
+    // minSize: 30000, // 模块大于30kb才进行分割
+    // maxSize: 0, // 最大尺寸0
+    // minChunks: 1, // 最少使用过一次就进行分割
+    // maxAsyncRequests: 5, // 异步加载chunk的并发请求数量最多为5个
+    // maxInitialRequests: 3, // 入口文件最多只能初始加载3个chunk
+    // automaticNameDelimiter: '~', // 命名分隔符
+    // enforeSizeThreshold: 50000, // 模块大于50kb强制打包
+    // name: true, // 缓存组名
+    cacheGroups: {
+      // 缓存组
+      default: {
+        minSize: 0, // 模块大于0kb才进行分割
+        minChunks: 2, // 最小使用过一次就进行分割
+        priority: -20, // 优先级
+        reuseExistingChunk: true, // 如果当前的chunk包含的模块已经被其他chunk包含了，那么将不会再次被引入
+    }
+  },
+},
+```
+
+#### 按需加载，动态导入
+
+```
+// import动态导入，会将动态导入的文件代码分割(分割成单独文件)，在需要使用的时候自动加载
+document.getElementById("btn").onclick = function () {
+  import('./count').then(res=> {
+    console.log("模块加载成功",res.default(2,1))
+  }).catch(err=>{
+    console.log("模块加载失败",err)
+  })
+}
+```
+
+### 单入口
+
+```
+// webpack.config.js
+optimization: {
+  // 代码分割配置
+  splitChunks: {
+    chunks: 'all', // 所有模块都进行分割
+    // minSize: 30000, // 模块大于30kb才进行分割
+    // maxSize: 0, // 最大尺寸0
+    // minChunks: 1, // 最少使用过一次就进行分割
+    // maxAsyncRequests: 5, // 异步加载chunk的并发请求数量最多为5个
+    // maxInitialRequests: 3, // 入口文件最多只能初始加载3个chunk
+    // automaticNameDelimiter: '~', // 命名分隔符
+    // enforeSizeThreshold: 50000, // 模块大于50kb强制打包
+    // name: true, // 缓存组名
+  },
+},
+```
+
+### 给动态导入的文件取名
+
+动态导入时要取名 `import(/* weebpackChunkName: "math" */ "./js/math")`
+
+```
+// webpack.config.js
+output: {
+  chunkFilename: 'static/js/[name].js', // 动态导入的文件名
+  // 图片，字体等通过type:"asset"处理的资源
+  assetModuleFilename: "static/media/[name].[hash][ext]",
+}
+```
+
+### Preload/Prefetch
+
+我们想要在浏览器空闲时间去加载后续需要使用的资源 而不是在需要时才加载，如果资源太大，用户还是会感到卡顿
+
+-   Preload: 告诉浏览器立即加载
+-   Prefetch: 告诉浏览器在空闲时加载
+
+它们都只会加载资源，不执行 Preload 只能加载当前页面需要使用的资源,Prefetch 可以加载下一个页面需要使用的资源 **注意：** 它们兼容性比较差 **安装**
+
+```
+npm i -D preload-webpack-plugin
+```
+
+**配置**
+
+```
+// webpack.config.js
+const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin')
+new PreloadWebpackPlugin({
+  rel: 'preload',
+  as: 'script',
+})
+/*
+  new PreloadWebpackPlugin({
+  rel: 'prefetch',
+})
+*/
+```
+
+### Network Cache
+
+如果`main.js`里面引入了`sum.js`并且打包时`sum.js`设置了`hash`值 如果`sum.js`发生变化，它的文件名的`hash`值就会发送变化 导致`main.js`也要重新打包。 所以我们希望有一个文件a,存储了`sum.js`的`hash`值，`main.js`通过a去访问`sum.js`,这样无论`sum.js`的文件名的`hash`值怎么变都不会影响到`main.js`
+
+```
+// webpack.config.js
+optimization: {
+  runtimeChunk: {
+    name: (entrypoint) => `runtime~${entrypoint.name}.js`
+  }
+}
+```
+
+### core-js
+
+虽然有了 babel ,但它无法处理async, promise对象时，它还是无法处理 core-js 是专门用来处理 ES6以上的 API的 `polyfill` **安装**
+
+```
+npm i core-js
+```
+
+-   直接引入 然后在入口文件`import 'core-js` 但这样会使打包文件很大
+-   手动引入 `import 'core-js/es/promise`
+
+如果我们想要按需加载，自动引入就需要取配置babel
+
+```
+// babel.config.js
+{
+  presets:{
+    [
+      [
+        "@babel/preset-env",{
+        useBuiltIns: "usage",// 按需加载自动引入
+        corejs: 3,
+      }
+      ],
+    ]
+  }
+}
+```
+
+### PWA(渐进式网络应用程序)
+
+我们希望给项目提供离线体验 **安装**
+
+```
+npm i -D workbox-webpack-plugin
+```
+
+**配置**
+
+```
+const WorkboxPlugin = require("workbox-webpack-plugin")
+​
+new WorkboxPlugin.GenerateSW({
+  clientsClaim: true,
+  skipWaiting: true,
+})
+```
+
+最后还要在主文件注册生成`server worker`
+
+```
+// src/main.js
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration)
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError)
+      })
+  })
+}
+```
