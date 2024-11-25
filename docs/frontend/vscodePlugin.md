@@ -73,6 +73,23 @@ yo code
 "package": "vsce package --no-dependencies"
 ```
 
+### webview 不能执行 js 脚本/切换标签页不保存上下文
+
+1. enableScripts 代表允许js脚本执行
+2. retainContextWhenHidden 代表当页签切换离开时保持插件上下文不销毁
+
+```js
+panel = vscode.window.createWebviewPanel(
+  "movie",
+  "Cola Movie",
+  vscode.ViewColumn.One,
+  {
+    enableScripts: true,
+    retainContextWhenHidden: true,
+  }
+);
+```
+
 ## 发布
 
 通过官网选择vscode code上传visx文件

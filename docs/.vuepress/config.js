@@ -61,6 +61,10 @@ module.exports = {
             title: "前端模块化",
             path: "/frontend/frontendModule",
           },
+          {
+            title: "一文上手 vscode 插件开发",
+            path: "/frontend/vscodePlugin",
+          },
         ],
       },
       {
