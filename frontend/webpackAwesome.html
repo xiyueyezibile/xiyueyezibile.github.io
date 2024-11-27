@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一文搞懂 webpack 配置 | xiyue 的博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="种一棵树最好的时间是十年前，其次是现在。">
+    
+    <link rel="preload" href="/assets/css/0.styles.8b18ee56.css" as="style"><link rel="preload" href="/assets/js/app.8f697a83.js" as="script"><link rel="preload" href="/assets/js/4.6e8e19d7.js" as="script"><link rel="preload" href="/assets/js/3.22d6c09e.js" as="script"><link rel="preload" href="/assets/js/2.90686449.js" as="script"><link rel="preload" href="/assets/js/1.0a1b08cd.js" as="script"><link rel="preload" href="/assets/js/46.a643d731.js" as="script"><link rel="prefetch" href="/assets/js/10.40c8bcc0.js"><link rel="prefetch" href="/assets/js/11.ea714278.js"><link rel="prefetch" href="/assets/js/14.9277e85e.js"><link rel="prefetch" href="/assets/js/15.28226581.js"><link rel="prefetch" href="/assets/js/16.0eaedfdb.js"><link rel="prefetch" href="/assets/js/17.9ed56091.js"><link rel="prefetch" href="/assets/js/18.0d31dedd.js"><link rel="prefetch" href="/assets/js/19.5a1c66ac.js"><link rel="prefetch" href="/assets/js/20.2a810016.js"><link rel="prefetch" href="/assets/js/21.7a42342a.js"><link rel="prefetch" href="/assets/js/22.8923db0d.js"><link rel="prefetch" href="/assets/js/23.e0ce32fe.js"><link rel="prefetch" href="/assets/js/24.ab1106a4.js"><link rel="prefetch" href="/assets/js/25.65477d70.js"><link rel="prefetch" href="/assets/js/26.3376dc0a.js"><link rel="prefetch" href="/assets/js/27.551fddfe.js"><link rel="prefetch" href="/assets/js/28.0f2e3d5b.js"><link rel="prefetch" href="/assets/js/29.d4f2d580.js"><link rel="prefetch" href="/assets/js/30.2988a2e4.js"><link rel="prefetch" href="/assets/js/31.db8155f3.js"><link rel="prefetch" href="/assets/js/32.7f2db20f.js"><link rel="prefetch" href="/assets/js/33.fdef02ce.js"><link rel="prefetch" href="/assets/js/34.f5ba2f21.js"><link rel="prefetch" href="/assets/js/35.a7c40ce0.js"><link rel="prefetch" href="/assets/js/36.1d1d8885.js"><link rel="prefetch" href="/assets/js/37.323e1f59.js"><link rel="prefetch" href="/assets/js/38.232e1a89.js"><link rel="prefetch" href="/assets/js/39.9901dd5a.js"><link rel="prefetch" href="/assets/js/40.9c54405a.js"><link rel="prefetch" href="/assets/js/41.1bc4abbc.js"><link rel="prefetch" href="/assets/js/42.dd6a38d0.js"><link rel="prefetch" href="/assets/js/43.1d64c36f.js"><link rel="prefetch" href="/assets/js/44.b35d01ec.js"><link rel="prefetch" href="/assets/js/45.cfc03958.js"><link rel="prefetch" href="/assets/js/47.ffcf632e.js"><link rel="prefetch" href="/assets/js/48.91da2935.js"><link rel="prefetch" href="/assets/js/49.ea14c313.js"><link rel="prefetch" href="/assets/js/5.dd6f9672.js"><link rel="prefetch" href="/assets/js/6.246ffe6b.js"><link rel="prefetch" href="/assets/js/7.04b74996.js"><link rel="prefetch" href="/assets/js/8.c7ab131e.js"><link rel="prefetch" href="/assets/js/9.1e0144fd.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e480d9b8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8b18ee56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-11b6966a><div data-v-11b6966a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-b5424bfe data-v-11b6966a data-v-11b6966a><h3 class="title" data-v-b5424bfe>xiyue 的博客</h3> <p class="description" data-v-b5424bfe>种一棵树最好的时间是十年前，其次是现在。</p> <label id="box" class="inputBox" data-v-b5424bfe><input type="password" value="" data-v-b5424bfe> <span data-v-b5424bfe>Konck! Knock!</span> <button data-v-b5424bfe>OK</button></label> <div class="footer" data-v-b5424bfe><span data-v-b5424bfe><i class="iconfont reco-theme" data-v-b5424bfe></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b5424bfe>vuePress-theme-reco</a></span> <span data-v-b5424bfe><i class="iconfont reco-copyright" data-v-b5424bfe></i> <a data-v-b5424bfe><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-11b6966a><header class="navbar" data-v-11b6966a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">xiyue 的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      xiyue 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/2159893581924631" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/xiyueyezibile" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-11b6966a></div> <aside class="sidebar" data-v-11b6966a><div class="personal-info-wrapper" data-v-30bbb8c8 data-v-11b6966a><!----> <!----> <div class="num" data-v-30bbb8c8><div data-v-30bbb8c8><h3 data-v-30bbb8c8>11</h3> <h6 data-v-30bbb8c8>文章</h6></div> <div data-v-30bbb8c8><h3 data-v-30bbb8c8>0</h3> <h6 data-v-30bbb8c8>标签</h6></div></div> <ul class="social-links" data-v-30bbb8c8></ul> <hr data-v-30bbb8c8></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      xiyue 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/2159893581924631" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/xiyueyezibile" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>简介</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/" aria-current="page" class="sidebar-link">关于我</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/frontend" class="sidebar-heading clickable router-link-active open"><span>前端技术分享</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/pnpmMonorepo.html" class="sidebar-link">pnpm + monorepo 为何是组件库/工具库的最佳方案</a></li><li><a href="/frontend/prototype.html" class="sidebar-link">尝试一图理清prototype、proto、原型对象之间的关系</a></li><li><a href="/frontend/zustand.html" class="sidebar-link">zustand 源码解析</a></li><li><a href="/frontend/createReact.html" class="sidebar-link">详细教程搭建 react 项目</a></li><li><a href="/frontend/webpackAwesome.html" aria-current="page" class="active sidebar-link">一文搞懂webpack配置</a></li><li><a href="/frontend/frontendModule.html" class="sidebar-link">前端模块化</a></li><li><a href="/frontend/vscodePlugin.html" class="sidebar-link">一文上手 vscode 插件开发</a></li><li><a href="/frontend/article.html" class="sidebar-link">精选文章</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/network" class="sidebar-heading clickable"><span>计算机网络</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/network/http.html" class="sidebar-link">快速了解计算机网络 - HTTP篇</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-b5424bfe data-v-11b6966a><h3 class="title" data-v-b5424bfe>一文搞懂 webpack 配置</h3> <!----> <label id="box" class="inputBox" data-v-b5424bfe><input type="password" value="" data-v-b5424bfe> <span data-v-b5424bfe>Konck! Knock!</span> <button data-v-b5424bfe>OK</button></label> <div class="footer" data-v-b5424bfe><span data-v-b5424bfe><i class="iconfont reco-theme" data-v-b5424bfe></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b5424bfe>vuePress-theme-reco</a></span> <span data-v-b5424bfe><i class="iconfont reco-copyright" data-v-b5424bfe></i> <a data-v-b5424bfe><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-11b6966a><div data-v-11b6966a><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">一文搞懂 webpack 配置</h1> <div data-v-6d0883e2><i class="iconfont reco-account" data-v-6d0883e2><span data-v-6d0883e2>xiyue</span></i> <i class="iconfont reco-date" data-v-6d0883e2><span data-v-6d0883e2>2024/10/17</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="为什么需要打包工具"><a href="#为什么需要打包工具" class="header-anchor">#</a> 为什么需要打包工具</h2> <blockquote><p>开发时，我们会使用框架(React, Vue), ES6 模块化语法, Less/Sass 预处理器等语法进行开发，这样代码想要在浏览器运行时必须经过编译成浏览器能识别的JS, CSS, HTML等，才能运行。 所以我们需要打包工具帮助我们完成这些事 除此，打包工具还能进行压缩代码，做兼容性处理，提升代码性能等</p></blockquote> <h2 id="基本使用"><a href="#基本使用" class="header-anchor">#</a> 基本使用</h2> <blockquote><p>它会以一个或多个文件作为打包的入口，将整个项目所有文件组合成一个或多个文件输出出去。输出的文件就是编译好的文件。 打包工具一般会输出一个或多个文件，这些文件就是编译后的文件，我们一般会将其称为bundle</p></blockquote> <h2 id="功能结束"><a href="#功能结束" class="header-anchor">#</a> 功能结束</h2> <p>Webpack 本身功能是有限的</p> <ul><li>开发模式：仅能编译 JS 中的 <code>ES Module</code> 语法</li> <li>生产模式：能编译 JS 中的 <code>ES Module</code> 语法，还能压缩 JS 代码</li></ul> <h2 id="创建目录"><a href="#创建目录" class="header-anchor">#</a> 创建目录</h2> <div class="language- extra-class"><pre class="language-text"><code>- src
+  - main.js
+  - js
+    - count.js
+    - sum.js
+- public
+    - index.html
+</code></pre></div><p>public/index.html</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Webpack&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;hello webpack&lt;/h1&gt;
+  &lt;script src=&quot;../src/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>src/main.js</p> <div class="language- extra-class"><pre class="language-text"><code>import count from &quot;./js/count&quot;
+import sum from &quot;./js/sum&quot;
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+</code></pre></div><p>src/js/count.js</p> <div class="language- extra-class"><pre class="language-text"><code>export default function count(x, y) {
+  return x - y
+}
+</code></pre></div><p>src/js/sum.js</p> <div class="language- extra-class"><pre class="language-text"><code>export default function sum(...args) {
+  return args.reduce((acc, cur) =&gt; acc + cur, 0)
+}
+</code></pre></div><p>当我们打开 <code>public/index.html</code> 时，控制台会报错<code>Uncaught SyntaxError: Cannot use import statement outside a module</code>，因为浏览器不认识<code>ES6 Module</code>的语法。 这时，我们就需要使用Webpack来编译打包我们的代码，使浏览器可以识别。</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language- extra-class"><pre class="language-text"><code>npm init -y
+npm install webpack webpack-cli --save-dev
+</code></pre></div><h2 id="打包"><a href="#打包" class="header-anchor">#</a> 打包</h2> <div class="language- extra-class"><pre class="language-text"><code>npx webpack ./src/main.js --mode=development // 开发模式
+</code></pre></div><p>然后就会在根目录下出现一个dist目录，里面有一个main.js文件，这就是我们打包后的文件。 我们更改一下我们的pubilc/index.html文件,把<code>&lt;script src=&quot;../src/main.js&quot;&gt;&lt;/script&gt;</code>改成<code>&lt;script src=&quot;../dist/main.js&quot;&gt;&lt;/script&gt;</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Webpack&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;hello webpack&lt;/h1&gt;
+  &lt;script src=&quot;../dist/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>然后浏览器就可以运行了。 当你查看dist/main.js文件时，会发现里面多了很多东西，我们看不懂。 我们现在使用生产模式进行打包，生产模式会进行代码压缩。</p> <div class="language- extra-class"><pre class="language-text"><code>npx webpack ./src/main.js --mode=production //  生产模式
+</code></pre></div><p>压缩之后的代码</p> <div class="language- extra-class"><pre class="language-text"><code>;(() =&gt; {
+  &quot;use strict&quot;
+  console.log(1), console.log([1, 2, 3, 4].reduce((o, e) =&gt; o + e, 0))
+})()
+</code></pre></div><h2 id="核心概念"><a href="#核心概念" class="header-anchor">#</a> 核心概念</h2> <ul><li>entry：入口文件，Webpack 执行构建的第一步从 entry 开始，可抽象成输入。</li> <li>output：输出文件，Webpack 执行构建的最后一步输出文件，可抽象成输出。</li> <li>module：模块，在 Webpack 里一切皆模块，一个模块对应着一个文件。</li> <li>loader：webpack本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要配置 loader 转换器。</li> <li>plugin：扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑。</li> <li>mode: 模式，模式指定了 webpack 使用相应环境下的配置。</li></ul> <h2 id="配置文件"><a href="#配置文件" class="header-anchor">#</a> 配置文件</h2> <p>名字固定: <code>webpack.config.js</code> 配置文件都是在 <code>nodeJS</code> 环境下运行的，都是<code>CommonJS</code>规范。</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+const path = require(&quot;path&quot;)
+module.exports = {
+  // 入口
+  entry: &quot;./src/main.js&quot;, // 相对路径
+  // 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, &quot;dist&quot;), // 绝对路径
+    // 文件名
+    filename: &quot;main.js&quot;,
+  },
+  // 加载器
+  module: {
+    rules: [
+      // loader的配置
+    ],
+  },
+  // 插件
+  plugins: [
+    // plugin的配置
+  ],
+  // 模式
+  mode: &quot;development&quot;, // 开发环境
+}
+</code></pre></div><p>有了配置文件，打包命令就可以简化了</p> <div class="language- extra-class"><pre class="language-text"><code>npx webpack
+</code></pre></div><h2 id="处理样式资源"><a href="#处理样式资源" class="header-anchor">#</a> 处理样式资源</h2> <p>Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要配置 loader 转换器。</p> <h3 id="处理-css-资源"><a href="#处理-css-资源" class="header-anchor">#</a> 处理 CSS 资源</h3> <p>添加 <code>src/css/index.css</code> 文件</p> <div class="language- extra-class"><pre class="language-text"><code>.box1 {
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+</code></pre></div><p>修改 <code>src/main.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>import count from &quot;./js/count&quot;
+import sum from &quot;./js/sum&quot;
+import &quot;./css/index.css&quot;
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+</code></pre></div><p>安装 <code>css-loader</code></p> <div class="language- extra-class"><pre class="language-text"><code>npm i css-loader style-loader -D
+</code></pre></div><p>然后在配置文件中配置 <code>css-loader</code></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+// 加载器
+  module: {
+    rules: [
+      // loader的配置
+      {
+        test: /.css$/, // 只检测.css结尾的文件,当匹配时调用use
+        // use执行顺序从右到左，从下到上
+        use: [
+          &quot;style-loader&quot;, // 将js中css通过创建style标签的形式添加到html文件中
+          &quot;css-loader&quot;, // 将css资源编译成commonjs的模块到js中
+        ],
+      },
+    ],
+  },
+</code></pre></div><h3 id="处理less资源"><a href="#处理less资源" class="header-anchor">#</a> 处理less资源</h3> <p>添加 <code>src/less/index.less</code> 文件</p> <div class="language- extra-class"><pre class="language-text"><code>.box2 {
+  width: 100px;
+  height: 100px;
+  background: deeppink;
+}
+</code></pre></div><p>修改 <code>src/main.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>import count from &quot;./js/count&quot;
+import sum from &quot;./js/sum&quot;
+import &quot;./css/index.css&quot;
+import &quot;./less/index.less&quot;
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+</code></pre></div><p>安装 <code>less-loader</code></p> <div class="language- extra-class"><pre class="language-text"><code>npm i less-loader less -D
+</code></pre></div><p>修改配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+{
+  test: /.less$/i,
+  use: [
+    // compiles Less to CSS
+    &quot;style-loader&quot;,
+    &quot;css-loader&quot;,
+    &quot;less-loader&quot;,
+  ],
+},
+</code></pre></div><h3 id="处理sass资源"><a href="#处理sass资源" class="header-anchor">#</a> 处理sass资源</h3> <p>修改 <code>src/sass/index.scss</code> 文件</p> <div class="language- extra-class"><pre class="language-text"><code>.box3 {
+  width: 100px;
+  height: 100px;
+  background: hotpink;
+}
+</code></pre></div><p>修改 <code>src/main.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>import count from &quot;./js/count&quot;
+import sum from &quot;./js/sum&quot;
+import &quot;./css/index.css&quot;
+import &quot;./less/index.less&quot;
+import &quot;./sass/index.scss&quot;
+console.log(count(2, 1))
+console.log(sum(1, 2, 3, 4))
+</code></pre></div><p>安装 <code>sass-loader</code></p> <div class="language- extra-class"><pre class="language-text"><code>npm i sass-loader sass -D
+</code></pre></div><p>修改配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+{
+  test: /.s[ac]ss$/i,
+  use: [
+    // 将 JS 字符串生成为 style 节点
+    &quot;style-loader&quot;,
+    // 将 CSS 转化成 CommonJS 模块
+    &quot;css-loader&quot;,
+    // 将 Sass 编译成 CSS
+    &quot;sass-loader&quot;,
+  ],
+},
+</code></pre></div><h3 id="处理图片资源"><a href="#处理图片资源" class="header-anchor">#</a> 处理图片资源</h3> <p>webpack5 内置了file-loader和url-loader，所以不需要再安装,会自动处理。 但我们有时需要对其进行一些优化。 添加 <code>src/images/1.png</code> 修改 <code>src/css/index.css</code></p> <div class="language- extra-class"><pre class="language-text"><code>.box1 {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  background-image: url('../images/1.png');
+}
+</code></pre></div><p>修改 <code>public/index.html</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Webpack&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;hello webpack&lt;/h1&gt;
+  &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box3&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;../dist/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p><strong>需求</strong>: 我们想把小图片转为base64,减少http请求。大图片不转换为base64,减少打包体积。 修改配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+{
+  test: /.(png|jpg|gif|jpeg)$/,
+  type: &quot;asset&quot;,
+  parser: {
+    dataUrlCondition: {
+      // 小于8kb的图片转base64
+      maxSize: 8 * 1024, // 8kb
+    },
+  },
+},
+</code></pre></div><h3 id="修改输出目录"><a href="#修改输出目录" class="header-anchor">#</a> 修改输出目录</h3> <p>当打包的文件多了，如果都打包到一个文件下，会显得很乱 所以需要进行输出目录配置</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+module.exports = {
+  // ...
+  // 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, &quot;dist&quot;), // 绝对路径
+    // 入口文件(一般为js文件)打包输出文件名
+    filename: &quot;static/js/main.js&quot;,
+  },
+  // 加载器
+  module: {
+    rules: [
+      // ...
+      {
+        test: /.(png|jpg|gif|jpeg)$/,
+        type: &quot;asset&quot;,
+        parser: {
+          dataUrlCondition: {
+            // 小于8kb的图片转base64
+            maxSize: 8 * 1024, // 8kb
+          },
+        },
+        generator: {
+          // 输出图片名称
+          filename: &quot;static/images/[hash:10][ext][query]&quot;, // 图片名称,[hash:10]表示hash值的长度为10位,[ext]表示文件后缀,[query]表示文件名
+        },
+      },
+    ],
+  }
+}
+</code></pre></div><h3 id="清空上次打包内容"><a href="#清空上次打包内容" class="header-anchor">#</a> 清空上次打包内容</h3> <p>如果我们不加以配置，每次观看最新的打包效果，都需要手动删除之前的dist文件夹，这样很麻烦，所以需要配置清空上次打包内容。</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+// 输出
+  output: {
+    // 文件的输出路径
+    // __dirname代表当前文件的文件夹目录
+    path: path.resolve(__dirname, &quot;dist&quot;), // 绝对路径
+    // 入口文件(一般为js文件)打包输出文件名
+    filename: &quot;static/js/main.js&quot;,
+    clean: true, // 打包前先清空输出目录
+  },
+</code></pre></div><h3 id="处理字体图标资源"><a href="#处理字体图标资源" class="header-anchor">#</a> 处理字体图标资源</h3> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+{
+  test: /.(woff|woff2|eot|ttf|otf)$/,
+  type: &quot;asset/resource&quot;,
+  generator: {
+    // 输出图片名称
+    filename: &quot;static/media/[hash][ext][query]&quot;, // 图片名称
+  },
+},
+</code></pre></div><h3 id="处理其他资源"><a href="#处理其他资源" class="header-anchor">#</a> 处理其他资源</h3> <p>比如音视频等资源 在处理字体图标资源的test匹配后面加相关后缀即可</p> <h3 id="处理js资源"><a href="#处理js资源" class="header-anchor">#</a> 处理js资源</h3> <p>Webpack 本身对于 js 的处理是有限的，只能处理 ES 模块化语法，所以我们需要进行一些处理。</p> <ul><li>针对 js 兼容性采用 Babel 来完成</li> <li>针对代码格式，采用 Eslint 来完成</li></ul> <h3 id="eslint"><a href="#eslint" class="header-anchor">#</a> eslint</h3> <p>可组装的 JavaScript 和 JSX 检查工具。 关键是写eslint的配置文件 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i eslint eslint-webpack-plugin -D
+</code></pre></div><p>修改配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+const ESLintPlugin = require(&quot;eslint-webpack-plugin&quot;)
+// 插件
+  plugins: [
+    // plugin的配置
+    new ESLintPlugin({
+      // 指定检测的文件
+      context: path.resolve(__dirname, &quot;src&quot;),
+    }),
+  ],
+</code></pre></div><p>添加 eslint 配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>// .eslintrc or .eslintrc.js or .eslintrc.json区别在于配置格式不一样
+// .eslintrc.js
+module.exports = {
+  // 继承 Eslint 规则
+  extends: [&quot;eslint:recommended&quot;],
+  env: {
+    node: true, // 启用node中的全局变量
+    browser: true, // 启用浏览器中的全局变量
+  },
+  parserOptions: {
+    ecmaVersion: 6, // 指定ECMAScript的版本
+    sourceType: &quot;module&quot;, // 指定源代码的类型，module表示CommonJS的模块化规范，script表示ECMAScript的规范
+  },
+  rules: {
+    &quot;no-var&quot;: 2, // 不能使用 var 定义变量
+  },
+}
+</code></pre></div><p><code>.eslintignore</code> 可以配置忽略检查的目录</p> <div class="language- extra-class"><pre class="language-text"><code>dist
+node_modules
+</code></pre></div><h3 id="babel"><a href="#babel" class="header-anchor">#</a> babel</h3> <p>主要用于将 ES6 语法编写的代码转换为向后兼容的代码</p> <div class="language- extra-class"><pre class="language-text"><code>// babel.config.js or babel.config.json or .babalrc or .babalrc.js or .babalrc.json
+// babel.config.js
+module.exports = {
+  // 智能预设，能编译ES6语法
+  presets: [&quot;@babel/preset-env&quot;],
+}
+</code></pre></div><p><strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i babel-loader @babel/core @babel/preset-env -D
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  loader: &quot;babel-loader&quot;, // 使用babel-loader
+},
+</code></pre></div><h3 id="处理-html-资源"><a href="#处理-html-资源" class="header-anchor">#</a> 处理 html 资源</h3> <p>我们希望有一个插件来自动引入script，而不是自己手动修改 <code>index.html</code> 文件 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i html-webpack-plugin -D
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+​
+new HtmlWebpackPlugin({
+      // 模板，以public/index.html文件创建心得html文件
+      // 1. 结构和原来一致，会自动引入打包的资源
+      template: path.resolve(__dirname, &quot;public/index.html&quot;),
+    }),
+</code></pre></div><h2 id="搭建开发服务器"><a href="#搭建开发服务器" class="header-anchor">#</a> 搭建开发服务器</h2> <p>每次改代码都需要打包才能看到效果，实在是太麻烦了，我们希望每次保存之后自动重新打包。 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i webpack-dev-server -D
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+devServer: {
+    host: &quot;127.0.0.1&quot;, // 主机地址
+    port: 3000, // 端口
+    open: true, // 自动打开浏览器
+  },
+</code></pre></div><p><strong>启动</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npx webpack serve
+</code></pre></div><h2 id="生产模式优化"><a href="#生产模式优化" class="header-anchor">#</a> 生产模式优化</h2> <p>我们把生产模式和开发模式分别用配置文件 创建 <code>config</code>目录 把 <code>webpack.config.js</code> 移入 <code>config</code> 目录，并改名为 <code>webpack.config.dev.js</code> 再复制一份 <code>webpack.config.dev.js</code> 改名为 <code>webpack.config.prod.js</code> <code>webpack.config.prod.js</code>和<code>webpack.config.dev.js</code>中所有绝对路径都需要回退一层目录 <code>webpack.config.prod.js</code>不需要<code>devServer</code>,可以删除,<code>mode</code>改为&quot;production&quot; <code>webpack.config.dev.js</code>修改 <code>output</code>的绝对路径</p> <div class="language- extra-class"><pre class="language-text"><code>path: undefined,// 开发模式没有输出
+</code></pre></div><p>运行某个配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>npx webpack --config config/webpack.config.prod.js
+npx webpack server --config config/webpack.config.dev.js
+</code></pre></div><h3 id="提取-css-为单独文件"><a href="#提取-css-为单独文件" class="header-anchor">#</a> 提取 CSS 为单独文件</h3> <p>现在 CSS 是通过 js 进行添加, 这会导致闪屏现象 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i mini-css-extract-plugin -D
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.prod.js
+const MiniCssExtractPlugin = require(&quot;mini-css-extract-plugin&quot;);
+// 把所有的 &quot;style-loader&quot; 替换成 MiniCssExtractPlugin.loader
+// ...
+new MiniCssExtractPlugin({
+      filename: &quot;static/css/main.css&quot;,
+    })
+</code></pre></div><h3 id="css-兼容性处理"><a href="#css-兼容性处理" class="header-anchor">#</a> CSS 兼容性处理</h3> <p><strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i postcss-loader postcss postcss-preset-env -D
+</code></pre></div><p>postcss 要在 <code>css-loader</code> 后面,在 <code>less-loader</code> 前面</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  loader: &quot;postcss-loader&quot;,
+  options: {
+    postcssOptions: {
+      plugins: [
+        &quot;postcss-preset-env&quot;, // 解决大多数样式兼容问题
+      ],
+    },
+  },
+},
+</code></pre></div><p>这里要看到效果还需要修改 <code>package.json</code></p> <div class="language- extra-class"><pre class="language-text"><code>&quot;browserslist&quot;:[
+    &quot;last 2 version&quot;,
+    &quot;&gt; 1%&quot;,
+    &quot;not dead&quot;,
+  ]
+</code></pre></div><h3 id="压缩-css"><a href="#压缩-css" class="header-anchor">#</a> 压缩 CSS</h3> <p><strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i css-minimizer-webpack-plugin -D
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.prod.js
+const CssMinimizerPlugin = require(&quot;css-minimizer-webpack-plugin&quot;);
+// ...
+new CssMinimizerPlugin()
+</code></pre></div><h3 id="压缩-js-和-html"><a href="#压缩-js-和-html" class="header-anchor">#</a> 压缩 JS 和 html</h3> <p>默认生产模式会对 JS 和 html进行压缩</p> <h2 id="提升开发体验优化"><a href="#提升开发体验优化" class="header-anchor">#</a> 提升开发体验优化</h2> <h3 id="source-map-源代码映射"><a href="#source-map-源代码映射" class="header-anchor">#</a> Source Map(源代码映射)</h3> <p>打包之后的代码我们很难看懂，不好调试，我们希望我们可以去调试打包之后的代码，以提高开发体验。 SourceMap 会生成xx.map，里面包含源代码和构建后代码每一行的映射关系，浏览器在运行打包后的代码时，如果遇到报错，会去查找对应的 SourceMap 文件，然后把报错位置映射到源代码上，这样就便于我们进行调试了。 SourceMap 有很多格式，但实际开发只需要关注两种情况</p> <ul><li>开发模式：cheap-module-source-map 打包速度快，只包含行映射</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.dev.js
+module.exports = {
+  // ...
+  devtool: &quot;cheap-module-source-map&quot;,
+}
+</code></pre></div><ul><li>生产模式：source-map 包含列，行，源代码，构建后代码的源代码位置映射,但打包速度慢</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.prod.js
+module.exports = {
+  // ...
+  devtool: &quot;source-map&quot;,
+}
+</code></pre></div><h3 id="hotmodulereplacement-hmr"><a href="#hotmodulereplacement-hmr" class="header-anchor">#</a> HotModuleReplacement(HMR)</h3> <p>HMR 允许在运行时更新各种模块，而无需完全刷新。 原本更改一个模块会重新打包所有模块，HMR会使用之前打包的结果，只更新有变化的模块，大大提高了开发效率。</p> <div class="language- extra-class"><pre class="language-text"><code>devServer: {
+    host: &quot;127.0.0.1&quot;, // 主机地址
+    port: 3000, // 端口
+    open: true, // 自动打开浏览器
+    hot: true, // 开启HMR
+  },
+</code></pre></div><p>在 Webpack5 中, HMR默认是开启的，不需要进行显式的配置 但 js 更改还是会整页刷新，如果想要 js 也开启</p> <div class="language- extra-class"><pre class="language-text"><code>// 如果支持热更新
+import count from &quot;./js/count.js&quot;
+if(module.hot) {
+  module.hot.accept(&quot;./js/count.js&quot;);
+}
+</code></pre></div><p>上面这样写会很麻烦 在实际开发中我们会使用其他loader来解决 比如： <code>vue-loader</code>,<code>react-hot-loader</code></p> <h3 id="oneof"><a href="#oneof" class="header-anchor">#</a> OneOf</h3> <p>OneOf 可以让loader只运行一次，如果多个loader对同一个文件生效，那么只会运行第一个，后面的会被忽略。</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  module: {
+    rules: [
+      // 每个文件只能被其中一个loader处理
+      oneOf: [
+        {
+        test: /.css$/,
+        use: [
+          {
+            loader: &quot;style-loader&quot;,
+          },
+          {
+            loader: &quot;css-loader&quot;,
+          },
+        ],
+      },
+      {
+        test: /.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: &quot;css-loader&quot;,
+          },
+        ],
+      },
+      ],
+    ],
+  },
+};
+</code></pre></div><p>上面配置了两个css-loader，但只会运行第一个，因为第二个被OneOf给忽略掉了</p> <h3 id="include-exclude"><a href="#include-exclude" class="header-anchor">#</a> include/exclude</h3> <p>include指定一个文件夹，文件夹下的文件会全部打包，不会忽略 exclude指定一个文件夹，文件夹下的文件不会打包，会忽略</p> <h3 id="cache-缓存"><a href="#cache-缓存" class="header-anchor">#</a> cache(缓存)</h3> <p>每次打包都要经过eslint检查和babel编译，如果每次都重新编译，会非常消耗性能，所以需要缓存。 当然，主要是 js 需要缓存</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  loader: &quot;babel-loader&quot;, // 使用babel-loader
+  options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+  },
+},
+</code></pre></div><h3 id="thead"><a href="#thead" class="header-anchor">#</a> Thead</h3> <p>多线程打包，可以加快打包速度 我们启动进程的数量就是我们 CPU 的核数 获取 CPU 核数</p> <div class="language- extra-class"><pre class="language-text"><code>const os = require(&quot;os&quot;);
+const cpus = os.cpus().length;
+</code></pre></div><p><strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm install thread-loader --save-dev
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.prod.js
+const os = require(&quot;os&quot;)
+const threads = os.cpus().length
+// webpack内置压缩plugin
+const TerserWebpackPlugin = require(&quot;terser-webpack-plugin&quot;)
+​
+​
+{
+  test: /.js$/,
+  exclude: /node_modules/, // 排除node_modules的js文件不处理
+  use: [
+    {
+      loader: &quot;thread-loader&quot;,
+      options: {
+        works: threads, // 开启几个线程
+      },
+    },
+    {
+      loader: &quot;babel-loader&quot;,
+      options: {
+        cacheDirectory: true, // 开启缓存
+        cacheCompression: false, // 关闭缓存文件压缩
+      },
+    },,
+  ], // 使用babel-loader
+            options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+  },
+},
+​
+// plugin的配置
+    new ESLintPlugin({
+      // 指定检测的文件
+      context: path.resolve(__dirname, &quot;../src&quot;),
+      threads,
+    }),
+​
+new TerserWebpackPlugin({
+      parallel: threads,
+    }),
+</code></pre></div><h2 id="减少代码体积"><a href="#减少代码体积" class="header-anchor">#</a> 减少代码体积</h2> <h3 id="treesaking"><a href="#treesaking" class="header-anchor">#</a> TreeSaking</h3> <p>TreeSaking 是一个 webpack 插件，它能够分析出你的代码中那些部分是永远不会被用到，然后剔除掉这部分。 webpack 默认开启</p> <h3 id="处理babel"><a href="#处理babel" class="header-anchor">#</a> 处理Babel</h3> <p>Babel 为编译的每个文件都插入了辅助代码，使代码体积过大 我们可以将它们作为一个独立模块来避免重复引入 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm install @babel/plugin-transform-runtime --save-dev
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// config/webpack.config.prod.js
+{
+  loader: &quot;babel-loader&quot;,
+  options: {
+    cacheDirectory: true, // 开启缓存
+    cacheCompression: false, // 关闭缓存文件压缩
+    plugins: [&quot;@babel/plugin-transform-runtime&quot;], // 开启babel-plugin-transform-runtime
+  },
+},
+</code></pre></div><h3 id="code-split-代码分割"><a href="#code-split-代码分割" class="header-anchor">#</a> Code Split(代码分割)</h3> <p>打包会将所有js文件打包到一个文件，导致加载时间过长，我们可以将代码拆分成多个文件，然后按需加载。</p> <h4 id="多入口"><a href="#多入口" class="header-anchor">#</a> 多入口</h4> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+entry: [
+  app: './src/app.js',
+  main: './src/main.js',
+],
+output: {
+  path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',// 以[name]自己的文件名作为文件名
+}
+</code></pre></div><h4 id="多入口公共模块"><a href="#多入口公共模块" class="header-anchor">#</a> 多入口公共模块</h4> <p>多入口文件的公共的代码提升为公共模块单独打包</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+entry: [
+  app: './src/app.js',
+  main: './src/main.js',
+],
+output: {
+  path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',// 以[name]自己的文件名作为文件名
+},
+optimization: {
+  // 代码分割配置
+  splitChunks: {
+    chunks: 'all', // 所有模块都进行分割
+    // minSize: 30000, // 模块大于30kb才进行分割
+    // maxSize: 0, // 最大尺寸0
+    // minChunks: 1, // 最少使用过一次就进行分割
+    // maxAsyncRequests: 5, // 异步加载chunk的并发请求数量最多为5个
+    // maxInitialRequests: 3, // 入口文件最多只能初始加载3个chunk
+    // automaticNameDelimiter: '~', // 命名分隔符
+    // enforeSizeThreshold: 50000, // 模块大于50kb强制打包
+    // name: true, // 缓存组名
+    cacheGroups: {
+      // 缓存组
+      default: {
+        minSize: 0, // 模块大于0kb才进行分割
+        minChunks: 2, // 最小使用过一次就进行分割
+        priority: -20, // 优先级
+        reuseExistingChunk: true, // 如果当前的chunk包含的模块已经被其他chunk包含了，那么将不会再次被引入
+    }
+  },
+},
+</code></pre></div><h4 id="按需加载-动态导入"><a href="#按需加载-动态导入" class="header-anchor">#</a> 按需加载，动态导入</h4> <div class="language- extra-class"><pre class="language-text"><code>// import动态导入，会将动态导入的文件代码分割(分割成单独文件)，在需要使用的时候自动加载
+document.getElementById(&quot;btn&quot;).onclick = function () {
+  import('./count').then(res=&gt; {
+    console.log(&quot;模块加载成功&quot;,res.default(2,1))
+  }).catch(err=&gt;{
+    console.log(&quot;模块加载失败&quot;,err)
+  })
+}
+</code></pre></div><h3 id="单入口"><a href="#单入口" class="header-anchor">#</a> 单入口</h3> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+optimization: {
+  // 代码分割配置
+  splitChunks: {
+    chunks: 'all', // 所有模块都进行分割
+    // minSize: 30000, // 模块大于30kb才进行分割
+    // maxSize: 0, // 最大尺寸0
+    // minChunks: 1, // 最少使用过一次就进行分割
+    // maxAsyncRequests: 5, // 异步加载chunk的并发请求数量最多为5个
+    // maxInitialRequests: 3, // 入口文件最多只能初始加载3个chunk
+    // automaticNameDelimiter: '~', // 命名分隔符
+    // enforeSizeThreshold: 50000, // 模块大于50kb强制打包
+    // name: true, // 缓存组名
+  },
+},
+</code></pre></div><h3 id="给动态导入的文件取名"><a href="#给动态导入的文件取名" class="header-anchor">#</a> 给动态导入的文件取名</h3> <p>动态导入时要取名 <code>import(/* weebpackChunkName: &quot;math&quot; */ &quot;./js/math&quot;)</code></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+output: {
+  chunkFilename: 'static/js/[name].js', // 动态导入的文件名
+  // 图片，字体等通过type:&quot;asset&quot;处理的资源
+  assetModuleFilename: &quot;static/media/[name].[hash][ext]&quot;,
+}
+</code></pre></div><h3 id="preload-prefetch"><a href="#preload-prefetch" class="header-anchor">#</a> Preload/Prefetch</h3> <p>我们想要在浏览器空闲时间去加载后续需要使用的资源 而不是在需要时才加载，如果资源太大，用户还是会感到卡顿</p> <ul><li>Preload: 告诉浏览器立即加载</li> <li>Prefetch: 告诉浏览器在空闲时加载</li></ul> <p>它们都只会加载资源，不执行 Preload 只能加载当前页面需要使用的资源,Prefetch 可以加载下一个页面需要使用的资源 <strong>注意：</strong> 它们兼容性比较差 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i -D preload-webpack-plugin
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin')
+new PreloadWebpackPlugin({
+  rel: 'preload',
+  as: 'script',
+})
+/*
+  new PreloadWebpackPlugin({
+  rel: 'prefetch',
+})
+*/
+</code></pre></div><h3 id="network-cache"><a href="#network-cache" class="header-anchor">#</a> Network Cache</h3> <p>如果<code>main.js</code>里面引入了<code>sum.js</code>并且打包时<code>sum.js</code>设置了<code>hash</code>值 如果<code>sum.js</code>发生变化，它的文件名的<code>hash</code>值就会发送变化 导致<code>main.js</code>也要重新打包。 所以我们希望有一个文件a,存储了<code>sum.js</code>的<code>hash</code>值，<code>main.js</code>通过a去访问<code>sum.js</code>,这样无论<code>sum.js</code>的文件名的<code>hash</code>值怎么变都不会影响到<code>main.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+optimization: {
+  runtimeChunk: {
+    name: (entrypoint) =&gt; `runtime~${entrypoint.name}.js`
+  }
+}
+</code></pre></div><h3 id="core-js"><a href="#core-js" class="header-anchor">#</a> core-js</h3> <p>虽然有了 babel ,但它无法处理async, promise对象时，它还是无法处理 core-js 是专门用来处理 ES6以上的 API的 <code>polyfill</code> <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i core-js
+</code></pre></div><ul><li>直接引入 然后在入口文件<code>import 'core-js</code> 但这样会使打包文件很大</li> <li>手动引入 <code>import 'core-js/es/promise</code></li></ul> <p>如果我们想要按需加载，自动引入就需要取配置babel</p> <div class="language- extra-class"><pre class="language-text"><code>// babel.config.js
+{
+  presets:{
+    [
+      [
+        &quot;@babel/preset-env&quot;,{
+        useBuiltIns: &quot;usage&quot;,// 按需加载自动引入
+        corejs: 3,
+      }
+      ],
+    ]
+  }
+}
+</code></pre></div><h3 id="pwa-渐进式网络应用程序"><a href="#pwa-渐进式网络应用程序" class="header-anchor">#</a> PWA(渐进式网络应用程序)</h3> <p>我们希望给项目提供离线体验 <strong>安装</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm i -D workbox-webpack-plugin
+</code></pre></div><p><strong>配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>const WorkboxPlugin = require(&quot;workbox-webpack-plugin&quot;)
+​
+new WorkboxPlugin.GenerateSW({
+  clientsClaim: true,
+  skipWaiting: true,
+})
+</code></pre></div><p>最后还要在主文件注册生成<code>server worker</code></p> <div class="language- extra-class"><pre class="language-text"><code>// src/main.js
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () =&gt; {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) =&gt; {
+        console.log('SW registered: ', registration)
+      })
+      .catch((registrationError) =&gt; {
+        console.log('SW registration failed: ', registrationError)
+      })
+  })
+}
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/frontend/createReact.html" class="prev">
+          详细教程搭建 react 项目
+        </a></span> <span class="next"><a href="/frontend/frontendModule.html">
+          前端模块化
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-0448d5f2 data-v-11b6966a><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#为什么需要打包工具" class="sidebar-link reco-side-为什么需要打包工具" data-v-0448d5f2>为什么需要打包工具</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#基本使用" class="sidebar-link reco-side-基本使用" data-v-0448d5f2>基本使用</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#功能结束" class="sidebar-link reco-side-功能结束" data-v-0448d5f2>功能结束</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#创建目录" class="sidebar-link reco-side-创建目录" data-v-0448d5f2>创建目录</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#安装" class="sidebar-link reco-side-安装" data-v-0448d5f2>安装</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#打包" class="sidebar-link reco-side-打包" data-v-0448d5f2>打包</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#核心概念" class="sidebar-link reco-side-核心概念" data-v-0448d5f2>核心概念</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#配置文件" class="sidebar-link reco-side-配置文件" data-v-0448d5f2>配置文件</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理样式资源" class="sidebar-link reco-side-处理样式资源" data-v-0448d5f2>处理样式资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理-css-资源" class="sidebar-link reco-side-处理-css-资源" data-v-0448d5f2>处理 CSS 资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理less资源" class="sidebar-link reco-side-处理less资源" data-v-0448d5f2>处理less资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理sass资源" class="sidebar-link reco-side-处理sass资源" data-v-0448d5f2>处理sass资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理图片资源" class="sidebar-link reco-side-处理图片资源" data-v-0448d5f2>处理图片资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#修改输出目录" class="sidebar-link reco-side-修改输出目录" data-v-0448d5f2>修改输出目录</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#清空上次打包内容" class="sidebar-link reco-side-清空上次打包内容" data-v-0448d5f2>清空上次打包内容</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理字体图标资源" class="sidebar-link reco-side-处理字体图标资源" data-v-0448d5f2>处理字体图标资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理其他资源" class="sidebar-link reco-side-处理其他资源" data-v-0448d5f2>处理其他资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理js资源" class="sidebar-link reco-side-处理js资源" data-v-0448d5f2>处理js资源</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#eslint" class="sidebar-link reco-side-eslint" data-v-0448d5f2>eslint</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#babel" class="sidebar-link reco-side-babel" data-v-0448d5f2>babel</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理-html-资源" class="sidebar-link reco-side-处理-html-资源" data-v-0448d5f2>处理 html 资源</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#搭建开发服务器" class="sidebar-link reco-side-搭建开发服务器" data-v-0448d5f2>搭建开发服务器</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#生产模式优化" class="sidebar-link reco-side-生产模式优化" data-v-0448d5f2>生产模式优化</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#提取-css-为单独文件" class="sidebar-link reco-side-提取-css-为单独文件" data-v-0448d5f2>提取 CSS 为单独文件</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#css-兼容性处理" class="sidebar-link reco-side-css-兼容性处理" data-v-0448d5f2>CSS 兼容性处理</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#压缩-css" class="sidebar-link reco-side-压缩-css" data-v-0448d5f2>压缩 CSS</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#压缩-js-和-html" class="sidebar-link reco-side-压缩-js-和-html" data-v-0448d5f2>压缩 JS 和 html</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#提升开发体验优化" class="sidebar-link reco-side-提升开发体验优化" data-v-0448d5f2>提升开发体验优化</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#source-map-源代码映射" class="sidebar-link reco-side-source-map-源代码映射" data-v-0448d5f2>Source Map(源代码映射)</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#hotmodulereplacement-hmr" class="sidebar-link reco-side-hotmodulereplacement-hmr" data-v-0448d5f2>HotModuleReplacement(HMR)</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#oneof" class="sidebar-link reco-side-oneof" data-v-0448d5f2>OneOf</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#include-exclude" class="sidebar-link reco-side-include-exclude" data-v-0448d5f2>include/exclude</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#cache-缓存" class="sidebar-link reco-side-cache-缓存" data-v-0448d5f2>cache(缓存)</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#thead" class="sidebar-link reco-side-thead" data-v-0448d5f2>Thead</a></li><li class="level-2" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#减少代码体积" class="sidebar-link reco-side-减少代码体积" data-v-0448d5f2>减少代码体积</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#treesaking" class="sidebar-link reco-side-treesaking" data-v-0448d5f2>TreeSaking</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#处理babel" class="sidebar-link reco-side-处理babel" data-v-0448d5f2>处理Babel</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#code-split-代码分割" class="sidebar-link reco-side-code-split-代码分割" data-v-0448d5f2>Code Split(代码分割)</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#单入口" class="sidebar-link reco-side-单入口" data-v-0448d5f2>单入口</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#给动态导入的文件取名" class="sidebar-link reco-side-给动态导入的文件取名" data-v-0448d5f2>给动态导入的文件取名</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#preload-prefetch" class="sidebar-link reco-side-preload-prefetch" data-v-0448d5f2>Preload/Prefetch</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#network-cache" class="sidebar-link reco-side-network-cache" data-v-0448d5f2>Network Cache</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#core-js" class="sidebar-link reco-side-core-js" data-v-0448d5f2>core-js</a></li><li class="level-3" data-v-0448d5f2><a href="/frontend/webpackAwesome.html#pwa-渐进式网络应用程序" class="sidebar-link reco-side-pwa-渐进式网络应用程序" data-v-0448d5f2>PWA(渐进式网络应用程序)</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/assets/js/app.8f697a83.js" defer></script><script src="/assets/js/4.6e8e19d7.js" defer></script><script src="/assets/js/3.22d6c09e.js" defer></script><script src="/assets/js/2.90686449.js" defer></script><script src="/assets/js/1.0a1b08cd.js" defer></script><script src="/assets/js/46.a643d731.js" defer></script>
+  </body>
+</html>
