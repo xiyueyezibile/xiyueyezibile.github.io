@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实用工具导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4cc9f0;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark-color);
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        #search-input {
+            width: 100%;
+            padding: 16px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: var(--card-shadow);
+            padding-left: 55px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 25px rgba(67, 97, 238, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 1.2rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tool-icon {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .tool-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+        }
+        
+        .tool-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .tool-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .tool-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px 0;
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        .add-tool-btn {
+            display: block;
+            margin: 40px auto 0;
+            padding: 14px 35px;
+            background: white;
+            border: 2px dashed var(--primary-color);
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .add-tool-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-style: solid;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-container {
+                margin-bottom: 30px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tools"></i> 实用工具导航</h1>
+            <p class="subtitle">精心挑选的实用工具集合，提高您的工作效率。点击卡片即可使用工具，支持搜索和分类筛选。</p>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="搜索工具...">
+            </div>
+            
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">全部工具</button>
+                <button class="category-btn" data-category="design">设计工具</button>
+                <button class="category-btn" data-category="dev">开发工具</button>
+                <button class="category-btn" data-category="productivity">效率工具</button>
+                <button class="category-btn" data-category="data">数据处理</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="tools-grid" id="tools-container">
+                <!-- 工具卡片将通过JavaScript动态生成 -->
+            </div>
+        </main>
+        
+        <button class="add-tool-btn" id="add-tool-btn">
+            <i class="fas fa-plus"></i> 添加新工具
+        </button>
+        
+        <footer>
+            <p>© 2023 实用工具导航 | 轻松扩展您的工具集合</p>
+        </footer>
+    </div>
+
+    <script>
+        // 工具数据 - 在这里添加新工具
+        const tools = [
+            {
+                id: 1,
+                name: "react在线演练场",
+                description: "在线调试react代码",
+                path: "/react-playground/",
+                icon: "fa-solid fa-file-image",
+                category: "design"
+            }
+        ];
+
+        // DOM元素
+        const toolsContainer = document.getElementById('tools-container');
+        const searchInput = document.getElementById('search-input');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const addToolBtn = document.getElementById('add-tool-btn');
+
+        // 当前过滤状态
+        let currentSearch = '';
+        let currentCategory = 'all';
+
+        // 渲染工具卡片
+        function renderTools() {
+            toolsContainer.innerHTML = '';
+            
+            const filteredTools = tools.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(currentSearch) || 
+                                      tool.description.toLowerCase().includes(currentSearch);
+                const matchesCategory = currentCategory === 'all' || tool.category === currentCategory;
+                
+                return matchesSearch && matchesCategory;
+            });
+            
+            if (filteredTools.length === 0) {
+                toolsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search fa-2x" style="margin-bottom: 15px;"></i>
+                        <p>没有找到匹配的工具</p>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">尝试不同的搜索词或选择其他分类</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredTools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = 'tool-card';
+                toolCard.innerHTML = `
+                    <div class="tool-icon">
+                        <i class="${tool.icon}"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">${tool.name}</h3>
+                        <p class="tool-description">${tool.description}</p>
+                        <a href="${tool.path}" class="tool-link">使用工具</a>
+                    </div>
+                `;
+                toolsContainer.appendChild(toolCard);
+            });
+        }
+
+        // 搜索功能
+        searchInput.addEventListener('input', () => {
+            currentSearch = searchInput.value.toLowerCase();
+            renderTools();
+        });
+
+        // 分类筛选
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 更新活动按钮
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // 更新当前分类
+                currentCategory = button.dataset.category;
+                renderTools();
+            });
+        });
+
+        // 添加新工具（演示功能）
+        addToolBtn.addEventListener('click', () => {
+            // 在实际应用中，这里可以打开一个表单来添加新工具
+            // 这里仅演示如何扩展工具列表
+            const newTool = {
+                id: tools.length + 1,
+                name: "新工具",
+                description: "这是新添加的工具，您可以编辑名称和描述",
+                path: "/new-tool",
+                icon: "fa-solid fa-plus-circle",
+                category: "productivity"
+            };
+            
+            tools.push(newTool);
+            renderTools();
+            
+            // 显示添加成功的消息
+            alert(`新工具已添加！工具总数：${tools.length}\n\n在实际应用中，您可以实现一个表单来添加新工具。`);
+        });
+
+        // 初始化渲染
+        renderTools();
+    </script>
+</body>
+</html>
