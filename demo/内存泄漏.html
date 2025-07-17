@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐式内存泄漏</title>
+</head>
+<button>
+    点我触发内存泄漏
+</button>
+
+<div>
+    <img src="./内存泄漏.png" width="1000" alt="">
+</div>
+<div>
+    <img src="./内存泄漏代码.png" width="1000" alt="">
+</div>
+<p>
+    为什么data会内存泄漏？
+</p>
+<div style="
+    background-color: pink;">全局上下文
+    <div style="background-color: lightblue; margin: 0 20px;">
+        click 上下文
+        <div style="background-color: lightgreen; margin: 0 20px;">
+            W 上下文：包含 text，data
+            <div style="background-color: lightyellow; margin: 0 20px">
+                A 函数：预解析发现 data，添加到 W 上下文中，函数本身没使用，被回收
+            </div>
+            <div style="background-color: lightcoral; margin: 0 20px">
+                B 函数：预解析发现 text，被W 上下文保存，没回收，导致 W 上下文的 data 一并被保存
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    没有函数 A 会内存泄漏吗？不会
+</p>
+
+<body>
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', click);
+        function click() {
+            console.log('点击了');
+            
+            function W() {
+                const data = new Array(1000000).fill('内存泄漏测试'); // 创建一个包含100万个元素的数组
+                const text = 'bbbb'
+                function A() {
+                    console.log(data);
+                }
+
+                function B() {
+                    console.log(text);
+                }
+                return B
+            }
+            window.B = W();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -261,7 +261,7 @@
             
             <div class="category-filter">
                 <button class="category-btn active" data-category="all">全部工具</button>
-                <button class="category-btn" data-category="design">设计工具</button>
+                <button class="category-btn" data-category="design">演示例子</button>
                 <button class="category-btn" data-category="dev">开发工具</button>
                 <button class="category-btn" data-category="productivity">效率工具</button>
                 <button class="category-btn" data-category="data">数据处理</button>
@@ -288,9 +288,17 @@
         const tools = [
             {
                 id: 1,
-                name: "react在线演练场",
-                description: "在线调试react代码",
+                name: "react 在线演练场",
+                description: "在线调试 react 代码",
                 path: "/react-playground/",
+                icon: "fa-solid fa-file-image",
+                category: "dev"
+            },
+            {
+                id: 2,
+                name: "隐式内存泄漏演示",
+                description: "简易隐式内存演示",
+                path: "/demo/内存泄漏.html",
                 icon: "fa-solid fa-file-image",
                 category: "design"
             }
