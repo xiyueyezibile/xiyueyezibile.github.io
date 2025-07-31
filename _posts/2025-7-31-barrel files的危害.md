@@ -113,7 +113,7 @@ test2();
 
 为什么两次结果不一样？
 
-原因很简单，构建工具认为 SingleTon 是一段有 `sideEffects` 的代码，出于安全考虑不予删除。在 Barrel Files 模式下，这意味着下游模块所有被判定为带有 `sideEffects` 的代码都会被保留下来，导致最终产物可能被打入许多无用代码。注意，有许多代码模式会被判定为具有 `sideEffects`，包括：
+原因很简单，构建工具认为里面包含有 `sideEffects` 的代码，出于安全考虑不予删除。在 Barrel Files 模式下，这意味着下游模块所有被判定为带有 `sideEffects` 的代码都会被保留下来，导致最终产物可能被打入许多无用代码。注意，有许多代码模式会被判定为具有 `sideEffects`，包括：
 
 - 顶层函数调用，如：console.log('a')；
 - 修改全局状态或对象，如：document.title = 'new Title'；
