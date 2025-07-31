@@ -4,7 +4,7 @@ title:      barrel files的危害
 subtitle:   webpack
 date:       2025-7-31
 author:     XIY
-header-img: img/zyh.jpg
+header-img: img/zyh.png
 catalog: true
 tags:
     - webpack
